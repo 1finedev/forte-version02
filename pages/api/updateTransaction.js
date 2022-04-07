@@ -39,7 +39,7 @@ Kindly check your ${transaction.bankName} account for the requested amount
 If you believe this is an error or you did not initiate the withdrawal request.
 Kindly contact the admin for further details.
 
-*This message is automated and sent to you by the system.*`;
+*This message is automated and sent to you by the portal.*`;
 
       const rejectionBody = `Hello ${transaction.user.fullname.split(" ")[0]}, 
 Your withdrawal request has been *REJECTED* by the Admin.
@@ -52,7 +52,7 @@ Kindly check your portal to request again after you fix the reason
 If you believe this is an error or you did not initiate the withdrawal request.
 Kindly contact the admin for further details.
 
-*This message is automated and sent to you by the system.*`;
+*This message is automated and sent to you by the portal.*`;
 
       const values = {
         body:

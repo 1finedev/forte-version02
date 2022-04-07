@@ -53,7 +53,7 @@ const handler = async (req, res) => {
 Agent ${session.user.agentId} has sent a withdrawal request!
 Kindly review the details on the admin portal and confirm the request.
 
-*This message is automated and sent to you by the system.*`;
+*This message is automated and sent to you by the portal.*`;
 
       const values = {
         body: body,
