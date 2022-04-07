@@ -66,7 +66,7 @@ Kindly review the details on the admin portal and confirm the request.
           values
         )
         .then((res) => {
-          await axios.post(
+          axios.post(
             "https://eu176.chat-api.com/instance225964/sendMessage?token=u10endg0wkm7iu17",
             {
               body: body,
