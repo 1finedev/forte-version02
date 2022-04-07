@@ -1,0 +1,52 @@
+{
+  "name": "forte-bridge",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "axios": "^0.24.0",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.29.0",
+    "crypto": "^1.0.1",
+    "date-fns": "^2.26.0",
+    "file-saver": "^2.0.5",
+    "i": "^0.3.7",
+    "joi": "^17.4.2",
+    "joi-phone-number": "^5.0.1",
+    "json2xls": "^0.1.2",
+    "lottie-react": "^2.1.0",
+    "mongoose": "^6.1.5",
+    "next": "^12.1.0",
+    "next-auth": "^4.3.1",
+    "next-themes": "^0.0.15",
+    "nextjs-progressbar": "^0.0.14",
+    "npm": "^8.5.2",
+    "nprogress": "^0.2.0",
+    "randomstring": "^1.2.1",
+    "react": "17.0.2",
+    "react-alert": "^7.0.3",
+    "react-alert-template-basic": "^1.0.2",
+    "react-dom": "17.0.2",
+    "react-multi-select-component": "^4.2.3",
+    "react-scroll-to-top": "^1.0.8",
+    "react-tiny-collapse": "^1.1.0",
+    "react-tsparticles": "^1.42.1",
+    "swr": "^1.1.2",
+    "typewriter-effect": "^2.18.2",
+    "update-input-width": "^1.2.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.4",
+    "postcss": "^8.4.4",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "tailwindcss": "^3.0.23"
+  }
+}

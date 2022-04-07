@@ -1,0 +1,7 @@
+/* default tailwind css */
+:root {
+  --mainColor: #3b82f6;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
