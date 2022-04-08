@@ -24,7 +24,7 @@ const EditShipment = () => {
 
     // clear local storage on component unmount
     return () => {
-      localStorage.clear();
+      localStorage.removeItem(`${router.query?.shipmentid}`);
     };
   }, [router]);
 

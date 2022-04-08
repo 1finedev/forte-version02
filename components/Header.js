@@ -36,7 +36,7 @@ const Header = ({ setSideBarOpen, sideBarOpen }) => {
         />
       </button>
       <h5 className="flex-1 text-xl text-center font-brand">
-        <Link href="/dashboard">FORTE-BRIDGE LOGISTICS</Link>
+        <Link href="/">FORTE-BRIDGE LOGISTICS</Link>
       </h5>
     </div>
   );

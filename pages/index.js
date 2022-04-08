@@ -1,67 +1,77 @@
-import Typewriter from "typewriter-effect";
-import Image from "next/image";
-import { signIn } from "next-auth/react";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const Index = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    const color = localStorage.getItem("mainColor");
+    if (color !== null) {
+      localStorage.setItem("nProgressColor", color);
+    } else {
+      localStorage.setItem("nProgressColor", "#3B82F6");
+    }
+    // clear local storage on component unmount
+    return () => {
+      localStorage.removeItem("nProgressColor");
+    };
+  }, []);
+
   return (
-    <>
-      <div className="min-h-[100vh] overflow-x-hidden scroll-smooth text-white">
-        <div className="relative h-[560px] w-full">
-          <div className="flex h-[10vh]  w-full justify-between bg-mainColor py-[30px] px-[100px] font-heading shadow-lg shadow-white/50 ">
-            <div className="flex items-center">
-              <p className="font-heading text-[20px]">FORTE-BRIDGE LOGISTICS</p>
-            </div>
-            <div className="flex items-center space-x-[35px]">
-              <div className="group relative">
-                <p className="cursor-pointer">Tracking</p>
-                <span className="m-bottom-1 ease-bloop duration-600 absolute left-0 h-[3px] w-full scale-x-0 transform rounded-sm bg-white transition group-hover:scale-x-100 "></span>
-              </div>
-              <div className="group relative">
-                <p className="cursor-pointer">Services</p>
-                <span className="m-bottom-1 ease-bloop duration-600 absolute left-0 h-[3px] w-full scale-x-0 transform rounded-sm bg-white transition group-hover:scale-x-100 "></span>
-              </div>
-              <div className="group relative">
-                <p className="cursor-pointer">Company</p>
-                <span className="m-bottom-1 ease-bloop duration-600 absolute left-0 h-[3px] w-full scale-x-0 transform rounded-sm bg-white transition group-hover:scale-x-100 "></span>
-              </div>
-              <div className="group relative">
-                <p className="cursor-pointer">Resources</p>
-                <span className="m-bottom-1 ease-bloop duration-600 absolute left-0 h-[3px] w-full scale-x-0 transform rounded-sm bg-white transition group-hover:scale-x-100 "></span>
-              </div>
-              <p
-                onClick={() => signIn()}
-                className="cursor-pointer rounded bg-white py-[8px] px-[30px] text-mainColor hover:bg-gray-300 hover:text-mainColor "
-              >
-                Sign-in
-              </p>
-            </div>
-          </div>
-          <div className="absolute top-0 z-[-2]">
-            <div className=" relative h-[100vh] w-[100vw] ">
-              <Image
-                className="h-full w-full transition-all duration-500 ease-in-out "
-                layout="fill"
-                objectFit="cover"
-                src="/images/slide2.jpg"
-                priority
-                alt="slideshow"
-              />
-            </div>
-          </div>
-          <div className="bg-mainColor/30 absolute top-0 z-[-1] min-h-[100vh] w-[100vw]"></div>
+    <div className=" font-brand">
+      <header className="flex justify-between bg-gray-100 px-[50px] py-[20px] font-heading text-lg font-medium">
+        <div
+          className="flex items-center space-x-2 cursor-pointer"
+          onClick={() => router.push("/")}
+        >
+          <svg
+            className="w-8 h-8 text-mainColor"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <h3>FORTE-BRIDGE</h3>
         </div>
-      </div>
-    </>
+        <div className="flex w-[25vw] items-center justify-between">
+          <div className="relative cursor-pointer group">
+            <p>Services</p>
+            <span className="m-bottom-1 ease-bloop duration-400 absolute left-0 h-[3px] w-full scale-x-0 transform rounded-sm bg-mainColor transition group-hover:scale-x-100 "></span>
+          </div>
+          <div className="relative cursor-pointer group">
+            <p>Tracking</p>
+            <span className="m-bottom-1 ease-bloop duration-400 absolute left-0 h-[3px] w-full scale-x-0 transform rounded-sm bg-mainColor transition group-hover:scale-x-100 "></span>
+          </div>
+          <div className="relative cursor-pointer group">
+            <p>Locations</p>
+            <span className="m-bottom-1 ease-bloop duration-400 absolute left-0 h-[3px] w-full scale-x-0 transform rounded-sm bg-mainColor transition group-hover:scale-x-100 "></span>
+          </div>
+        </div>
+        <div className="flex items-center space-x-4">
+          <div
+            className="relative cursor-pointer group"
+            onClick={() => router.push("/login")}
+          >
+            <p>Login</p>
+            <span className="m-bottom-1 ease-bloop duration-400 absolute left-0 h-[3px] w-full scale-x-0 transform rounded-sm bg-mainColor transition group-hover:scale-x-100 "></span>
+          </div>
+          <p
+            className="cursor-pointer rounded-lg bg-mainColor px-[20px] py-[8px] text-white hover:animate-pulse"
+            onClick={() => router.push("/signup")}
+          >
+            Sign up
+          </p>
+        </div>
+      </header>
+    </div>
   );
 };
 
 export default Index;
-
-export async function getServerSideProps(context) {
-  return {
-    redirect: {
-      permanent: false,
-      destination: "/login",
-    },
-  };
-}

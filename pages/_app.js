@@ -3,12 +3,12 @@ import { SessionProvider } from "next-auth/react";
 import { transitions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import NextNProgress from "nextjs-progressbar";
-import { useRouter } from "next/router";
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useState, useLayoutEffect } from "react";
 import { useSession, signIn } from "next-auth/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { LoadingScreen } from "../components";
+
 const options = {
   color: "white",
   timeout: 5000,
@@ -18,8 +18,9 @@ const options = {
 // handle client side session
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+  const [nColor, setNColor] = useState("white");
+
   // handle page load animation
-  const router = useRouter();
   useEffect(() => {
     AOS.init({ duration: 500 });
     AOS.refresh();
@@ -34,6 +35,11 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     if (color !== null) {
       document.documentElement.style.setProperty("--mainColor", color);
     }
+
+    const nProgressColor = localStorage.getItem("nProgressColor");
+    if (nProgressColor !== null) {
+      setNColor(nProgressColor);
+    }
   }, []);
 
   const getLayout = Component.getLayout || ((page) => page);
@@ -41,7 +47,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <SessionProvider session={session} refetchOnWindowFocus={true}>
       <AlertProvider template={AlertTemplate} {...options}>
-        <NextNProgress color="white" />
+        <NextNProgress color={nColor} />
 
         {Component.auth ? (
           <Auth>
