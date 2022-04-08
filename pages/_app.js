@@ -5,6 +5,7 @@ import AlertTemplate from "react-alert-template-basic";
 import NextNProgress from "nextjs-progressbar";
 import { useEffect, useState, useLayoutEffect } from "react";
 import { useSession, signIn } from "next-auth/react";
+import { useRouter } from "next/router";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { LoadingScreen } from "../components";
@@ -18,6 +19,7 @@ const options = {
 // handle client side session
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+  const router = useRouter();
   const [nColor, setNColor] = useState("white");
 
   // handle page load animation
@@ -40,7 +42,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     if (nProgressColor !== null) {
       setNColor(nProgressColor);
     }
-  }, []);
+  }, [router]);
 
   const getLayout = Component.getLayout || ((page) => page);
 

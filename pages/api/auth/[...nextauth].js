@@ -73,6 +73,6 @@ export default NextAuth({
       return token;
     },
   },
-  pages: { signIn: "/login", signOut: "/login", error: "/login" },
+  pages: { signIn: "/login", signOut: "/", error: "/login" },
   debug: true,
 });

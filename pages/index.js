@@ -1,21 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { useRouter } from "next/router";
 
 const Index = () => {
   const router = useRouter();
 
-  useEffect(() => {
+  //workaround to enable SSR work on pages that use getServerSideProps without causing useLayoutEffect errors
+  const canUseDOM = typeof window !== "undefined";
+  const useIsomorphicLayoutEffect = canUseDOM ? useLayoutEffect : useEffect;
+  useIsomorphicLayoutEffect(() => {
+    // check local storage and decide if theme is set
     const color = localStorage.getItem("mainColor");
     if (color !== null) {
       localStorage.setItem("nProgressColor", color);
-    } else {
-      localStorage.setItem("nProgressColor", "#3B82F6");
     }
-    // clear local storage on component unmount
+    // set back to white on unmount
     return () => {
-      localStorage.removeItem("nProgressColor");
+      localStorage.setItem("nProgressColor", "white");
     };
-  }, []);
+  }, [router]);
 
   return (
     <div className=" font-brand">

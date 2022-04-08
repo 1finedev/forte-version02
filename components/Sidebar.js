@@ -128,7 +128,7 @@ const Sidebar = ({ sideBarOpen, setSideBarOpen }) => {
       router.push(active);
     }
     if (active === "/logout") {
-      signOut().then(() => router.push("/login"));
+      signOut().then(() => router.push("/"));
     }
   }, [active, router]);
 

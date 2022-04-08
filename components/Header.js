@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 
 const Header = ({ setSideBarOpen, sideBarOpen }) => {
+  const { data: session } = useSession();
   const router = useRouter();
 
   const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white  transition ease transform duration-300`;
@@ -36,7 +38,7 @@ const Header = ({ setSideBarOpen, sideBarOpen }) => {
         />
       </button>
       <h5 className="flex-1 text-xl text-center font-brand">
-        <Link href="/">FORTE-BRIDGE LOGISTICS</Link>
+        <Link href={session ? "/dashboard" : "/"}>FORTE-BRIDGE LOGISTICS</Link>
       </h5>
     </div>
   );

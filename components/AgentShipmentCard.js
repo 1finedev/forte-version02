@@ -17,7 +17,6 @@ const AgentShipmentCard = ({ loading, shipment, handleUpdate, isLoading }) => {
           ) : (
             <>
               {shipment?.map((shipment, index) => {
-                console.log(shipment);
                 return (
                   <div
                     key={index}
