@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-const Index = () => {
+import Typewriter from "typewriter-effect";
+
+const Index = ({ stats }) => {
+  console.log(stats);
+  const formatter = Intl.NumberFormat("en", { notation: "compact" });
+
   const [showMenu, setShowMenu] = useState(false);
   const [slides, setSlides] = useState([
     "/slide2.jpg",
@@ -21,7 +26,6 @@ const Index = () => {
       }
     }, 8000);
 
-    console.log(currentSlide);
     return () => clearInterval(interval);
   }, [currentSlide]);
 
@@ -127,57 +131,85 @@ const Index = () => {
         </div>
       </div>
       {/* slideshow */}
-      <div className="relative z-[-1] h-[80vh] w-full" data-aos="fade">
-        <Image
-          className="w-full h-full"
-          objectFit="cover"
-          layout="fill"
-          src={slides[currentSlide]}
-        />
-        <div className="absolute z-[10] h-[80vh] w-full bg-black/80">
-          <div className="mt-[80px] ml-[90px] text-white">
-            <p className="mb-[5px] pl-[10px] text-lg">
-              Flexible, Improved, Lightning-fast Logistics Service
+      <div className="relative">
+        <div className="relative z-[-1] h-[85vh] w-full" data-aos="fade">
+          <Image
+            className="w-full h-full"
+            objectFit="cover"
+            layout="fill"
+            src={slides[currentSlide]}
+            priority
+          />
+          <div className="absolute h-[85vh] w-full bg-black/80"></div>
+        </div>
+        <div className="absolute top-0 z-[1000] mt-[90px] ml-[100px]  text-white">
+          <div className="mb-[15px] flex space-x-1 pl-[10px] font-heading text-lg italic">
+            <p>Secure & Lightning-fast logistics from Turkey to</p>{" "}
+            <span className="text-white">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Nigeria",
+                    "Ghana",
+                    "Kenya",
+                    "USA",
+                    "UK",
+                    "Canada",
+                    "your doorstep!",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </span>
+          </div>
+          <p className="mb-[5px] font-heading text-6xl font-bold">
+            Advanced & Sustainable
+          </p>
+          <p className="mb-[40px] font-heading text-6xl font-bold">
+            Cargo Solutions!
+          </p>
+          <div className="mb-[5px] flex space-x-2">
+            <svg
+              className="w-6 h-6 text-mainColor"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <p>Quality Control System, 100% Satisfaction Guarantee</p>
+          </div>
+          <div className="mb-[5px] flex space-x-2">
+            <svg
+              className="w-6 h-6 text-mainColor"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <p>Highly Professional Staff, Accurate Measurements Processes</p>
+          </div>
+          <div className="z-[1000] mt-[30px] flex space-x-6">
+            <p className="cursor-pointer rounded-lg bg-mainColor py-[12px] px-[20px] hover:bg-white hover:text-mainColor hover:shadow hover:shadow-mainColor">
+              See our rates{" "}
             </p>
-            <p className="mb-[5px] font-heading text-6xl font-bold">
-              Advanced & Sustainable
+            <p className="cursor-pointer rounded-lg bg-mainColor py-[12px] px-[20px] hover:bg-white hover:text-mainColor hover:shadow hover:shadow-mainColor">
+              Track a shipment
             </p>
-            <p className="mb-[30px] font-heading text-6xl font-bold">
-              Cargo Solutions!
-            </p>
-            <div className="mb-[5px] flex space-x-2">
-              <svg
-                className="w-6 h-6 text-mainColor"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <p>Quality Control System, 100% Satisfaction Guarantee</p>
-            </div>
-            <div className="mb-[5px] flex space-x-2">
-              <svg
-                className="w-6 h-6 text-mainColor"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <p>Highly Professional Staff, Accurate Measurements Processes</p>
-            </div>
           </div>
         </div>
       </div>
+
       <div className="mx-auto mb-[60px] mt-[-60px] flex h-[120px] w-[70vw] items-center justify-between divide-x rounded-xl  bg-white shadow-lg shadow-black/50">
         <div
           onClick={() => setCta(0)}
@@ -286,6 +318,91 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      {/* section 2 */}
+      <div className="mx-auto flex w-[70vw] justify-between pt-[30px]">
+        <div className="max-w-[62%]">
+          <p className="font-800 mb-[10px] text-mainColor">
+            Providing full range of delivery services worldwide
+          </p>
+          <p className="mb-[5px] font-heading text-4xl">
+            Reliable Logistic & Transport
+          </p>
+          <p className="mb-[20px] font-heading text-4xl">
+            Solutions Saves Your Time!
+          </p>
+          <div className="flex justify-between pt-[20px]">
+            <div className="w-[55%] text-sm ">
+              <p className="text-justify text-gray-700">
+                Forte-Bridge Global Logistics is a trusted and tested logistics
+                operator providing full range service in the sphere of air and
+                sea shipping, customs clearance of any kind of shipment with
+                delivery to your doorstep.
+              </p>
+              <p className="mt-[15px] text-justify text-gray-700">
+                We pride ourselves in providing the best service to our clients
+                and even only take payment after your goods arrives and has been
+                cleared in selected countries
+              </p>
+              <p className="mt-[15px] text-justify text-gray-700">
+                Our skilled personnel are well versed in utilizing state of the
+                art communications & tracking combined with experience in
+                integrated supply chain technology solutions
+              </p>
+              <p className="mt-[10px] font-heading text-mainColor">
+                Olayisade Kehinde
+              </p>
+              <p className="font-heading ">Founder</p>
+            </div>
+            <div className="w-[38%]">
+              <div className="mb-[30px]">
+                <div className="mb-[10px] flex items-center space-x-2">
+                  <span className="h-[10px] w-[10px] bg-mainColor"></span>
+                  <p>Quality</p>
+                </div>
+                <p className="mt-[15px] text-justify text-sm text-gray-700">
+                  Following the quality of our service thus having gained trust
+                  from many clients
+                </p>
+              </div>
+              <div className="mb-[10px] flex items-center space-x-2">
+                <span className="h-[10px] w-[10px] bg-mainColor"></span>
+                <p>Reliability</p>
+              </div>
+              <p className="mt-[15px] text-justify text-sm text-gray-700">
+                We provide with cargo safety throughout all the stages of our
+                delivery process
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="w-[30%] pt-[30px]">
+          <div className="relative h-[460px] w-full">
+            <Image src="/cargo2.jpg" objectFit="cover" layout="fill" />
+            <div className="absolute top-[40%] left-[-30px] flex h-[160px] w-[150px] flex-col items-center rounded-lg bg-mainColor p-[10px]">
+              <svg
+                className="h-[40px] w-[40px] text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <p className="mt-[20px] text-4xl text-white">
+                {formatter.format(1e7)}+
+              </p>
+              <p className="mt-[5px] text-xs text-white">Delivered shipments</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* section 3 */}
+      <div></div>
     </div>
   );
 };
