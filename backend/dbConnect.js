@@ -14,37 +14,45 @@ if (!MONGODB_DB) {
   );
 }
 
-/**
- * Global is used here to maintain a cached connection across hot reloads
- * in development. This prevents connections growing exponentially
- * during API Route usage.
- */
-let cached = global.mongo;
-
-if (!cached) {
-  cached = global.mongo = { conn: null, promise: null };
-}
-
 export async function connectToDatabase() {
-  if (cached.conn) {
-    console.log("using existing conn");
-    return cached.conn;
+  const options = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    autoIndex: true,
+  };
+
+  let client;
+  let clientPromise;
+
+  if (!process.env.MONGODB_URI) {
+    throw new Error("Please add your Mongo URI to .env.local");
   }
 
-  if (!cached.promise) {
-    const opts = {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      autoIndex: true,
-    };
-
-    cached.promise = mongoose.connect(MONGODB_URI, opts).then((client) => {
+  if (process.env.NODE_ENV === "development") {
+    // In development mode, use a global variable so that the value
+    // is preserved across module reloads caused by HMR (Hot Module Replacement).
+    if (!global._mongoClientPromise) {
+      global._mongoClientPromise = mongoose
+        .connect(MONGODB_URI, options)
+        .then((client) => {
+          return {
+            client,
+          };
+        });
+    }
+    clientPromise = global._mongoClientPromise;
+    console.log("using new conn");
+  } else {
+    // In production mode, it's best to not use a global variable.
+    clientPromise = mongoose.connect(MONGODB_URI, opts).then((client) => {
       return {
         client,
       };
     });
+    console.log("using existing conn");
   }
-  cached.conn = await cached.promise;
-  console.log("using new conn");
-  return cached.conn;
+
+  // Export a module-scoped MongoClient promise. By doing this in a
+  // separate module, the client can be shared across functions.
+  return clientPromise;
 }
