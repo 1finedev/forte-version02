@@ -12,6 +12,7 @@ const handler = async (req, res) => {
 
     const data = await Shipment.find({
       createdAt: { $gte: batchStart, $lte: batchEnd },
+      destination: { $ne: "GHANA" },
     });
 
     const calc = await Promise.all(

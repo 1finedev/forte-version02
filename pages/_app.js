@@ -20,7 +20,6 @@ const options = {
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const router = useRouter();
-  const [nColor, setNColor] = useState("white");
 
   // handle page load animation
   useEffect(() => {
@@ -37,11 +36,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     if (color !== null) {
       document.documentElement.style.setProperty("--mainColor", color);
     }
-
-    const nProgressColor = localStorage.getItem("nProgressColor");
-    if (nProgressColor !== null) {
-      setNColor(nProgressColor);
-    }
   }, [router]);
 
   const getLayout = Component.getLayout || ((page) => page);
@@ -49,7 +43,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <SessionProvider session={session} refetchOnWindowFocus={true}>
       <AlertProvider template={AlertTemplate} {...options}>
-        <NextNProgress color={nColor} />
+        <NextNProgress color="white" />
 
         {Component.auth ? (
           <Auth>
