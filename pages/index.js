@@ -1,7 +1,8 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useState, useLayoutEffect } from "react";
 import { useRouter } from "next/router";
 
 const Index = () => {
+  const [showMenu, setShowMenu] = useState(false);
   const router = useRouter();
 
   //workaround to enable SSR work on pages that use getServerSideProps without causing useLayoutEffect errors
@@ -21,7 +22,7 @@ const Index = () => {
 
   return (
     <div className=" font-brand">
-      <header className="flex justify-between bg-gray-100 px-[50px] py-[20px] font-heading text-lg font-medium">
+      <header className="flex justify-between border-b border-mainColor bg-gray-100 px-[50px] py-[20px] font-heading text-lg font-medium">
         <div
           className="flex items-center space-x-2 cursor-pointer"
           onClick={() => router.push("/")}
@@ -42,7 +43,7 @@ const Index = () => {
           </svg>
           <h3>FORTE-BRIDGE</h3>
         </div>
-        <div className="flex w-[25vw] items-center justify-between">
+        <div className="hidden w-[30vw] items-center justify-between md:flex">
           <div className="relative cursor-pointer group">
             <p>Services</p>
             <span className="m-bottom-1 ease-bloop duration-400 absolute left-0 h-[3px] w-full scale-x-0 transform rounded-sm bg-mainColor transition group-hover:scale-x-100 "></span>
@@ -56,7 +57,7 @@ const Index = () => {
             <span className="m-bottom-1 ease-bloop duration-400 absolute left-0 h-[3px] w-full scale-x-0 transform rounded-sm bg-mainColor transition group-hover:scale-x-100 "></span>
           </div>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="items-center hidden space-x-4 md:flex ">
           <div
             className="relative cursor-pointer group"
             onClick={() => router.push("/login")}
@@ -71,7 +72,57 @@ const Index = () => {
             Sign up
           </p>
         </div>
+        <svg
+          onClick={() => setShowMenu(!showMenu)}
+          className="w-8 h-8 cursor-pointer text-mainColor md:hidden"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
       </header>
+      <div
+        data-aos="slide"
+        className={`${
+          showMenu ? "block" : "hidden"
+        } mx-auto flex w-[90vw] flex-col items-center space-y-[10px] rounded-b border border-t-0 border-mainColor bg-gray-100 pb-[20px] shadow-lg shadow-black/50 transition`}
+      >
+        <div className="group relative mt-[20px] w-full cursor-pointer text-center text-lg">
+          <p>Services</p>
+          <span className="m-bottom-1 ease-bloop duration-400 absolute left-0 h-[2px] w-full scale-x-0 transform rounded-sm bg-mainColor transition group-hover:scale-x-100 "></span>
+        </div>
+        <div className="relative w-full text-lg text-center cursor-pointer group">
+          <p>Tracking</p>
+          <span className="m-bottom-1 ease-bloop duration-400 absolute left-0 h-[2px] w-full scale-x-0 transform rounded-sm bg-mainColor transition group-hover:scale-x-100 "></span>
+        </div>
+        <div className="relative w-full text-lg text-center cursor-pointer group">
+          <p>Locations</p>
+          <span className="m-bottom-1 ease-bloop duration-400 absolute left-0 h-[2px] w-full scale-x-0 transform rounded-sm bg-mainColor transition group-hover:scale-x-100 "></span>
+        </div>
+        <div className="flex items-center space-x-12 pt-[10px]">
+          <p
+            className="cursor-pointer rounded-lg bg-mainColor px-[20px] py-[8px] text-white hover:animate-pulse"
+            onClick={() => router.push("/login")}
+          >
+            Login{" "}
+          </p>
+          <p
+            className="cursor-pointer rounded-lg bg-mainColor px-[20px] py-[8px] text-white hover:animate-pulse"
+            onClick={() => router.push("/signup")}
+          >
+            Sign up
+          </p>
+        </div>
+      </div>
+      {/* slideshow */}
+      <div className=""></div>
     </div>
   );
 };

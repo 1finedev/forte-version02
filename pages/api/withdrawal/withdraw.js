@@ -2,6 +2,8 @@ import { getSession } from "next-auth/react";
 import Funds from "../../../backend/fundsModel";
 import User from "../../../backend/userModel";
 import axios from "axios";
+import { startOfDay, endOfDay } from "date-fns";
+
 const handler = async (req, res) => {
   if (req.method === "POST") {
     const session = await getSession({ req });
@@ -19,7 +21,11 @@ const handler = async (req, res) => {
       try {
         const user = await User.findOne({ _id: session.user._id });
 
-        if (user.balance < amount) {
+        if (
+          user.balance < amount ||
+          startOfDay(new Date(Date.now())) <
+            startOfDay(new Date(process.env.NEXT_WITHDRAWAL_DATE))
+        ) {
           return res.status(200).json({
             status: "error",
             error: "Insufficient balance!",

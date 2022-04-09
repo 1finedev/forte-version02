@@ -104,7 +104,10 @@ const Layout = ({ children }) => {
             sideBarOpen ? "w-[200px]" : "w-[4vw]"
           } fixed h-screen bg-mainColor pl-[5px] text-white transition-all duration-700  ease-in-out`}
         >
-          <div className="mb-[30px] flex cursor-pointer items-center space-x-[20px] p-[20px]">
+          <div
+            className="mb-[30px] flex cursor-pointer items-center space-x-[20px] p-[20px]"
+            onClick={() => router.push("/")}
+          >
             <svg
               className="w-6 h-6"
               fill="none"
