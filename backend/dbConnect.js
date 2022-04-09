@@ -41,7 +41,7 @@ export async function connectToDatabase() {
         });
     }
     clientPromise = global._mongoClientPromise;
-    console.log("using new conn");
+    console.log("db connected successfully");
   } else {
     // In production mode, it's best to not use a global variable.
     clientPromise = mongoose.connect(MONGODB_URI, opts).then((client) => {
@@ -49,7 +49,7 @@ export async function connectToDatabase() {
         client,
       };
     });
-    console.log("using existing conn");
+    console.log("db connected successfully");
   }
 
   // Export a module-scoped MongoClient promise. By doing this in a

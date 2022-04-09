@@ -35,7 +35,7 @@ const Signup = () => {
     }).with("password", "passwordConfirm");
 
     const { error, value } = await schema.validate({
-      mobile: mobile.replace(/\s/g, "").trim(),
+      mobile: mobile?.replace(/\s/g, "").trim(),
       password: password.trim(),
       fullname: fullname.trim(),
       agentId: agentId.toLowerCase().replace(/\s/g, "").trim(),
@@ -190,7 +190,7 @@ const Signup = () => {
               {loading ? (
                 <div className="mt-[20px] flex w-full justify-center rounded-lg bg-gray-500 p-[10px] text-white">
                   <svg
-                    className="h-6 w-6"
+                    className="w-6 h-6"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -216,7 +216,7 @@ const Signup = () => {
             <p className="mt-[15px]">
               Already have an account?{" "}
               <span
-                className="cursor-pointer text-red-500"
+                className="text-red-500 cursor-pointer"
                 onClick={() => router.push("/login")}
               >
                 Login!

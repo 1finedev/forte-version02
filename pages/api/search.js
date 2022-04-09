@@ -114,7 +114,7 @@ const handler = async (req, res) => {
               ? { balance: 1 }
               : path === "amountLt"
               ? { balance: -1 }
-              : {}
+              : { createdAt: -1 }
           );
         return res.status(200).json({ status: "success", data: result });
       }
