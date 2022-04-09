@@ -48,7 +48,6 @@ const handler = async (req, res) => {
           }
         );
         // update user balances
-        let rebate;
         const dollarSide = process.env.DOLLAR_AGENT;
         const nairaSide = process.env.NAIRA_AGENT;
         const dollarAgent = shipment.weight * dollarSide;
@@ -56,32 +55,18 @@ const handler = async (req, res) => {
         const convertDollar = dollarAgent * dollarRate;
         const total = nairaAgent + convertDollar;
 
-        if (shipment.extraWeight > 0) {
-          const freightInDollars = freightRate * shipment.extraWeight;
-          const freightCalc = freightInDollars * dollarRate;
-          const freightTotal =
-            (Math.round(freightCalc * 10) / 10).toFixed(1) * 1;
-          const customsTot = customsRate * shipment.extraWeight;
-          const customsTotal =
-            (Math.round(customsTot * 10) / 10).toFixed(1) * 1;
-          const amountDue = Math.round(freightTotal + customsTotal);
-          const addedTotal = total + amountDue;
-          rebate = Math.round(addedTotal);
-        } else {
-          rebate = Math.round(total);
-        }
-        if (!shipment.calculated) {
+        if (shipment.calculated === false) {
           await Shipment.findByIdAndUpdate(shipment._id, {
             calculated: true,
-            rebate,
+            rebate: total,
             dollarSide,
             nairaSide,
           });
           await User.findByIdAndUpdate(shipment.user, {
             $inc: {
               totalKg: weight,
-              wallet: rebate,
-              balance: rebate,
+              wallet: total,
+              balance: total,
             },
           });
         }
