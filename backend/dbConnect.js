@@ -15,7 +15,7 @@ if (!MONGODB_DB) {
 }
 
 export async function connectToDatabase() {
-  const options = {
+  const opts = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     autoIndex: true,
@@ -33,7 +33,7 @@ export async function connectToDatabase() {
     // is preserved across module reloads caused by HMR (Hot Module Replacement).
     if (!global._mongoClientPromise) {
       global._mongoClientPromise = mongoose
-        .connect(MONGODB_URI, options)
+        .connect(MONGODB_URI, opts)
         .then((client) => {
           return {
             client,
