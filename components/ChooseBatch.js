@@ -93,12 +93,15 @@ const ChooseBatch = ({
                 }
                 className="rounded-lg bg-mainColor px-[8px] py-[5px] text-base text-white  caret-current focus:outline-none"
               >
-                <option></option>
+                <option>Choose</option>
                 {selectedYearData?.map((month, index) => {
                   return (
-                    <option key={index} value={month?.name}>
-                      {month?.name}
-                    </option>
+                    <>
+                      <option selected hidden disabled></option>
+                      <option key={index} value={month?.name}>
+                        {month?.name}
+                      </option>
+                    </>
                   );
                 })}
               </select>
@@ -118,12 +121,15 @@ const ChooseBatch = ({
                 }}
                 className="rounded-lg bg-mainColor px-[8px] py-[5px]  text-base text-white  caret-current focus:outline-none"
               >
-                <option></option>
+                <option>Choose</option>
                 {selectedMonthData?.map((batch, index) => {
                   return (
-                    <option key={index} value={batch?.startDate}>
-                      Batch: {batch?.batch}
-                    </option>
+                    <>
+                      <option selected hidden disabled></option>
+                      <option key={index} value={batch?.startDate}>
+                        Batch: {batch?.batch}
+                      </option>
+                    </>
                   );
                 })}
               </select>

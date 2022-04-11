@@ -24,6 +24,8 @@ const useBatch = (batchData, router) => {
   const [selectedMonth, setSelectedMonth] = useState(false);
   const [shipment, setShipment] = useState();
 
+  useEffect(() => {}, []);
+
   // shipment fetcher
   const fetchShipment = async () => {
     setLoading(true);
@@ -216,10 +218,13 @@ const useBatch = (batchData, router) => {
         (m) => m.name == month
       );
       setSelectedMonthIndex(index);
-      setSelectedMonth(true);
+      setSelectedMonth(false);
       setSelectedMonthData(
         batches?.[selectedYearIndex]?.months?.[index]?.batches
       );
+      setTimeout(() => {
+        setSelectedMonth(true);
+      }, 10);
     }
   };
 
