@@ -2,11 +2,9 @@ import Funds from "./../../backend/fundsModel";
 import User from "./../../backend/userModel";
 import { getSession } from "next-auth/react";
 import axios from "axios";
-import { connectToDatabase } from "./../../backend/dbConnect";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
-    await connectToDatabase();
     const session = await getSession({ req });
     if (!session || session?.user?.role !== "admin") {
       return res

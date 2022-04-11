@@ -1,6 +1,5 @@
 import User from "./../../../backend/userModel";
 import { getSession } from "next-auth/react";
-import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const cloudinary = require("cloudinary");
 cloudinary.config({
@@ -11,7 +10,6 @@ cloudinary.config({
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
-    await connectToDatabase();
     const session = await getSession({ req });
     if (!session) {
       return res.status(200).json({

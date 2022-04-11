@@ -1,9 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import User from "./../../../backend/userModel";
-import { connectToDatabase } from "./../../../backend/dbConnect";
-
-connectToDatabase();
 
 export default NextAuth({
   session: {

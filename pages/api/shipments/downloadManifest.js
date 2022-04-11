@@ -1,5 +1,4 @@
 import Shipment from "../../../backend/shipmentModel";
-import { connectToDatabase } from "./../../../backend/dbConnect";
 const Readable = require("stream").Readable;
 const json2xls = require("json2xls");
 import fs from "fs";
@@ -7,7 +6,6 @@ import path from "path";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
-    await connectToDatabase();
     const { batchStart, batchEnd } = req.body;
     if (!batchStart || !batchEnd) {
       return res.status(200).json({
