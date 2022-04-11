@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
 import { connectToDatabase } from "./dbConnect";
 
-await connectToDatabase();
+connectToDatabase();
 
 const userSchema = new mongoose.Schema(
   {
