@@ -621,7 +621,7 @@ const Shipments = ({ batchData }) => {
                             {selectedMonthData?.map((batch, index) => {
                               return (
                                 <Fragment key={index}>
-                                  <option selected disabled></option>
+                                  <option Selected hidden disabled></option>
                                   <option value={batch?.startDate}>
                                     Batch: {batch?.batch}
                                   </option>

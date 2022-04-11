@@ -1,8 +1,10 @@
 import User from "./../../../backend/userModel";
 import axios from "axios";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
+    await connectToDatabase();
     const { mobile } = req.body;
 
     const user = await User.findOne({ mobile });

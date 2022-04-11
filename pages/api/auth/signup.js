@@ -1,7 +1,9 @@
 import User from "../../../backend/userModel";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 export const handler = async (req, res) => {
   if (req.method === "POST") {
+    await connectToDatabase();
     const { fullname, agentId, mobile, password } = req.body.value;
 
     if (!password || !fullname || !agentId || !mobile) {

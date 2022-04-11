@@ -1,8 +1,10 @@
 import Shipment from "../../../backend/shipmentModel";
 import User from "../../../backend/userModel";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
+    await connectToDatabase();
     const { freight, customs, dollar, batchStart, batchEnd } = req.body;
     if (!freight || !customs || !dollar || !batchStart || !batchEnd) {
       return res

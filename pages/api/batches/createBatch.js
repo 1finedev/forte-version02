@@ -3,9 +3,11 @@ import format from "date-fns/format";
 import getMonth from "date-fns/getMonth";
 import getYear from "date-fns/getYear";
 import { getSession } from "next-auth/react";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
   if (req.method === "GET") {
+    await connectToDatabase();
     const session = await getSession({ req });
     if (!session || session.user.role !== "sec") {
       return res.status(200).json({

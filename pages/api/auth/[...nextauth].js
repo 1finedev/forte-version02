@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import User from "./../../../backend/userModel";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 export default NextAuth({
   session: {
@@ -9,6 +10,7 @@ export default NextAuth({
   providers: [
     CredentialsProvider({
       async authorize(credentials, req) {
+        await connectToDatabase();
         //1. check credentials for body data
         const { mobile, password } = credentials;
         if (!mobile || !password) {

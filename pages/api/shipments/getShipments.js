@@ -1,8 +1,10 @@
 import Shipment from "./../../../backend/shipmentModel";
 import { getSession } from "next-auth/react";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
+    await connectToDatabase();
     const { batchStart, batchEnd } = req.body;
 
     if (!batchStart || !batchEnd) {

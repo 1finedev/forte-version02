@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-import { connectToDatabase } from "./dbConnect";
-connectToDatabase();
+// import { connectToDatabase } from "./dbConnect";
+// connectToDatabase();
 
 const fundsSchema = new mongoose.Schema(
   {

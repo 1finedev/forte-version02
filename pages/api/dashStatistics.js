@@ -2,10 +2,12 @@ import User from "./../../backend/userModel";
 import Batch from "./../../backend/batchesModel";
 import Shipment from "./../../backend/shipmentModel";
 import mongoose from "mongoose";
+import { connectToDatabase } from "./../../backend/dbConnect";
 
 import { getSession } from "next-auth/react";
 const handler = async (req, res) => {
   if (req.method === "GET") {
+    await connectToDatabase();
     const session = await getSession({ req });
     if (!session || session?.user?.role !== "admin") {
       return res

@@ -1,5 +1,5 @@
 import TinyCollapse from "react-tiny-collapse";
-
+import { Fragment } from "react";
 const ChooseBatch = ({
   collapse,
   setCollapse,
@@ -60,6 +60,7 @@ const ChooseBatch = ({
               Select year:
             </label>
             <select
+              defaultValue="choose"
               name="year"
               onChange={(e) =>
                 UpdateBatches({
@@ -68,7 +69,7 @@ const ChooseBatch = ({
               }
               className="rounded-lg bg-mainColor px-[8px] py-[5px] text-base text-white  caret-current focus:outline-none"
             >
-              <option></option>
+              <option value="choose">Choose</option>
               {batches?.map((year, index) => {
                 return (
                   <option key={index} value={year?.year}>
@@ -96,12 +97,9 @@ const ChooseBatch = ({
                 <option>Choose</option>
                 {selectedYearData?.map((month, index) => {
                   return (
-                    <>
-                      <option selected hidden disabled></option>
-                      <option key={index} value={month?.name}>
-                        {month?.name}
-                      </option>
-                    </>
+                    <option key={index} value={month?.name}>
+                      {month?.name}
+                    </option>
                   );
                 })}
               </select>
@@ -113,6 +111,7 @@ const ChooseBatch = ({
                 Select batch
               </label>
               <select
+                defaultValue="choose"
                 name="batch"
                 onChange={(e) => {
                   UpdateBatches({
@@ -121,15 +120,15 @@ const ChooseBatch = ({
                 }}
                 className="rounded-lg bg-mainColor px-[8px] py-[5px]  text-base text-white  caret-current focus:outline-none"
               >
-                <option>Choose</option>
+                <option value="choose">Choose</option>
                 {selectedMonthData?.map((batch, index) => {
                   return (
-                    <>
-                      <option selected hidden disabled></option>
+                    <Fragment key={index}>
+                      <option hidden disabled></option>
                       <option key={index} value={batch?.startDate}>
                         Batch: {batch?.batch}
                       </option>
-                    </>
+                    </Fragment>
                   );
                 })}
               </select>

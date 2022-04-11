@@ -1,9 +1,11 @@
 import { getSession } from "next-auth/react";
 import User from "../../../backend/userModel";
 import axios from "axios";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
+    await connectToDatabase();
     const session = await getSession({ req });
     if (!session) {
       res.status(200).json({ status: "error", error: "You are not logged in" });

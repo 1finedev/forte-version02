@@ -1,17 +1,19 @@
 import User from "../../../backend/userModel";
 import Shipment from "../../../backend/shipmentModel";
 import { getSession } from "next-auth/react";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
-  const session = await getSession({ req });
-
-  if (!session || session?.user?.role !== "admin") {
-    return res.status(200).json({
-      status: "error",
-      error: "You are not logged in!",
-    });
-  }
   if (req.method === "POST") {
+    await connectToDatabase();
+    const session = await getSession({ req });
+
+    if (!session || session?.user?.role !== "admin") {
+      return res.status(200).json({
+        status: "error",
+        error: "You are not logged in!",
+      });
+    }
     const { name, destination, weight, carton, agentId } = req.body;
 
     if (!name || !destination || !weight || !carton || !agentId) {

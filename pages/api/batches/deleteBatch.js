@@ -1,8 +1,11 @@
 import Batch from "./../../../backend/batchesModel";
 import { getSession } from "next-auth/react";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
+    await connectToDatabase();
+
     const { year, monthId, batchId, batchLength } = req.body;
     if (!year || !batchId || !monthId || !batchLength) {
       return res.status(200).json({
