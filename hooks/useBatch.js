@@ -162,10 +162,43 @@ const useBatch = (batchData, router) => {
       selectedMonthIndex
     ]?.batches?.findIndex((b) => b.startDate === start);
     if (start) {
-      const batchEnd =
-        batches?.[selectedYearIndex]?.months?.[selectedMonthIndex]?.batches?.[
+      let batchEnd;
+
+      if (
+        // if current batch is last batch in month
+        !batches?.[selectedYearIndex]?.months?.[selectedMonthIndex]?.batches?.[
           index + 1
-        ]?.startDate || new Date(Date.now());
+        ]?.startDate
+      ) {
+        if (
+          // if another month exists after previous batch which was the last in its month
+          batches?.[selectedYearIndex]?.months?.[selectedMonthIndex + 1]
+            ?.batches?.[0]?.startDate
+        ) {
+          batchEnd =
+            batches?.[selectedYearIndex]?.months?.[selectedMonthIndex + 1]
+              ?.batches?.[0]?.startDate;
+        } else {
+          if (
+            // if another year exists after previous batch which was the last in its year
+            batches?.[selectedYearIndex + 1]?.months?.[0]?.batches?.[0]
+              .startDate
+          ) {
+            batchEnd =
+              batches?.[selectedYearIndex + 1]?.months?.[0]?.batches?.[0]
+                .startDate;
+          } else {
+            batchEnd = new Date(Date.now());
+          }
+        }
+      } else {
+        // if another batch exists in the same month as current batch
+        batchEnd =
+          batches?.[selectedYearIndex]?.months?.[selectedMonthIndex]?.batches?.[
+            index + 1
+          ]?.startDate;
+      }
+
       setCurrentBatch(
         batches?.[selectedYearIndex]?.months?.[selectedMonthIndex]?.batches?.[
           index
