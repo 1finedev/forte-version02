@@ -3,6 +3,8 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import User from "./../../../backend/userModel";
 import { connectToDatabase } from "./../../../backend/dbConnect";
 
+await connectToDatabase();
+
 export default NextAuth({
   session: {
     strategy: "jwt",
@@ -10,7 +12,6 @@ export default NextAuth({
   providers: [
     CredentialsProvider({
       async authorize(credentials, req) {
-        await connectToDatabase();
         //1. check credentials for body data
         const { mobile, password } = credentials;
         if (!mobile || !password) {
@@ -61,11 +62,9 @@ export default NextAuth({
   },
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-      await connectToDatabase;
       return true;
     },
     async session({ session, token }) {
-      await connectToDatabase();
       session.user = token.user;
 
       const user = await User.findById(token.user._id);
@@ -73,7 +72,6 @@ export default NextAuth({
       return session;
     },
     async jwt({ token, user }) {
-      await connectToDatabase();
       user && (token.user = user);
       return token;
     },
