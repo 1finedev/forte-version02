@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+await connectToDatabase();
 
 const fundsSchema = new mongoose.Schema(
   {

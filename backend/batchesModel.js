@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 import { connectToDatabase } from "./dbConnect";
-connectToDatabase();
+await connectToDatabase();
 
 const batchSchema = new mongoose.Schema({
   batch: {

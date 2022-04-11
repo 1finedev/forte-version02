@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const randomString = require("randomstring");
 import { connectToDatabase } from "./dbConnect";
 
-connectToDatabase();
+await connectToDatabase();
 
 const shipmentSchema = new mongoose.Schema({
   name: {

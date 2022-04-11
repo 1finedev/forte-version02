@@ -202,7 +202,7 @@ const Index = ({ stats }) => {
             </div>
             <div className="z-[1000] mt-[30px] flex space-x-6">
               <p className="cursor-pointer rounded-lg bg-mainColor py-[12px] px-[20px] hover:bg-white hover:text-mainColor hover:shadow hover:shadow-mainColor">
-                See our rates{" "}
+                See our rates
               </p>
               <p className="cursor-pointer rounded-lg bg-mainColor py-[12px] px-[20px] hover:bg-white hover:text-mainColor hover:shadow hover:shadow-mainColor">
                 Track a shipment
