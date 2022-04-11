@@ -61,9 +61,11 @@ export default NextAuth({
   },
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
+      await connectToDatabase;
       return true;
     },
     async session({ session, token }) {
+      await connectToDatabase();
       session.user = token.user;
 
       const user = await User.findById(token.user._id);
@@ -71,6 +73,7 @@ export default NextAuth({
       return session;
     },
     async jwt({ token, user }) {
+      await connectToDatabase();
       user && (token.user = user);
       return token;
     },
