@@ -2,17 +2,9 @@ import Batch from "../../../backend/batchesModel";
 import format from "date-fns/format";
 import getMonth from "date-fns/getMonth";
 import getYear from "date-fns/getYear";
-import { getSession } from "next-auth/react";
 
 const handler = async (req, res) => {
   if (req.method === "GET") {
-    const session = await getSession({ req });
-    if (!session || session.user.role !== "sec") {
-      return res.status(200).json({
-        status: "error",
-        msg: "You must be logged in with correct privileges to create a batch.",
-      });
-    }
     const yearBatch = await Batch.findOne()
       .sort({ field: "asc", _id: -1 })
       .limit(1);

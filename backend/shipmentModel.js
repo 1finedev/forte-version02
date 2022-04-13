@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const randomString = require("randomstring");
+import User from "./../backend/userModel";
 import { connectToDatabase } from "./dbConnect";
 
 connectToDatabase();
@@ -142,6 +143,7 @@ shipmentSchema.pre(/^find/, function (next) {
   this.populate({
     path: "user",
     select: "agentId",
+    model: User,
   });
   next();
 });
