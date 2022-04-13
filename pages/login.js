@@ -50,7 +50,7 @@ const Login = () => {
 
       const res = await signIn("credentials", {
         redirect: false,
-        mobile: mobile.replace(/\s/g, "").trim(),
+        mobile: mobile.replace(/\s/g, "").trim() * 1,
         password: password.trim(),
       });
       setLoading(false);

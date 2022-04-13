@@ -23,19 +23,19 @@ Pay ₦${transformPrice(
       req.body.amountDue
     )} naira only into the bank details below.
 
-Account Name: Access Bank
-Account Number: 1495381315
-Bank Name: FORTE BRIDGE LOGISTICS NIG LTD.
+NOTE: KINDLY PAY THE FULL AMOUNT INCLUDING THE KOBO (₦${transformPrice(
+      req.body.amountDue
+    )}) naira only into the bank details below.
 
-*No cash payment is accepted.*
+Account Name: Fortebridge Global Logistics
+Account Number: 0427481733
+Bank Name: Guaranty Trust Bank (GTB)
+Send proof of payment to this number or (+2348156672664)
 
-You can pickup at 14 Ola Adeshile Str. Off Gogo Hassan Ajao Estate Lagos.
+You can pick up at "32, Stella Sholanke Street, Opposite Surepath School, off M/M Int'l airport road, Ajao Estate, Ikeja, Lagos (Enter fatai irawo street and go straight down to the T-junction)"
 
-reply this message with proof of payment with account name for confirmation or to *Ifeanyi on WhatsApp* - 08105991312 
-
-Mon-Fri: 10:00am-5:00pm Sat:10:00am-3:00pm. 
-
-*Demurrage apply (400/DAY) 5 days after pick up message is received*.
+PICKUP YOUR ITEMS QUICKLY TO AVOID ATTRACTING DEMURRAGE CHARGES.
+For additional enquiries, please contact us on +2348094404441
 `;
 
     const values = {

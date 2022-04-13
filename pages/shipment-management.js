@@ -93,16 +93,16 @@ const Shipments = ({ batchData }) => {
 
   const [batchStats, setBatchStats] = useState({});
 
-  // useEffect(() => {
-  //   console.log(AllShips.length);
+  useEffect(() => {
+    console.log(AllShips.length);
 
-  //   AllShips.forEach((ship, index) => {
-  //     setTimeout(async () => {
-  //       // const res = await axios.post("/api/shipments/createShipment", ship);
-  //       // console.log(`shipment ${index} posted of ${AllShips.length}`);
-  //     }, 2000);
-  //   });
-  // }, []);
+    AllShips.forEach((ship, index) => {
+      setTimeout(async () => {
+        // const res = await axios.post("/api/shipments/createShipment", ship);
+        // console.log(`shipment ${index} posted of ${AllShips.length}`);
+      }, 2000);
+    });
+  }, []);
 
   // post a shipment
   const postOneShipment = async (e) => {
