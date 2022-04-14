@@ -107,7 +107,7 @@ const Login = () => {
               {loading ? (
                 <div className="mt-[30px] flex w-full cursor-pointer justify-center rounded-lg bg-gray-500 p-[10px] text-white">
                   <svg
-                    className="w-6 h-6"
+                    className="h-6 w-6"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -140,7 +140,7 @@ const Login = () => {
               Don&apos;t have an account?{" "}
               <span
                 onClick={() => router.push("/signup")}
-                className="text-red-500 cursor-pointer"
+                className="cursor-pointer text-red-500"
               >
                 Sign up!
               </span>

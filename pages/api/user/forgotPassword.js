@@ -5,7 +5,15 @@ const handler = async (req, res) => {
   if (req.method === "POST") {
     const { mobile } = req.body;
 
+    if (!mobile) {
+      return res.status(200).json({
+        status: "error",
+        error: "Mobile number is required!",
+      });
+    }
+
     const user = await User.findOne({ mobile });
+
     if (!user) {
       return res.status(200).json({
         status: "error",
@@ -23,7 +31,10 @@ const handler = async (req, res) => {
     const resetURL = `https://fortebridgelogistics.com/forgot-password/${resetToken}`;
 
     const title = `Forgot your FORTE-BRIDGE Account password?
-Open this link in a browser to reset your password`;
+Open this link in a browser to reset your password
+
+${resetURL}
+`;
 
     try {
       const values = {
