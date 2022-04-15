@@ -13,7 +13,7 @@ const useSearch = (
   const alert = useAlert();
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
-  const debouncedQuery = useDebounce(query, 1000);
+  const debouncedQuery = useDebounce(query, 300);
 
   const [searchType, setSearchType] = useState("shipment");
   const [path, setPath] = useState("name");

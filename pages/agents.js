@@ -12,7 +12,7 @@ const Agents = () => {
   const alert = useAlert();
   const [active, setActive] = useState(1);
   const [agents, setAgents] = useState([]);
-  const [transactions, setTransactions] = useState([]);
+  const [transactions, setTransactions] = useState();
   const [loading, setLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [selectedTransaction, setSelectedTransaction] = useState({
@@ -25,7 +25,7 @@ const Agents = () => {
     path: "name",
     searchType: "agents",
   });
-  const debouncedQuery = useDebounce(search.query, 200);
+  const debouncedQuery = useDebounce(search.query, 300);
 
   const handleSearch = async () => {
     setLoading(true);
@@ -34,7 +34,6 @@ const Agents = () => {
       setAgents(data.data);
     } else {
       const { data } = await axios.post("/api/search", search);
-      console.log(data);
       setTransactions(data.data);
     }
     setLoading(false);
@@ -245,7 +244,7 @@ const Agents = () => {
           onClick={() => setActive(1)}
         >
           <button className="text-lg font-bold uppercase font-heading">
-            E-Unique Agents - ({agents?.length})
+            Forte Bridge Agents - ({agents?.length})
           </button>
           {active === 1 && (
             <span className="absolute bottom-[-15px] left-0  h-[1px] w-[100%] rounded-full bg-mainColor"></span>
@@ -271,7 +270,13 @@ const Agents = () => {
       >
         <div className="relative my-[20px] min-w-[35vw] text-center text-mainColor">
           <input
-            onInput={(e) => setSearch({ ...search, query: e.target.value })}
+            onInput={(e) =>
+              setSearch({
+                ...search,
+                query: e.target.value,
+                searchType: active === 1 ? "agents" : "transactions",
+              })
+            }
             value={search.query}
             type="text"
             className="w-full  rounded-full border bg-white p-[10px] text-center placeholder-gray-900 shadow-sm shadow-mainColor outline-0 ring-0 focus:outline-none"
@@ -436,131 +441,146 @@ const Agents = () => {
               </th>
             </tr>
           </thead>
-          {transactions?.map((transaction, index) => {
-            const transformPrice = (price) => {
-              return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            };
-            return (
-              <tbody key={index} className="bg-white divide-y divide-gray-200 ">
-                <tr className="relative">
-                  <td
-                    scope="col"
-                    className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
-                  >
-                    {index + 1}
-                  </td>
-                  <td className="max-w-[115px] whitespace-nowrap py-4 pl-2">
-                    <div className="text-sm font-medium text-gray-900">
-                      {transaction.user.fullname.toUpperCase().split(" ")[0]}{" "}
-                      {transaction.user.fullname.toUpperCase().split(" ")[1]}
-                    </div>
-                  </td>
-                  <td className="max-w-[100px]  py-4 ">
-                    {transaction.user.agentId.toUpperCase()}
-                  </td>
-                  <td className="py-4 whitespace-nowrap">
-                    ₦{transformPrice(transaction.amount)}
-                  </td>
-                  <td className="max-w-[80px] py-4">
-                    {format(new Date(transaction.createdAt), "dd-MM-yyyy")}
-                  </td>
-                  <td className="py-4 whitespace-nowrap">
-                    {transaction.bankName}
-                  </td>
-                  <td className="py-4 whitespace-nowrap">
-                    {transaction.accountNumber}
-                  </td>
-                  <td className="py-4 whitespace-nowrap">
-                    {transaction.comment}
-                  </td>
-                  <td
-                    className={`whitespace-nowrap py-4 ${
-                      transaction.status === "Approved"
-                        ? "text-green-600"
-                        : transaction.status === "Rejected"
-                        ? "text-red-500"
-                        : "text-yellow-500"
-                    }`}
-                  >
-                    {transaction.status}
-                  </td>
-                  {transaction.status !== "Rejected" && (
+          {transactions &&
+            transactions?.map((transaction, index) => {
+              const transformPrice = (price) => {
+                return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+              };
+              return (
+                <tbody
+                  key={index}
+                  className="bg-white divide-y divide-gray-200 "
+                >
+                  <tr className="relative">
                     <td
-                      className="py-4 whitespace-nowrap"
-                      onClick={() =>
-                        setSelectedTransaction({
-                          id: transaction._id,
-                          index,
-                        })
-                      }
+                      scope="col"
+                      className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
-                      <svg
-                        className="w-6 h-6 cursor-pointer text-mainColor"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
+                      {index + 1}
                     </td>
-                  )}
-                  <td>
-                    {selectedTransaction.id === transaction._id && (
-                      <div className="absolute top-[20px] right-[80px] z-[10] flex flex-col space-y-2 rounded-md bg-mainColor p-[15px] text-center text-white">
-                        <div>
-                          <p className="underline underline-offset-1">
-                            Change Status
-                          </p>
-                          <select
-                            name="Change Status"
-                            onChange={(e) => {
-                              setStatus({ ...status, value: e.target.value });
-                            }}
-                            className="mt-[10px] w-full rounded-md bg-white px-2 py-[8px] text-base text-mainColor focus:outline-none"
-                          >
-                            <option value="">Choose</option>
-                            <option value="Approved">Approve</option>
-                            <option value="Rejected">Reject</option>
-                          </select>
-                          <br />
-                          <textarea
-                            className="mt-4 h-[80px]  rounded-md border border-mainColor px-[5px] py-[8px] text-sm text-mainColor focus:outline-0"
-                            type="number"
-                            placeholder="Add a comment"
-                            onInput={(e) =>
-                              setStatus({ ...status, comment: e.target.value })
-                            }
-                            defaultValue={transaction.adminComment}
-                          ></textarea>
-                        </div>
-                        <button
-                          onClick={updateTransaction}
-                          disabled={!!status.value.length < 1}
-                          className="mx-auto rounded-md bg-white  py-[5px] px-[20px] text-mainColor disabled:bg-gray-400"
-                        >
-                          Submit
-                        </button>
-                        <p
-                          className="text-xs text-right cursor-pointer hover:text-gray-300 hover:underline"
-                          onClick={() =>
-                            setSelectedTransaction({ id: "", index: "" })
-                          }
-                        >
-                          Close
-                        </p>
+                    <td className="max-w-[115px] whitespace-nowrap py-4 pl-2">
+                      <div className="text-sm font-medium text-gray-900">
+                        {
+                          transaction?.user?.fullname
+                            ?.toUpperCase()
+                            ?.split(" ")?.[0]
+                        }{" "}
+                        {
+                          transaction?.user?.fullname
+                            ?.toUpperCase()
+                            ?.split(" ")?.[1]
+                        }
                       </div>
+                    </td>
+                    <td className="max-w-[100px]  py-4 ">
+                      {transaction?.user?.agentId?.toUpperCase()}
+                    </td>
+                    <td className="py-4 whitespace-nowrap">
+                      ₦{transformPrice(transaction.amount)}
+                    </td>
+                    <td className="max-w-[80px] py-4">
+                      {format(new Date(transaction.createdAt), "dd-MM-yyyy")}
+                    </td>
+                    <td className="py-4 whitespace-nowrap">
+                      {transaction.bankName}
+                    </td>
+                    <td className="py-4 whitespace-nowrap">
+                      {transaction.accountNumber}
+                    </td>
+                    <td className="whitespace max-w-[200px] py-4">
+                      {transaction.comment}
+                    </td>
+                    <td
+                      className={`whitespace-nowrap py-4 ${
+                        transaction.status === "Approved"
+                          ? "text-green-600"
+                          : transaction.status === "Rejected"
+                          ? "text-red-500"
+                          : "text-yellow-500"
+                      }`}
+                    >
+                      {transaction.status}
+                    </td>
+                    {transaction.status !== "Rejected" && (
+                      <td
+                        className="py-4 whitespace-nowrap"
+                        onClick={() =>
+                          setSelectedTransaction({
+                            id: transaction._id,
+                            index,
+                          })
+                        }
+                      >
+                        <svg
+                          className="w-6 h-6 cursor-pointer text-mainColor"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </td>
                     )}
-                  </td>
-                </tr>
-              </tbody>
-            );
-          })}
+                    <td>
+                      {selectedTransaction.id === transaction._id && (
+                        <div className="absolute top-[20px] right-[80px] z-[10] flex flex-col space-y-2 rounded-md bg-mainColor p-[15px] text-center text-white">
+                          <div>
+                            <p className="underline underline-offset-1">
+                              Change Status
+                            </p>
+                            <select
+                              name="Change Status"
+                              onChange={(e) => {
+                                setStatus({ ...status, value: e.target.value });
+                              }}
+                              className="mt-[10px] w-full rounded-md bg-white px-2 py-[8px] text-base text-mainColor focus:outline-none"
+                            >
+                              <option value="">Choose</option>
+                              <option value="Approved">Approve</option>
+                              <option value="Rejected">Reject</option>
+                            </select>
+                            <br />
+                            <textarea
+                              className="mt-4 h-[80px]  rounded-md border border-mainColor px-[5px] py-[8px] text-sm text-mainColor focus:outline-0"
+                              type="number"
+                              placeholder="Add a comment"
+                              onInput={(e) =>
+                                setStatus({
+                                  ...status,
+                                  comment: e.target.value,
+                                })
+                              }
+                              defaultValue={transaction.adminComment}
+                            ></textarea>
+                          </div>
+                          <button
+                            onClick={updateTransaction}
+                            disabled={!!status.value.length < 1}
+                            className="mx-auto rounded-md bg-white  py-[5px] px-[20px] text-mainColor disabled:bg-gray-400"
+                          >
+                            Submit
+                          </button>
+                          <p
+                            className="text-xs text-right cursor-pointer hover:text-gray-300 hover:underline"
+                            onClick={() =>
+                              setSelectedTransaction({ id: "", index: "" })
+                            }
+                          >
+                            Close
+                          </p>
+                        </div>
+                      )}
+                    </td>
+                  </tr>
+                </tbody>
+              );
+            })}
         </table>
       )}
     </div>

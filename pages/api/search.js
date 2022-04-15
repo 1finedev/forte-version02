@@ -5,7 +5,7 @@ import Funds from "./../../backend/fundsModel";
 
 const handler = async (req, res) => {
   const { query, path, searchType, batchStart, batchEnd } = req.body;
-  if (!query || !path || !searchType || !batchStart || !batchEnd) {
+  if (!query || !path || !searchType) {
     return res
       .status(200)
       .json({ status: "error", error: "Missing parameters" });
@@ -15,6 +15,7 @@ const handler = async (req, res) => {
   if (!session) {
     return res.status(200).json({ status: "error", error: "Not logged in" });
   }
+
   switch (searchType) {
     case "shipment":
       {
@@ -101,7 +102,11 @@ const handler = async (req, res) => {
       {
         let option;
         if (path === "name") {
-          option = { fullname: new RegExp(query, "i") };
+          const agent = await User.findOne({
+            fullname: new RegExp(query, "i"),
+          });
+
+          option = { user: agent._id };
         } else if (path === "approved") {
           option = { status: "Approved" };
         } else if (path === "pending") {
@@ -135,6 +140,7 @@ const handler = async (req, res) => {
               ? { balance: -1 }
               : { createdAt: -1 }
           );
+
         return res.status(200).json({ status: "success", data: result });
       }
       break;
