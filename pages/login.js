@@ -3,8 +3,6 @@ import { useState } from "react";
 import { useAlert } from "react-alert";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
-import dynamic from "next/dynamic";
-const Particle = dynamic(() => import("../components/Particle"));
 import { Layout } from "../components";
 
 const Login = () => {
@@ -75,7 +73,7 @@ const Login = () => {
   return (
     <Layout>
       <div
-        className={`relative flex min-h-[100vh] w-full flex-col items-center justify-center font-brand text-black`}
+        className={`relative flex min-h-[100vh] w-full  flex-col items-center justify-center bg-mainColor font-brand text-black`}
       >
         <div className="relative mt-[-10vh] flex h-[90vh]  w-full flex-col items-center justify-center">
           <div className="absolute rounded-2xl bg-white p-[40px] shadow-2xl xl:px-[55px]">
@@ -107,7 +105,7 @@ const Login = () => {
               {loading ? (
                 <div className="mt-[30px] flex w-full cursor-pointer justify-center rounded-lg bg-gray-500 p-[10px] text-white">
                   <svg
-                    className="h-6 w-6"
+                    className="w-6 h-6"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -140,14 +138,13 @@ const Login = () => {
               Don&apos;t have an account?{" "}
               <span
                 onClick={() => router.push("/signup")}
-                className="cursor-pointer text-red-500"
+                className="text-red-500 cursor-pointer"
               >
                 Sign up!
               </span>
             </p>
           </div>
         </div>
-        <Particle />
       </div>
     </Layout>
   );

@@ -3,8 +3,6 @@ import { useState } from "react";
 import { useAlert } from "react-alert";
 import { useRouter } from "next/router";
 import axios from "axios";
-import dynamic from "next/dynamic";
-const Particle = dynamic(() => import("../components/Particle"));
 
 const Signup = () => {
   // alert hook
@@ -121,7 +119,7 @@ const Signup = () => {
 
   return (
     <Layout>
-      <div className="relative flex min-h-[100vh] w-full items-center justify-center font-brand text-black">
+      <div className="relative flex min-h-[100vh] w-full items-center justify-center bg-mainColor font-brand text-black">
         <div className="relative mt-[-8vh] flex  flex-col items-center justify-center">
           <div className="absolute w-[80vw] rounded-2xl border border-mainColor  bg-white  p-[20px] shadow-2xl md:w-[30vw] ">
             <h6 className="mt-[10px] text-center font-brand text-xl uppercase text-black">
@@ -224,7 +222,6 @@ const Signup = () => {
             </p>
           </div>
         </div>
-        <Particle />
       </div>
     </Layout>
   );
