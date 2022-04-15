@@ -4,8 +4,8 @@ import Shipment from "./../../backend/shipmentModel";
 import Funds from "./../../backend/fundsModel";
 
 const handler = async (req, res) => {
-  const { query, path, searchType } = req.body;
-  if (!query || !path || !searchType) {
+  const { query, path, searchType, batchStart, batchEnd } = req.body;
+  if (!query || !path || !searchType || !batchStart || !batchEnd) {
     return res
       .status(200)
       .json({ status: "error", error: "Missing parameters" });
@@ -20,13 +20,25 @@ const handler = async (req, res) => {
       {
         let option;
         if (path === "name") {
-          option = { name: new RegExp(query, "i") };
+          option = {
+            name: new RegExp(query, "i"),
+            createdAt: { $gte: batchStart, $lte: batchEnd },
+          };
         } else if (path === "carton") {
-          option = { carton: query };
+          option = {
+            carton: query,
+            createdAt: { $gte: batchStart, $lte: batchEnd },
+          };
         } else if (path === "location") {
-          option = { destination: new RegExp(query, "i") };
+          option = {
+            destination: new RegExp(query, "i"),
+            createdAt: { $gte: batchStart, $lte: batchEnd },
+          };
         } else if (path === "weight") {
-          option = { weight: query };
+          option = {
+            weight: query,
+            createdAt: { $gte: batchStart, $lte: batchEnd },
+          };
         } else if (path === "agentId" && query.length > 2) {
           const agent = await User.findOne({ agentId: query });
           if (!agent) {
@@ -34,12 +46,19 @@ const handler = async (req, res) => {
               .status(200)
               .json({ status: "error", error: "Agent not found" });
           }
-          option = { user: agent?._id };
+          option = {
+            user: agent?._id,
+            createdAt: { $gte: batchStart, $lte: batchEnd },
+          };
         } else return res.status(200).json({ status: "success", data: [] });
 
         const result = await Shipment.find(
           session?.user?.role === "agent"
-            ? { name: new RegExp(query, "i"), user: session?.user?._id }
+            ? {
+                name: new RegExp(query, "i"),
+                user: session?.user?._id,
+                createdAt: { $gte: batchStart, $lte: batchEnd },
+              }
             : option
         ).limit(100);
         return res.status(200).json({ status: "success", data: result });

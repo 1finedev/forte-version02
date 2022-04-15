@@ -1,6 +1,6 @@
-import { getSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { AgentsList } from "./../components";
+import { useDebounce } from "use-lodash-debounce";
 import Layout from "./backLayout";
 import { format } from "date-fns";
 import axios from "axios";
@@ -25,6 +25,7 @@ const Agents = () => {
     path: "name",
     searchType: "agents",
   });
+  const debouncedQuery = useDebounce(search.query, 200);
 
   const handleSearch = async () => {
     setLoading(true);
@@ -52,7 +53,7 @@ const Agents = () => {
       getAgents();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search.query]);
+  }, [debouncedQuery]);
 
   const getTransactions = async () => {
     setLoading(true);
@@ -61,7 +62,7 @@ const Agents = () => {
     setLoading(false);
   };
   useEffect(() => {
-    getTransactions();
+    active === 2 && getTransactions();
   }, [active]);
 
   const handleClick = async (option) => {
@@ -240,32 +241,23 @@ const Agents = () => {
     <div>
       <div className="relative mt-[10px] flex border-b pb-[15px]">
         <div
-          className="relative w-1/2 cursor-pointer text-center"
+          className="relative w-1/2 text-center cursor-pointer"
           onClick={() => setActive(1)}
         >
-          <button className="font-heading text-lg font-bold uppercase">
-            FORTE-BRIDGE Agents - ({agents?.length})
+          <button className="text-lg font-bold uppercase font-heading">
+            E-Unique Agents - ({agents?.length})
           </button>
           {active === 1 && (
             <span className="absolute bottom-[-15px] left-0  h-[1px] w-[100%] rounded-full bg-mainColor"></span>
           )}
         </div>
         <div
-          className="relative w-1/2 cursor-pointer text-center"
+          className="relative w-1/2 text-center cursor-pointer"
           onClick={() => setActive(2)}
         >
-          <button className="w-1/2 font-heading text-lg font-bold uppercase">
-            <span>Transactions</span>
-            <span className="ml-[10px] rounded-full bg-yellow-500 p-[4px] px-[10px]">
-              Pending:{" "}
-              {
-                transactions?.filter(
-                  (transaction) => transaction.status === "Pending"
-                ).length
-              }
-            </span>
+          <button className="w-1/2 text-lg font-bold uppercase font-heading">
+            Transactions
           </button>
-
           {active === 2 && (
             <span className="absolute bottom-[-15px] left-0  h-[1px] w-[100%] rounded-full bg-mainColor"></span>
           )}
@@ -364,7 +356,7 @@ const Agents = () => {
         </div>
       </div>
       {loading && (
-        <p className="mb-2 text-center text-lg text-mainColor">
+        <p className="mb-2 text-lg text-center text-mainColor">
           Fetching results, please wait...
         </p>
       )}
@@ -382,13 +374,13 @@ const Agents = () => {
             <tr>
               <th
                 scope="col"
-                className="py-3 pl-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
               >
                 S/N
               </th>
               <th
                 scope="col"
-                className="py-3 pl-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
               >
                 Agent Name
               </th>
@@ -400,45 +392,45 @@ const Agents = () => {
               </th>
               <th
                 scope="col"
-                className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
               >
                 Amount
               </th>
               <th
                 scope="col"
-                className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 "
+                className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase "
               >
                 Date
               </th>
 
               <th
                 scope="col"
-                className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
               >
                 Bank Name
               </th>
 
               <th
                 scope="col"
-                className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
               >
                 Account Number
               </th>
               <th
                 scope="col"
-                className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
               >
                 Comments
               </th>
               <th
                 scope="col"
-                className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
               >
                 Status
               </th>
               <th
                 scope="col"
-                className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
               >
                 Action
               </th>
@@ -448,46 +440,39 @@ const Agents = () => {
             const transformPrice = (price) => {
               return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             };
-
             return (
-              <tbody key={index} className="divide-y divide-gray-200 bg-white ">
+              <tbody key={index} className="bg-white divide-y divide-gray-200 ">
                 <tr className="relative">
                   <td
                     scope="col"
-                    className="py-3 pl-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                    className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                   >
                     {index + 1}
                   </td>
-                  <td className="max-w-[150px] whitespace-nowrap py-4 pl-2">
+                  <td className="max-w-[115px] whitespace-nowrap py-4 pl-2">
                     <div className="text-sm font-medium text-gray-900">
-                      {
-                        transaction?.user?.fullname
-                          ?.toUpperCase()
-                          ?.split(" ")?.[0]
-                      }{" "}
-                      {
-                        transaction?.user?.fullname
-                          ?.toUpperCase()
-                          ?.split(" ")?.[1]
-                      }
+                      {transaction.user.fullname.toUpperCase().split(" ")[0]}{" "}
+                      {transaction.user.fullname.toUpperCase().split(" ")[1]}
                     </div>
                   </td>
                   <td className="max-w-[100px]  py-4 ">
-                    {transaction?.user?.agentId?.toUpperCase()}
+                    {transaction.user.agentId.toUpperCase()}
                   </td>
-                  <td className="whitespace-nowrap py-4">
-                    ₦{transformPrice(transaction?.amount)}
+                  <td className="py-4 whitespace-nowrap">
+                    ₦{transformPrice(transaction.amount)}
                   </td>
                   <td className="max-w-[80px] py-4">
-                    {format(new Date(transaction?.createdAt), "dd-MM-yyyy")}
+                    {format(new Date(transaction.createdAt), "dd-MM-yyyy")}
                   </td>
-                  <td className="whitespace-nowrap py-4">
-                    {transaction?.bankName}
+                  <td className="py-4 whitespace-nowrap">
+                    {transaction.bankName}
                   </td>
-                  <td className="whitespace-nowrap py-4">
-                    {transaction?.accountNumber}
+                  <td className="py-4 whitespace-nowrap">
+                    {transaction.accountNumber}
                   </td>
-                  <td className="max-w-[120px] py-4">{transaction?.comment}</td>
+                  <td className="py-4 whitespace-nowrap">
+                    {transaction.comment}
+                  </td>
                   <td
                     className={`whitespace-nowrap py-4 ${
                       transaction.status === "Approved"
@@ -501,7 +486,7 @@ const Agents = () => {
                   </td>
                   {transaction.status !== "Rejected" && (
                     <td
-                      className="whitespace-nowrap py-4"
+                      className="py-4 whitespace-nowrap"
                       onClick={() =>
                         setSelectedTransaction({
                           id: transaction._id,
@@ -510,7 +495,7 @@ const Agents = () => {
                       }
                     >
                       <svg
-                        className="h-6 w-6 cursor-pointer text-mainColor"
+                        className="w-6 h-6 cursor-pointer text-mainColor"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -562,7 +547,7 @@ const Agents = () => {
                           Submit
                         </button>
                         <p
-                          className="cursor-pointer text-right text-xs hover:text-gray-300 hover:underline"
+                          className="text-xs text-right cursor-pointer hover:text-gray-300 hover:underline"
                           onClick={() =>
                             setSelectedTransaction({ id: "", index: "" })
                           }
@@ -586,19 +571,3 @@ export default Agents;
 Agents.getLayout = function getLayout(page) {
   return <Layout page="create-shipment">{page}</Layout>;
 };
-
-export async function getServerSideProps({ req, res }) {
-  const session = await getSession({ req });
-
-  if (session?.user?.role !== "admin") {
-    return {
-      redirect: {
-        permanent: false,
-        destination: "/profile",
-      },
-    };
-  }
-  return {
-    props: {},
-  };
-}

@@ -1,11 +1,20 @@
 import { useState, useEffect } from "react";
+import { useDebounce } from "use-lodash-debounce";
 import { useAlert } from "react-alert";
 import axios from "axios";
 
-const useSearch = (setShipment, fetchShipment, router) => {
+const useSearch = (
+  setShipment,
+  fetchShipment,
+  router,
+  batchStart,
+  batchEnd
+) => {
   const alert = useAlert();
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
+  const debouncedQuery = useDebounce(query, 1000);
+
   const [searchType, setSearchType] = useState("shipment");
   const [path, setPath] = useState("name");
 
@@ -15,6 +24,8 @@ const useSearch = (setShipment, fetchShipment, router) => {
       query,
       path,
       searchType,
+      batchStart,
+      batchEnd,
     });
     if (res.data.status === "success") {
       setShipment(res.data.data);
@@ -43,7 +54,7 @@ const useSearch = (setShipment, fetchShipment, router) => {
       handleSearch();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+  }, [debouncedQuery]);
 
   return {
     isLoading,

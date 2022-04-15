@@ -11,7 +11,6 @@ import useSearch from "./../hooks/useSearch";
 import { format } from "date-fns";
 import { useRouter } from "next/router";
 import { measureText } from "update-input-width";
-import AllShips from "./../ships.json";
 
 const Shipments = ({ batchData }) => {
   const { data: session } = useSession();
@@ -38,7 +37,9 @@ const Shipments = ({ batchData }) => {
   const { isLoading, query, setQuery, setSearchType, setPath } = useSearch(
     setShipment,
     fetchShipment,
-    router
+    router,
+    currentBatch.startDate,
+    batchEnd
   );
 
   const [editValues, setEditValues] = useState({
@@ -92,17 +93,6 @@ const Shipments = ({ batchData }) => {
   });
 
   const [batchStats, setBatchStats] = useState({});
-
-  useEffect(() => {
-    console.log(AllShips.length);
-
-    AllShips.forEach((ship, index) => {
-      setTimeout(async () => {
-        // const res = await axios.post("/api/shipments/createShipment", ship);
-        // console.log(`shipment ${index} posted of ${AllShips.length}`);
-      }, 2000);
-    });
-  }, []);
 
   // post a shipment
   const postOneShipment = async (e) => {
@@ -182,7 +172,6 @@ const Shipments = ({ batchData }) => {
     if (res.data.status === "success") {
       setLoadingFees({ ...loading, calculate: false });
       fetchShipment();
-
       downloadManifest();
       await axios.post("/api/shipments/agentRebate", {
         batchStart: currentBatch.startDate,

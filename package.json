@@ -38,7 +38,8 @@
     "react-tsparticles": "^1.42.1",
     "swr": "^1.1.2",
     "typewriter-effect": "^2.18.2",
-    "update-input-width": "^1.2.2"
+    "update-input-width": "^1.2.2",
+    "use-lodash-debounce": "^1.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",

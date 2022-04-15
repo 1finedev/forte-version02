@@ -33,44 +33,29 @@ const handler = async (req, res) => {
       });
     }
 
-    Promise.all(
-      data.forEach(async (shipment) => {
-        // // update balance
+    data.forEach(async (shipment) => {
+      // update balance
+      let rebate;
+      const dollarSide = process.env.DOLLAR_AGENT * 1;
+      const nairaSide = process.env.NAIRA_AGENT * 1;
+      const dollarAgent = shipment.weight * dollarSide;
+      const nairaAgent = shipment.weight * nairaSide;
+      const convertDollar = dollarAgent * shipment.dollarRate;
+      const total = nairaAgent + convertDollar;
+      rebate = (Math.round(total * 10) / 10).toFixed(0) * 1;
 
-        let rebate;
-        const dollarSide = process.env.DOLLAR_AGENT * 1;
-        const nairaSide = process.env.NAIRA_AGENT * 1;
-        const dollarAgent = weight * dollarSide;
-        const nairaAgent = weight * nairaSide;
-        const convertDollar = dollarAgent * shipment.dollarRate;
-        const total = nairaAgent + convertDollar;
-
-        if (shipment.extraWeight > 0) {
-          const freightInDollars = shipment.freightRate * extraWeight;
-          const freightCalc = freightInDollars * shipment.dollarRate;
-          const freightTotal =
-            (Math.round(freightCalc * 10) / 10).toFixed(1) * 1;
-          const customsTot = shipment.customsRate * weight;
-          const customsTotal =
-            (Math.round(customsTot * 10) / 10).toFixed(1) * 1;
-          const amountDue = Math.round(freightTotal + customsTotal);
-          const addedTotal = total + amountDue;
-          rebate = (Math.round(addedTotal * 10) / 10).toFixed(1) * 1;
-        } else {
-          rebate = (Math.round(total * 10) / 10).toFixed(1) * 1;
-        }
-        if (!shipment.calculated) {
-          await User.findByIdAndUpdate(shipment.user, {
-            $inc: {
-              totalKg: weight,
-              wallet: rebate,
-              balance: rebate,
-            },
-            calculated: true,
-          });
-        }
-      })
-    );
+      if (shipment.calculated === false) {
+        console.log(rebate);
+        await User.findByIdAndUpdate(shipment.user, {
+          $inc: {
+            totalKg: weight,
+            wallet: rebate,
+            balance: rebate,
+          },
+          calculated: true,
+        });
+      }
+    });
 
     return res.status(200).json({
       status: "success",
