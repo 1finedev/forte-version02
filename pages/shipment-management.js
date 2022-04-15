@@ -248,6 +248,7 @@ const Shipments = ({ batchData }) => {
                   "/api/shipments/sendSingleMessage",
                   {
                     ...shipment,
+                    currentBatch,
                   }
                 );
                 if (res.data.status === "success") {
@@ -296,6 +297,7 @@ const Shipments = ({ batchData }) => {
                   "/api/shipments/sendSingleMessage",
                   {
                     ...shipment,
+                    currentBatch,
                   }
                 );
                 if (res.data.status === "success") {

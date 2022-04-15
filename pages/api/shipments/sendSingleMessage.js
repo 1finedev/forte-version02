@@ -5,6 +5,8 @@ const handler = async (req, res) => {
     const transformPrice = (price) => {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
+    const formatter = new Intl.DateTimeFormat("en", { month: "long" });
+    const month = formatter.format(new Date(req.body.currentBatch.startDate));
 
     const body = `Dear ${req.body.name},
 
@@ -13,6 +15,9 @@ Your ${
     }KG shipment with FORTE-BRIDGE Cargo is ready for collection!
 
 Details:
+Manifest: ${req.body.currentBatch.startDate.split("-")[0]}, ${month}, Batch ${
+      req.body.currentBatch.batch
+    }
 Destination ${req.body.destination}
 Weight: ${req.body.weight + req.body.extraWeight}KG
 Freight: ₦${transformPrice(req.body.freightTotal)}
