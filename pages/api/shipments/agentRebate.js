@@ -48,7 +48,7 @@ const handler = async (req, res) => {
         console.log(rebate);
         await User.findByIdAndUpdate(shipment.user, {
           $inc: {
-            totalKg: weight,
+            totalKg: shipment.weight,
             wallet: rebate,
             balance: rebate,
           },
