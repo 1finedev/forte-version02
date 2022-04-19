@@ -120,12 +120,12 @@ const Login = () => {
                   </svg>
                 </div>
               ) : (
-                <h6
+                <button
                   onClick={onSubmit}
                   className="mt-[30px] w-full cursor-pointer  rounded-lg bg-mainColor p-[10px] text-center text-white"
                 >
                   Login
-                </h6>
+                </button>
               )}
             </form>
             <p
