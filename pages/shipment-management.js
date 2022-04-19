@@ -14,7 +14,7 @@ import { measureText } from "update-input-width";
 
 const Shipments = ({ batchData }) => {
   const { data: session } = useSession();
-  // check if shipment to display is from agent page
+  // load router to check if shipments to display is from agent page
   const router = useRouter();
   const alert = useAlert();
   const {

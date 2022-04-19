@@ -39,7 +39,6 @@ const handler = async (req, res) => {
           customsTotal,
           amountDue,
           freightInDollars,
-          locked: true,
           shipStatus: "WAREHOUSE",
         },
         {

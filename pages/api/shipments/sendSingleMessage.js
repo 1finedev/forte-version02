@@ -1,4 +1,5 @@
 import axios from "axios";
+import Shipment from "./../../../backend/shipmentModel";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
@@ -53,15 +54,26 @@ For additional enquiries, please contact us on +2348094404441
         "https://eu176.chat-api.com/instance225964/sendMessage?token=u10endg0wkm7iu17",
         values
       )
-      .then(() => {
-        if (req.body.mobile === null || req.body.mobile === "") {
+      .then(async () => {
+        if (!req.body.mobile) {
+          await Shipment.findByIdAndUpdate(req.body._id, {
+            messageSent: false,
+            locked: false,
+          });
           axios.post(
             "https://eu176.chat-api.com/instance225964/sendMessage?token=u10endg0wkm7iu17",
             {
-              body: `Message delivery failed! \nAgent: ${req.body.user.agentId} \nShipment: ${req.body.name} - ${req.body.weight}KG \nReason: phone number is empty`,
+              body: `Message delivery failed! \nAgent: ${req.body.user.agentId.toUpperCase()} \nShipment: ${
+                req.body.name
+              } - ${req.body.weight}KG \nReason: phone number is empty`,
               phone: "905526157375",
             }
           );
+        } else {
+          await Shipment.findByIdAndUpdate(req.body._id, {
+            messageSent: true,
+            locked: true,
+          });
         }
       })
       .catch((err) => {

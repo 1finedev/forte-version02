@@ -45,7 +45,6 @@ const handler = async (req, res) => {
       rebate = (Math.round(total * 10) / 10).toFixed(0) * 1;
 
       if (shipment.calculated === false) {
-        console.log(rebate);
         await User.findByIdAndUpdate(shipment.user, {
           $inc: {
             totalKg: shipment.weight,

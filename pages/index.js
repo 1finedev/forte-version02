@@ -26,6 +26,7 @@ const Index = ({ stats }) => {
     }, 8000);
 
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlide]);
 
   return (
@@ -140,6 +141,7 @@ const Index = ({ stats }) => {
               layout="fill"
               src={slides[currentSlide]}
               priority
+              alt="slideshow"
             />
             <div className="absolute h-[85vh] w-full bg-black/80"></div>
           </div>
@@ -380,7 +382,12 @@ const Index = ({ stats }) => {
         </div>
         <div className="w-[30%] pt-[30px]">
           <div className="relative h-[460px] w-full">
-            <Image src="/cargo2.jpg" objectFit="cover" layout="fill" />
+            <Image
+              src="/cargo2.jpg"
+              objectFit="cover"
+              layout="fill"
+              alt="side image"
+            />
             <div className="absolute top-[40%] left-[-30px] flex h-[160px] w-[150px] flex-col items-center rounded-lg bg-mainColor p-[10px]">
               <svg
                 className="h-[40px] w-[40px] text-white"
@@ -421,6 +428,7 @@ const Index = ({ stats }) => {
                   layout="fill"
                   src="/air.png"
                   priority
+                  alt="air freight"
                 />
               </div>
               <div className="bg-white p-[25px]">
@@ -501,6 +509,7 @@ const Index = ({ stats }) => {
                   layout="fill"
                   src="/sea.png"
                   priority
+                  alt="ocean freight"
                 />
               </div>
               <div className="bg-white p-[25px]">
@@ -581,6 +590,7 @@ const Index = ({ stats }) => {
                   layout="fill"
                   src="/road.png"
                   priority
+                  alt="Road freight"
                 />
               </div>
               <div className="bg-white p-[25px]">
