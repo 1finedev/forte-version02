@@ -121,7 +121,10 @@ const Login = () => {
                 </div>
               ) : (
                 <button
-                  onClick={onSubmit}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onSubmit();
+                  }}
                   className="mt-[30px] w-full cursor-pointer  rounded-lg bg-mainColor p-[10px] text-center text-white"
                 >
                   Login
