@@ -11,6 +11,7 @@ import useSearch from "./../hooks/useSearch";
 import { format } from "date-fns";
 import { useRouter } from "next/router";
 import { measureText } from "update-input-width";
+import mockData from "./../mockData.json";
 
 const Shipments = ({ batchData }) => {
   const { data: session } = useSession();
@@ -133,6 +134,21 @@ const Shipments = ({ batchData }) => {
       );
     }
   };
+
+  useEffect(() => {
+    // mockData.forEach((shipment, index) => {
+    //   setTimeout(async () => {
+    //     const res = await axios.post("/api/shipments/createShipment", {
+    //       name: shipment.name,
+    //       destination: shipment.destination,
+    //       weight: shipment.weight,
+    //       carton: shipment.carton,
+    //       agentId: shipment.agentId,
+    //     });
+    //     console.log(`shipment ${index} with name ${res.name} added`);
+    //   }, 3000);
+    // });
+  }, []);
 
   // download Manifest
   const downloadManifest = async () => {

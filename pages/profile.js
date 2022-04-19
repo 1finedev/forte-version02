@@ -108,7 +108,12 @@ This code will expire in 10 minutes.`;
         },
       };
     default:
-      return <p>Unable to render page.. Contact Developer!</p>;
+      return {
+        redirect: {
+          permanent: false,
+          destination: "/login",
+        },
+      };
   }
 
   return {

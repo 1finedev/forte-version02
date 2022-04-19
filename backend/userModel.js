@@ -76,9 +76,6 @@ userSchema.pre(/^find/, function () {
     active: {
       $ne: false,
     },
-    suspended: {
-      $ne: false,
-    },
   });
 });
 

@@ -208,7 +208,10 @@ const Layout = ({ children }) => {
               </div>
               <div className="flex hover:text-mainColor hover:underline">
                 <h5
-                  onClick={() => signOut().then(() => router.push("/login"))}
+                  onClick={async () => {
+                    await signOut();
+                    router.push("/login");
+                  }}
                   className="pr-[5px]"
                 >
                   Logout

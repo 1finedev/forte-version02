@@ -63,7 +63,6 @@ export default NextAuth({
     },
     async session({ session, token }) {
       session.user = token.user;
-
       const user = await User.findById(token.user._id);
       session.user = user;
       return session;
