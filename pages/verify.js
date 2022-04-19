@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
-const Particle = dynamic(() => import("../components/Particle"));
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useAlert } from "react-alert";
@@ -72,14 +70,14 @@ const Verify = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen w-full pt-[80px]">
+    <div className="relative min-h-screen w-full bg-mainColor pt-[80px]">
       <p className="p-[20px] text-center text-lg text-white">
         Please enter the code sent to your Whatsapp to verify your account
       </p>
       <div className="mt-[30px] flex flex-col items-center">
         <input
           className={`mb-2 w-[160px] rounded-lg border bg-gray-700 px-[15px] py-[10px] text-2xl text-white shadow-md  focus:outline-0`}
-          type="number"
+          type="tel"
           placeholder=""
           pattern="[0-9]*"
           inputMode="numeric"
@@ -111,7 +109,6 @@ const Verify = () => {
           {loading ? "Please wait..." : "Submit"}
         </button>
       </div>
-      <Particle />
     </div>
   );
 };
