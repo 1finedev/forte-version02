@@ -185,7 +185,7 @@ const Index = ({ stats }) => {
         </div>
       </div>
       {/* slideshow */}
-      <div className="mt-[11vh]">
+      <div className="mt-[10vh]">
         {" "}
         <div className="relative">
           <div className="relative z-[-1] h-[85vh] w-full" data-aos="fade">
