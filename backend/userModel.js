@@ -72,11 +72,11 @@ userSchema.pre("save", function () {
 // run before a find action is performed
 userSchema.pre(/^find/, function () {
   // this points to the current query
-  this.find({
-    active: {
-      $ne: false,
-    },
-  });
+  // this.find({
+  //   active: {
+  //     $ne: false,
+  //   },
+  // });
 });
 
 // verify user password

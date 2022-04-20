@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
+import axios from "axios";
 
 const Index = ({ stats }) => {
   const formatter = Intl.NumberFormat("en", { notation: "compact" });
@@ -14,7 +15,18 @@ const Index = ({ stats }) => {
   ]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [cta, setCta] = useState(0);
+  const [tab, setTab] = useState(0);
+  const [terms, setTerms] = useState(false);
+  const [requestData, setRequestData] = useState({
+    name: "",
+    mobile: "",
+    services: [],
+    terms: false,
+  });
   const router = useRouter();
+
+  console.log(requestData);
+  const handleAgentRequest = async () => {};
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -668,9 +680,9 @@ const Index = ({ stats }) => {
       </div>
 
       {/* section 4 */}
-      <div className="flex w-full justify-between bg-mainColor px-[100px] pt-[100px] text-white">
-        <div className="mt-[100px]">
-          <p className="italic">Need to buy something abroad?</p>
+      <div className="flex w-full justify-between bg-mainColor px-[100px] pb-[150px] pt-[100px] text-white">
+        <div className="mt-[120px] w-[50%]">
+          <p className="italic">Need a seasoned personal shopper?</p>
           <p className="my-[5px] font-heading text-3xl">
             Request for an experienced & trusted
           </p>
@@ -678,7 +690,122 @@ const Index = ({ stats }) => {
             Forte-Bridge procurement agent
           </p>
         </div>
-        <div className="mt-[100px]"></div>
+        <div className="mt-[70px] mr-[100px] w-[40%]">
+          <form className="flex flex-col space-y-[20px]">
+            <div className="flex flex-col">
+              <label htmlFor="name" className="mb-[5px]">
+                Your name
+              </label>
+              <input
+                onChange={(e) =>
+                  setRequestData({ ...requestData, name: e.target.value })
+                }
+                className="min-w-0 p-1 uppercase border-0 rounded-lg text-mainColor focus:outline-0"
+                type="text"
+                name="name"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="name" className="mb-[5px]">
+                Your Whatsapp number
+              </label>
+              <input
+                onChange={(e) =>
+                  setRequestData({ ...requestData, mobile: e.target.value })
+                }
+                className="min-w-0 p-1 uppercase border-0 rounded-lg text-mainColor focus:outline-0"
+                type="text"
+                name="name"
+                placeholder="+23480180180156"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="name" className="mb-[5px]">
+                Service you are interested in{" "}
+              </label>
+              <input
+                className="min-w-0 p-1 uppercase border-0 rounded-lg text-mainColor focus:outline-0"
+                type="text"
+                name="name"
+              />
+            </div>
+
+            <div className="flex items-center space-x-4">
+              <input
+                type="checkbox"
+                name="terms"
+                onChange={(e) =>
+                  setRequestData({ ...requestData, terms: !requestData.terms })
+                }
+              />
+              <span>
+                I have read and agreed to the{" "}
+                <span
+                  className="underline cursor-pointer underline-offset-2"
+                  onClick={() => setTerms(!terms)}
+                >
+                  terms and conditions
+                </span>{" "}
+                of this application
+              </span>
+            </div>
+            {terms && (
+              <>
+                <p>
+                  Read the following terms and conditions binding this
+                  application
+                </p>
+                <p>
+                  1. Kindly note that if we give you an agent from forte-bridge,
+                  you are not allowed to instruct the agent to send your goods
+                  through any other cargo in Turkey that offers the same or
+                  similar services as Forte-Bridge Global Logistics unless a
+                  waiver has been given to you by the management
+                </p>
+                <p>
+                  2. To mitigate the risk fraud, you should notify the
+                  management of forte-bridge of dealing and transactions with
+                  the agent of any deals deal worth more than 1 million naira or
+                  $2000 or proceed with trust at your own risk.
+                </p>
+                <p>
+                  3.If any of our agents takes your goods to another cargo, that
+                  means that they no longer work with us, hence conducting
+                  business with such individuals is at your own risk! notify us
+                  immediately before you continue to transact with such agent!
+                </p>
+              </>
+            )}
+            <button
+              type="submit"
+              onClick={(e) => {
+                e.preventDefault();
+                handleAgentRequest();
+              }}
+              className="mx-auto mt-[20px] mb-[10px] w-fit rounded-lg bg-white py-[10px] px-[20px] text-mainColor "
+            >
+              Submit request
+            </button>
+          </form>
+        </div>
+      </div>
+
+      {/* section 5 */}
+      <div className="mt-[-100px] bg-gray-100 ">
+        <div className="mx-auto w-[70vw] rounded-lg bg-white pt-[30px]">
+          <div className="flex justify-between divide-x-2 divide-mainColor border-b border-mainColor pb-[20px]">
+            <div className="w-[50%] text-center">
+              <p>Track a shipment</p>
+            </div>
+            <div className="w-[50%] text-center">
+              <p>Calculate tentative fee</p>
+            </div>
+          </div>
+
+          <div className="flex justify-between divide-x-2 divide-mainColor pb-[20px]">
+            hi
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -686,12 +813,12 @@ const Index = ({ stats }) => {
 
 export default Index;
 
-export async function getServerSideProps(context) {
-  if (process.env.NODE_ENV === "development") return { props: {} };
-  return {
-    redirect: {
-      destination: "/login",
-      permanent: false,
-    },
-  };
-}
+// export async function getServerSideProps(context) {
+//   if (process.env.NODE_ENV === "development") return { props: {} };
+//   return {
+//     redirect: {
+//       destination: "/login",
+//       permanent: false,
+//     },
+//   };
+// }
