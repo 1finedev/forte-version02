@@ -916,12 +916,12 @@ const Index = ({ stats }) => {
 
 export default Index;
 
-// export async function getServerSideProps(context) {
-//   if (process.env.NODE_ENV === "development") return { props: {} };
-//   return {
-//     redirect: {
-//       destination: "/login",
-//       permanent: false,
-//     },
-//   };
-// }
+export async function getServerSideProps(context) {
+  if (process.env.NODE_ENV === "development") return { props: {} };
+  return {
+    redirect: {
+      destination: "/login",
+      permanent: false,
+    },
+  };
+}
