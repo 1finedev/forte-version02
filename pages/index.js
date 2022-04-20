@@ -3,8 +3,11 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import axios from "axios";
+import Link from "next/link";
+import { useAlert } from "react-alert";
 
 const Index = ({ stats }) => {
+  const alert = useAlert();
   const formatter = Intl.NumberFormat("en", { notation: "compact" });
 
   const [showMenu, setShowMenu] = useState(false);
@@ -17,6 +20,8 @@ const Index = ({ stats }) => {
   const [cta, setCta] = useState(0);
   const [tab, setTab] = useState(0);
   const [terms, setTerms] = useState(false);
+  const [trackingCode, setTrackingCode] = useState("");
+  const [shipment, setShipment] = useState();
   const [requestData, setRequestData] = useState({
     name: "",
     mobile: "",
@@ -25,8 +30,41 @@ const Index = ({ stats }) => {
   });
   const router = useRouter();
 
-  console.log(requestData);
   const handleAgentRequest = async () => {};
+
+  const handleTracking = async () => {
+    if (trackingCode.length < 5) {
+      return alert.show(
+        <div
+          className="z-[10000000] text-white dark:text-white"
+          style={{ textTransform: "initial", fontFamily: "Roboto" }}
+        >
+          Tracking code is empty or invalid!
+        </div>,
+        {
+          type: "error",
+        }
+      );
+    } else {
+      const res = await axios.post("/api/track", { shipCode: trackingCode });
+
+      if (res.data.status === "error") {
+        alert.show(
+          <div
+            className="z-[10000000] text-white dark:text-white"
+            style={{ textTransform: "initial", fontFamily: "Roboto" }}
+          >
+            {res.data.error}{" "}
+          </div>,
+          {
+            type: "error",
+          }
+        );
+      } else {
+        setShipment(res.data.data);
+      }
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,7 +81,7 @@ const Index = ({ stats }) => {
 
   return (
     <div className="font-brand">
-      <header className="fixed z-[100000] mt-[-11vh] flex w-full justify-between border-b border-mainColor bg-mainColor px-[50px] py-[15px] font-heading text-lg font-medium text-white">
+      <header className="fixed z-[1] mt-[-11vh] flex w-full justify-between border-b border-white border-mainColor bg-mainColor px-[50px] py-[15px] font-heading text-lg font-medium text-white">
         <div
           className="flex items-center space-x-2 cursor-pointer"
           onClick={() => router.push("/")}
@@ -215,9 +253,11 @@ const Index = ({ stats }) => {
               <p>Highly Professional Staff, Accurate Measurements Processes</p>
             </div>
             <div className="z-[1000] mt-[30px] flex space-x-6">
-              <p className="cursor-pointer rounded-lg bg-mainColor py-[12px] px-[20px] hover:bg-white hover:text-mainColor hover:shadow hover:shadow-mainColor">
-                See our rates
-              </p>
+              <Link href="#trackQuote">
+                <a className="cursor-pointer rounded-lg bg-mainColor py-[12px] px-[20px] hover:bg-white hover:text-mainColor hover:shadow hover:shadow-mainColor">
+                  See our rates
+                </a>
+              </Link>
               <p className="cursor-pointer rounded-lg bg-mainColor py-[12px] px-[20px] hover:bg-white hover:text-mainColor hover:shadow hover:shadow-mainColor">
                 Track a shipment
               </p>
@@ -791,20 +831,79 @@ const Index = ({ stats }) => {
       </div>
 
       {/* section 5 */}
-      <div className="mt-[-100px] bg-gray-100 ">
-        <div className="mx-auto w-[70vw] rounded-lg bg-white pt-[30px]">
-          <div className="flex justify-between divide-x-2 divide-mainColor border-b border-mainColor pb-[20px]">
-            <div className="w-[50%] text-center">
+      <div className="relative min-h-[100vh] bg-gray-100 px-[100px]">
+        <div
+          id="trackQuote"
+          className="absolute top-[-75px] mx-[110px] w-[70vw] scroll-mt-32 rounded-lg border border-white bg-white pb-[100px] shadow"
+        >
+          <div className="flex justify-between border-b border-gray-100 divide-x-2 divide-gray-500 ">
+            <div
+              className={`w-[50%] cursor-pointer rounded-tl-lg ${
+                tab === 0 ? "bg-black text-white" : "bg-white text-black"
+              } pb-[20px] pt-[30px] text-center `}
+              onClick={() => setTab(0)}
+            >
               <p>Track a shipment</p>
             </div>
-            <div className="w-[50%] text-center">
+            <div
+              onClick={() => setTab(1)}
+              className={`w-[50%] cursor-pointer rounded-tr-lg ${
+                tab === 1 ? "bg-black text-white" : "bg-white text-black"
+              } pb-[20px] pt-[30px] text-center `}
+            >
               <p>Calculate tentative fee</p>
             </div>
           </div>
 
-          <div className="flex justify-between divide-x-2 divide-mainColor pb-[20px]">
-            hi
-          </div>
+          {tab === 0 && (
+            <>
+              <div className="mt-[40px] flex flex-col items-center justify-center">
+                <p className="text-lg text-center animate-pulse animate-bounce">
+                  Enter a tracking code below to track your package
+                </p>
+                <form>
+                  <div className="mt-[10px] flex items-center justify-center">
+                    <input
+                      className="w-[40vw] rounded-tl-lg rounded-bl-lg border border-gray-300 bg-gray-100 p-[15px] text-mainColor focus:outline-0"
+                      type="text"
+                      placeholder="Example - ZNzrIdnBgpU"
+                      onChange={(e) => setTrackingCode(e.target.value)}
+                    />
+                    <button
+                      className="w-fit rounded-tr-lg rounded-br-lg bg-black py-[15px] px-[20px] text-white"
+                      type="submit"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleTracking();
+                      }}
+                    >
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              {/* <div>
+                <p>1 shipment found...</p>
+
+                <div>
+                  <p>Name:</p>
+                  <p>Mrs Opemipo</p>
+                </div>
+              </div> */}
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -813,12 +912,12 @@ const Index = ({ stats }) => {
 
 export default Index;
 
-// export async function getServerSideProps(context) {
-//   if (process.env.NODE_ENV === "development") return { props: {} };
-//   return {
-//     redirect: {
-//       destination: "/login",
-//       permanent: false,
-//     },
-//   };
-// }
+export async function getServerSideProps(context) {
+  if (process.env.NODE_ENV === "development") return { props: {} };
+  return {
+    redirect: {
+      destination: "/login",
+      permanent: false,
+    },
+  };
+}
