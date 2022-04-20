@@ -73,6 +73,7 @@ const EditShipment = () => {
         shipment,
       });
 
+      console.log(res);
       if (res.data.status === "success") {
         setLoading(false);
         alert.show(
