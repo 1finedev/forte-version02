@@ -1,5 +1,4 @@
 import Shipment from "../../../backend/shipmentModel";
-import User from "../../../backend/userModel";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {

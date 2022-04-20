@@ -81,7 +81,11 @@ const Index = ({ stats }) => {
 
   return (
     <div className="font-brand">
-      <header className="fixed z-[1] mt-[-11vh] flex w-full justify-between border-b border-white border-mainColor bg-mainColor px-[50px] py-[15px] font-heading text-lg font-medium text-white">
+      <header
+        className={`fixed ${
+          trackingCode.length > 1 ? "z-[1]" : "z-[100000]"
+        } mt-[-11vh] flex w-full justify-between border-b border-white border-mainColor bg-mainColor px-[50px] py-[15px] font-heading text-lg font-medium text-white`}
+      >
         <div
           className="flex items-center space-x-2 cursor-pointer"
           onClick={() => router.push("/")}
@@ -912,12 +916,12 @@ const Index = ({ stats }) => {
 
 export default Index;
 
-export async function getServerSideProps(context) {
-  if (process.env.NODE_ENV === "development") return { props: {} };
-  return {
-    redirect: {
-      destination: "/login",
-      permanent: false,
-    },
-  };
-}
+// export async function getServerSideProps(context) {
+//   if (process.env.NODE_ENV === "development") return { props: {} };
+//   return {
+//     redirect: {
+//       destination: "/login",
+//       permanent: false,
+//     },
+//   };
+// }
