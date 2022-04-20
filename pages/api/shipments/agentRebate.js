@@ -26,6 +26,7 @@ const handler = async (req, res) => {
       createdAt: { $gte: batchStart, $lte: batchEnd },
     });
 
+    console.log(data.length);
     if (!data || data.length === 0) {
       return res.status(200).json({
         status: "error",
@@ -43,7 +44,7 @@ const handler = async (req, res) => {
       const convertDollar = dollarAgent * shipment.dollarRate;
       const total = nairaAgent + convertDollar;
       rebate = (Math.round(total * 10) / 10).toFixed(0) * 1;
-
+      console.log(shipment.calculated);
       if (shipment.calculated === false) {
         await User.findByIdAndUpdate(shipment.user, {
           $inc: {
@@ -51,6 +52,8 @@ const handler = async (req, res) => {
             wallet: rebate,
             balance: rebate,
           },
+        });
+        await Shipment.findByIdAndUpdate(shipment._id, {
           calculated: true,
         });
       }

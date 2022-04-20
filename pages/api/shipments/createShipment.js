@@ -48,10 +48,10 @@ const handler = async (req, res) => {
 
     // find existing shipment with same name
     const existingCustomer = await Shipment.findOne({
-      name: name.toUpperCase(),
+      name: name.toUpperCase().trim(),
       user: user._id,
       mobile: { $ne: null },
-    });
+    }).sort({ createdAt: -1 });
 
     try {
       const shipment = await Shipment.create({

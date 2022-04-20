@@ -145,7 +145,11 @@ const Shipments = ({ batchData }) => {
     //       carton: shipment.carton,
     //       agentId: shipment.agentId,
     //     });
-    //     console.log(`shipment ${index} with name ${res.name} added`);
+    //     if (res.data.status === "success") {
+    //       console.log(`shipment ${index} with name ${shipment.name} added`);
+    //     } else {
+    //       console.log(res.data.error);
+    //     }
     //   }, 3000);
     // });
   }, []);
@@ -189,11 +193,6 @@ const Shipments = ({ batchData }) => {
       setLoadingFees({ ...loading, calculate: false });
       fetchShipment();
       downloadManifest();
-      await axios.post("/api/shipments/agentRebate", {
-        batchStart: currentBatch.startDate,
-        batchEnd,
-      });
-
       alert.show(
         <div
           className="text-white dark:text-white"
@@ -216,6 +215,29 @@ const Shipments = ({ batchData }) => {
         </div>,
         {
           type: "error",
+        }
+      );
+    }
+  };
+
+  //calculate Rebate
+
+  const handleRebates = async () => {
+    const res = await axios.post("/api/shipments/agentRebate", {
+      batchStart: currentBatch.startDate,
+      batchEnd,
+    });
+
+    if (res.data.status === "success") {
+      alert.show(
+        <div
+          className="text-white dark:text-white"
+          style={{ textTransform: "initial", fontFamily: "Roboto" }}
+        >
+          SUCCESS!!!
+        </div>,
+        {
+          type: "success",
         }
       );
     }
@@ -843,6 +865,17 @@ const Shipments = ({ batchData }) => {
           className="cursor-pointer rounded-lg bg-white  p-[5px] px-[45px] py-[10px] text-mainColor shadow-xl disabled:cursor-not-allowed disabled:bg-gray-300"
         >
           Send Messages
+        </button>
+        <button
+          onClick={handleRebates}
+          disabled={
+            shipment?.length === 0 || session?.user?.role === "sec"
+              ? true
+              : false
+          }
+          className="cursor-pointer rounded-lg bg-white  p-[5px] px-[45px] py-[10px] text-mainColor shadow-xl disabled:cursor-not-allowed disabled:bg-gray-300"
+        >
+          Calculate Rebate
         </button>
       </div>
 
