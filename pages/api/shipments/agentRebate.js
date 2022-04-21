@@ -44,7 +44,6 @@ const handler = async (req, res) => {
       const convertDollar = dollarAgent * shipment.dollarRate;
       const total = nairaAgent + convertDollar;
       rebate = (Math.round(total * 10) / 10).toFixed(0) * 1;
-      console.log(shipment.calculated);
       if (shipment.calculated === false) {
         await User.findByIdAndUpdate(shipment.user, {
           $inc: {
@@ -55,6 +54,7 @@ const handler = async (req, res) => {
         });
         await Shipment.findByIdAndUpdate(shipment._id, {
           calculated: true,
+          rebate,
         });
       }
     });

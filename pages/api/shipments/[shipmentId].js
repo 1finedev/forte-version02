@@ -130,13 +130,13 @@ const handler = async (req, res) => {
     try {
       // todo: remove commission from previous agent if already calculated
       const previous = await Shipment.findOne({ _id: shipmentId });
-
+      console.log(previous);
       if (previous.calculated) {
         await User.findByIdAndUpdate(previous.user, {
           $inc: {
             balance: -previous.rebate,
             wallet: -previous.rebate,
-            totalKg: -previous.rebate,
+            totalKg: -previous.weight,
           },
         });
       }

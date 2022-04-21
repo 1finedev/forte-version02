@@ -178,7 +178,28 @@ const Shipments = ({ batchData }) => {
       )}-Batch ${batchStats?.currentBatch?.batch}.xlsx`
     );
   };
+  //calculate Rebate
 
+  const handleRebates = async () => {
+    const res = await axios.post("/api/shipments/agentRebate", {
+      batchStart: currentBatch.startDate,
+      batchEnd,
+    });
+
+    if (res.data.status === "success") {
+      alert.show(
+        <div
+          className="text-white dark:text-white"
+          style={{ textTransform: "initial", fontFamily: "Roboto" }}
+        >
+          SUCCESS!!!
+        </div>,
+        {
+          type: "success",
+        }
+      );
+    }
+  };
   // calculate batch fees
   const calcBatchFees = async (e) => {
     e.preventDefault();
@@ -192,7 +213,8 @@ const Shipments = ({ batchData }) => {
     if (res.data.status === "success") {
       setLoadingFees({ ...loading, calculate: false });
       fetchShipment();
-      // downloadManifest();
+      await handleRebates();
+      downloadManifest();
       alert.show(
         <div
           className="text-white dark:text-white"
@@ -215,29 +237,6 @@ const Shipments = ({ batchData }) => {
         </div>,
         {
           type: "error",
-        }
-      );
-    }
-  };
-
-  //calculate Rebate
-
-  const handleRebates = async () => {
-    const res = await axios.post("/api/shipments/agentRebate", {
-      batchStart: currentBatch.startDate,
-      batchEnd,
-    });
-
-    if (res.data.status === "success") {
-      alert.show(
-        <div
-          className="text-white dark:text-white"
-          style={{ textTransform: "initial", fontFamily: "Roboto" }}
-        >
-          SUCCESS!!!
-        </div>,
-        {
-          type: "success",
         }
       );
     }

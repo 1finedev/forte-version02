@@ -21,20 +21,19 @@ const handler = async (req, res) => {
       // calculate Fee
       const weight = shipment.weight;
       const freightInDollars = freightRate * weight;
-      const freightCalc = freightInDollars * shipment.dollarRate;
-      const freightTotal = (Math.round(freightCalc * 10) / 10).toFixed(1) * 1;
+      const freightCalc = freightInDollars * dollarRate;
+      const freightTotal = Math.round(freightCalc);
       const customsTot = customsRate * weight;
-      const customsTotal = (Math.round(customsTot * 10) / 10).toFixed(1) * 1;
+      const customsTotal = Math.round(customsTot);
       const amountDue = Math.round(freightTotal + customsTotal);
-
       // update shipment and lock
       await Shipment.findByIdAndUpdate(
         shipment._id,
         {
+          freightTotal,
           freightRate,
           customsRate,
           dollarRate,
-          freightTotal,
           customsTotal,
           amountDue,
           freightInDollars,
