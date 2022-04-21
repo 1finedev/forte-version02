@@ -192,7 +192,7 @@ const Shipments = ({ batchData }) => {
     if (res.data.status === "success") {
       setLoadingFees({ ...loading, calculate: false });
       fetchShipment();
-      downloadManifest();
+      // downloadManifest();
       alert.show(
         <div
           className="text-white dark:text-white"
