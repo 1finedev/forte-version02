@@ -39,6 +39,10 @@ const userSchema = new mongoose.Schema(
     passwordChangedAt: Date,
     passwordResetToken: String,
     passwordResetExpires: Date,
+    messageTries: {
+      type: Number,
+      default: 25,
+    },
   },
   { timestamps: true }
 );

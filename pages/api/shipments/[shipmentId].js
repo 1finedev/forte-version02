@@ -104,6 +104,59 @@ const handler = async (req, res) => {
             runValidators: true,
           }
         );
+
+        if (
+          session.user.role === "agent" &&
+          shipment.mobile &&
+          session.user.messageTries > 0
+        ) {
+          const adminBody = `Phone number just updated!, kindly initiate message please
+${shipment.name},
+${shipment.weight},
+${shipment.mobile}
+${shipment.createdAt.split("T")[0]}
+
+${shipment.user.agentId} has ${session.user.messageTries} requests left!`;
+
+          const values = {
+            body: adminBody,
+            phone: "9055261567375",
+          };
+
+          axios
+            .post(
+              "https://eu176.chat-api.com/instance225964/sendMessage?token=u10endg0wkm7iu17",
+              values
+            )
+            .then((response) => {
+              const agentBody = `Message request successful!, You have now used ${
+                25 - session.user.messageTries
+              } your ${session.user.messageTries} late message requests!`;
+              const value = {
+                body: agentBody,
+                phone: session.user.mobile,
+              };
+              axios.post(
+                "https://eu176.chat-api.com/instance225964/sendMessage?token=u10endg0wkm7iu17",
+                value
+              );
+            });
+        } else {
+          const agentBody = `Message request failed! Your late message requests is less than 1!
+
+Error: ${shipment.user.agentId} has ${session.user.messageTries} requests left!`;
+
+          const values = {
+            body: agentBody,
+            phone: "9055261567375",
+          };
+
+          await axios.post(
+            "https://eu176.chat-api.com/instance225964/sendMessage?token=u10endg0wkm7iu17",
+            values
+          );
+        }
+
         return res.status(200).json({ status: "success", data: shipment });
       }
     } catch (error) {

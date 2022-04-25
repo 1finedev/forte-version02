@@ -103,7 +103,7 @@ const AgentsList = ({
                 {agent.agentId.toUpperCase()}
               </td>
               <td className="py-4 whitespace-nowrap">
-                {(Math.round(totalKg * 10) / 10).toFixed(1) * 1 || 0}
+                {(Math.round(agent.totalKg * 10) / 10).toFixed(1) * 1 || 0}
               </td>
               <td className="max-w-[80px] py-4">
                 {format(new Date(agent.createdAt), "dd-MM-yyyy")}
