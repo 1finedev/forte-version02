@@ -12,13 +12,13 @@ const AgentsList = ({
         <tr>
           <th
             scope="col"
-            className="py-3 pl-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+            className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
           >
             Photo
           </th>
           <th
             scope="col"
-            className="py-3 pl-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+            className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
           >
             Agent Name
           </th>
@@ -30,40 +30,40 @@ const AgentsList = ({
           </th>
           <th
             scope="col"
-            className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+            className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
           >
             Total KG
           </th>
           <th
             scope="col"
-            className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 "
+            className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase "
           >
             Joined{" "}
           </th>
 
           <th
             scope="col"
-            className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+            className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
           >
             Wallet
           </th>
 
           <th
             scope="col"
-            className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+            className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
           >
             Available
           </th>
 
           <th
             scope="col"
-            className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+            className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
           >
             Status
           </th>
           <th
             scope="col"
-            className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+            className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
           >
             Action
           </th>
@@ -75,11 +75,11 @@ const AgentsList = ({
         };
 
         return (
-          <tbody key={index} className="divide-y divide-gray-200 bg-white ">
+          <tbody key={index} className="bg-white divide-y divide-gray-200 ">
             <tr className="relative">
               <td
                 scope="col"
-                className="py-3 pl-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
               >
                 <div className="relative h-[50px] w-[50px] rounded-full bg-mainColor">
                   {agent.photo ? (
@@ -102,28 +102,28 @@ const AgentsList = ({
               <td className="max-w-[100px]  py-4 ">
                 {agent.agentId.toUpperCase()}
               </td>
-              <td className="whitespace-nowrap py-4">
-                {transformPrice(agent.totalKg || 0)}
+              <td className="py-4 whitespace-nowrap">
+                {(Math.round(totalKg * 10) / 10).toFixed(1) * 1 || 0}
               </td>
               <td className="max-w-[80px] py-4">
                 {format(new Date(agent.createdAt), "dd-MM-yyyy")}
               </td>
-              <td className="whitespace-nowrap py-4">
+              <td className="py-4 whitespace-nowrap">
                 ₦{transformPrice(agent.wallet)}
               </td>
-              <td className="whitespace-nowrap py-4">
+              <td className="py-4 whitespace-nowrap">
                 {" "}
                 ₦{transformPrice(agent.balance)}
               </td>
-              <td className="whitespace-nowrap py-4">
+              <td className="py-4 whitespace-nowrap">
                 {agent.suspended ? "Suspended" : "Active"}
               </td>
               <td
-                className="whitespace-nowrap py-4"
+                className="py-4 whitespace-nowrap"
                 onClick={() => setSelectedIndex(agent._id)}
               >
                 <svg
-                  className="h-6 w-6 cursor-pointer text-mainColor"
+                  className="w-6 h-6 cursor-pointer text-mainColor"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -171,7 +171,7 @@ const AgentsList = ({
                       Delete
                     </p>
                     <p
-                      className="cursor-pointer text-right text-xs hover:text-gray-300 hover:underline"
+                      className="text-xs text-right cursor-pointer hover:text-gray-300 hover:underline"
                       onClick={() => setSelectedIndex()}
                     >
                       Close

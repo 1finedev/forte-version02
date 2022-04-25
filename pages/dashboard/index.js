@@ -161,7 +161,7 @@ const AgentProfile = ({ statistics }) => {
                         accept="image/*"
                       />
                       <svg
-                        className="mx-auto h-8 w-8 text-mainColor"
+                        className="w-8 h-8 mx-auto text-mainColor"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +193,10 @@ const AgentProfile = ({ statistics }) => {
           </div>
           <div className="h-[30px] w-[2px] bg-white text-transparent">|</div>
           <div className="text-center">
-            <p className="font-bold">{statistics[0]?.totalKg || 0}</p>
+            <p className="font-bold">
+              {(Math.round(statistics[0]?.totalKg * 10) / 10).toFixed(1) * 1 ||
+                0}
+            </p>
             <p className="text-sm text-gray-300">Total Kilograms</p>
           </div>
         </div>
@@ -222,7 +225,7 @@ const AgentProfile = ({ statistics }) => {
                 >
                   ₦{transformPrice(session.user.wallet) || 0}
                 </p>
-                <p className="text-text-white text-xs">Wallet Balance</p>
+                <p className="text-xs text-text-white">Wallet Balance</p>
               </div>
             </div>
             {!showEarning ? (
@@ -279,7 +282,7 @@ const AgentProfile = ({ statistics }) => {
                 >
                   ₦{transformPrice(session.user.balance) || 0}
                 </p>
-                <p className="text-text-white text-xs">Available Balance</p>
+                <p className="text-xs text-text-white">Available Balance</p>
               </div>{" "}
             </div>
           </div>
@@ -289,7 +292,7 @@ const AgentProfile = ({ statistics }) => {
             <p className="text-heading pb-[10px] text-[20px] text-white">
               Quick Links
             </p>
-            <div className="grid grid-cols-2 items-center justify-center text-center">
+            <div className="grid items-center justify-center grid-cols-2 text-center">
               <p className="m-2 cursor-pointer  rounded-xl border border-mainColor bg-white  p-[10px] text-mainColor">
                 <Link href="/shipments">Shipments</Link>
               </p>
