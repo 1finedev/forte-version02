@@ -129,9 +129,12 @@ ${shipment.user.agentId} has ${session.user.messageTries} requests left!`;
               values
             )
             .then((response) => {
-              const agentBody = `Message request successful!, You have now used ${
+              const agentBody = `Message request successful!, 
+You have now used ${
                 25 - session.user.messageTries
-              } your ${session.user.messageTries} late message requests!`;
+              } out of your 25 late message credits!
+              
+Kindly ensure that you have the correct phone number uploaded every time to avoid running out of late message credits`;
               const value = {
                 body: agentBody,
                 phone: session.user.mobile,
