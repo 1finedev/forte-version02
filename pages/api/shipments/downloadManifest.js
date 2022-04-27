@@ -33,8 +33,8 @@ const handler = async (req, res) => {
       const excel = json2xls(newData, {
         fields: [
           "name",
-          "destination",
           "weight",
+          "destination",
           "carton",
           "freightRate",
           "dollarRate",
@@ -62,7 +62,7 @@ const handler = async (req, res) => {
           "Content-Type",
           "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         );
-        res.setHeader("Content-Length", `${manifestBuffer.size}`);
+        res.setHeader("Content-Length", `${buffer.length}`);
         manifestBuffer.pipe(res);
         manifestBuffer.on("end", resolve);
 

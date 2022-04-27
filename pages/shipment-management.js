@@ -169,7 +169,6 @@ const Shipments = ({ batchData }) => {
     );
     const pdfBlob = new Blob([data.data], { type: "application/xlsx" });
     setLoadingFees({ ...loading, download: false });
-
     return saveAs(
       pdfBlob,
       `${format(
