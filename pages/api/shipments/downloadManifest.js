@@ -33,8 +33,8 @@ const handler = async (req, res) => {
       const excel = json2xls(newData, {
         fields: [
           "name",
-          "weight",
           "destination",
+          "weight",
           "carton",
           "freightRate",
           "dollarRate",
