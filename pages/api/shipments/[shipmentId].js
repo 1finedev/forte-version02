@@ -108,7 +108,7 @@ const handler = async (req, res) => {
         if (
           session.user.role === "agent" &&
           shipment.mobile &&
-          shipment.messageSent &&
+          shipment.rebate &&
           session.user.messageTries > 0
         ) {
           const adminBody = `Phone number just updated!, kindly initiate message please
@@ -148,7 +148,7 @@ Kindly ensure that you have the correct phone number uploaded every time to avoi
         } else if (
           session.user.role === "agent" &&
           shipment.mobile &&
-          !shipment.messageSent &&
+          !shipment.rebate &&
           session.user.messageTries < 1
         ) {
           h;
