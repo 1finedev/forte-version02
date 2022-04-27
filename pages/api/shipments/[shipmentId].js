@@ -108,6 +108,7 @@ const handler = async (req, res) => {
         if (
           session.user.role === "agent" &&
           shipment.mobile &&
+          shipment.messageSent &&
           session.user.messageTries > 0
         ) {
           const adminBody = `Phone number just updated!, kindly initiate message please
@@ -144,7 +145,13 @@ Kindly ensure that you have the correct phone number uploaded every time to avoi
                 value
               );
             });
-        } else {
+        } else if (
+          session.user.role === "agent" &&
+          shipment.mobile &&
+          !shipment.messageSent &&
+          session.user.messageTries < 1
+        ) {
+          h;
           const agentBody = `Message request failed! Your late message requests is less than 1!
 
 Error: ${shipment.user.agentId} has ${session.user.messageTries} requests left!`;
