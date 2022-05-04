@@ -10,6 +10,7 @@ const handler = async (req, res) => {
       .limit(1);
 
     const lastMonthInBatch = yearBatch?.months?.[yearBatch?.months?.length - 1];
+
     if (
       // No batch ever created or it's the first month in a year
       yearBatch === null ||
@@ -76,9 +77,10 @@ const handler = async (req, res) => {
       }
     } else {
       try {
-        await Batch.updateOne(
+        console.log(format(new Date(Date.now()), "yyyy"));
+        const mon = await Batch.findOneAndUpdate(
           {
-            Year: format(new Date(Date.now()), "yyyy"),
+            year: format(new Date(Date.now()), "yyyy"),
           },
           {
             $push: {
@@ -89,6 +91,7 @@ const handler = async (req, res) => {
             },
           }
         );
+        console.log(mon);
         return res.status(200).json({
           status: "success",
         });

@@ -11,6 +11,7 @@ const handler = async (req, res) => {
         error: "Batch start date must be provided!",
       });
     }
+
     let query;
 
     const session = await getSession({ req });

@@ -262,9 +262,11 @@ const Index = ({ stats }) => {
                   See our rates
                 </a>
               </Link>
-              <p className="cursor-pointer rounded-lg bg-mainColor py-[12px] px-[20px] hover:bg-white hover:text-mainColor hover:shadow hover:shadow-mainColor">
-                Track a shipment
-              </p>
+              <Link href="#trackQuote">
+                <a className="cursor-pointer rounded-lg bg-mainColor py-[12px] px-[20px] hover:bg-white hover:text-mainColor hover:shadow hover:shadow-mainColor">
+                  Track a shipment
+                </a>
+              </Link>
             </div>
           </div>
         </div>

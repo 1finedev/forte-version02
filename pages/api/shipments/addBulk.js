@@ -220,42 +220,39 @@ const handler = async (req, res) => {
     //       await deduct();
     //     };
     //     calculateAll();
-    //     const customers = await Shipment.distinct("mobile");
-    //     let timeout = 0;
-    //     let index = 1;
-    //     customers.forEach((mobile) => {
-    //       setTimeout(() => {
-    //         const body = `Hello our esteemed customer,
-    // Thank you for choosing forte-bridge to deliver your goods.
-    // Please take note of the following information:
-    // 1. Due to the muslim festivities, cargo will not be accepted at the airport next monday,
-    // therefore, we will send goods this friday 29th, April, 2022.
-    // Make sure to reach out to your agents in turkey to use this opportunity!
-    // 2. Also, For a while now there has been steady increase in cargo freight rates by the airline but we have done our best to cover for the increase in the rates.
-    // but sadly it has been increased yet again by the airline for the second time in three weeks!
-    // This means the freight rate has been *INCREASED* from $5.5 per kg to $5.8kg per kg going forward!
-    // Customs rate remains 750 naira per KG - No increase!.
-    // We wish you speedy sales!
-    // Forte Bridge Global Logistics`;
-    //         const values = {
-    //           body: body,
-    //           phone: mobile,
-    //         };
-    //         axios
-    //           .post(
-    //             "https://api.chat-api.com/instance225964/sendMessage?token=u10endg0wkm7iu17",
-    //             values
-    //           )
-    //           .then((response) => {
-    //             console.log(index + 1, response.data.message);
-    //           })
-    //           .catch((error) => {
-    //             console.log(error);
-    //           });
-    //       }, timeout);
-    //       timeout += 4000;
-    //       index = index + 1;
-    //     });
+    const customers = await Shipment.distinct("mobile");
+    let timeout = 0;
+    let index = 1;
+    customers.forEach((mobile) => {
+      setTimeout(() => {
+        const body = `Happy new month! 🕺🏼💃🏼
+  
+Also, from all of us at Forte Bridge Global logistics, we want to wish our muslim brothers and sisters happy *Eid-Al-Fitr* 🥳🍾
+  
+May the good tidings of the ramadan be with you and your family.
+Have fun and stay blessed.
+
+Forte Bridge`;
+
+        const values = {
+          body: body,
+          phone: mobile,
+        };
+        axios
+          .post(
+            "https://api.chat-api.com/instance225964/sendMessage?token=u10endg0wkm7iu17",
+            values
+          )
+          .then((response) => {
+            console.log(index + 1, response.data.message);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }, timeout);
+      timeout += 3000;
+      index = index + 1;
+    });
   } catch (error) {
     console.log(error);
   }
