@@ -32,11 +32,12 @@ const handler = async (req, res) => {
           });
         }
         // check if shipment has been calculated previously and remove the calculated sum
-        if (req.body.shipment.calculated) {
-          const previous = await Shipment.findOne({
-            _id: req.body.shipment._id,
-          });
-          await User.findByIdAndUpdate(previous.user, {
+        const previous = await Shipment.findOne({
+          _id: req.body.shipment.shipmentId,
+        });
+
+        if (previous.calculated === true) {
+          await User.findByIdAndUpdate(previous.user._id, {
             $inc: {
               balance: -previous.rebate,
               wallet: -previous.rebate,

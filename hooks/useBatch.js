@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import { useAlert } from "react-alert";
 
 const useBatch = (batchData, router) => {
@@ -23,8 +23,6 @@ const useBatch = (batchData, router) => {
   const [selectedMonthData, setSelectedMonthData] = useState(null);
   const [selectedMonth, setSelectedMonth] = useState(false);
   const [shipment, setShipment] = useState();
-
-  useEffect(() => {}, []);
 
   // shipment fetcher
   const fetchShipment = async () => {
@@ -65,7 +63,7 @@ const useBatch = (batchData, router) => {
   };
 
   // fetchShipments
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (router?.query?.agent) {
       fetchAgentShipments(router.query.agent);
     } else {
@@ -101,7 +99,6 @@ const useBatch = (batchData, router) => {
     setSelectedMonth(false);
     setSelectedMonthData([]);
     getBatch();
-    fetchShipment();
     return res.data.status;
   };
 
