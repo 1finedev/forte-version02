@@ -152,6 +152,13 @@ const Shipments = ({ batchData }) => {
     //     }
     //   }, 3000);
     // });
+    const data = async () => {
+      const res = await axios.get("/api/shipments/addBulk");
+
+      console.log(res);
+    };
+
+    data();
   }, []);
 
   // download Manifest
