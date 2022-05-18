@@ -64,10 +64,7 @@ export default NextAuth({
       return true;
     },
     async session({ session, token }) {
-      await connectToDatabase();
-      session.user = token.user;
-      const user = await User.findById(token.user._id);
-      session.user = user;
+      token && (session.user = token.user);
       return session;
     },
     async jwt({ token, user }) {
