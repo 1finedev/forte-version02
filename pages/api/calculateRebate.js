@@ -1,9 +1,11 @@
+import { connectToDatabase } from "./../../backend/dbConnect";
 import User from "./../../backend/userModel";
 import Shipment from "./../../backend/shipmentModel";
 import Funds from "./../../backend/fundsModel";
 const { startOfDay, endOfDay } = require("date-fns");
 
 const handler = async (req, res) => {
+  await connectToDatabase();
   const resetAll = async () => {
     const allAgents = await User.find({});
 

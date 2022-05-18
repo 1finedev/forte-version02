@@ -1,10 +1,10 @@
+import { connectToDatabase } from "../backend/dbConnect";
 import { useState, useLayoutEffect, useEffect } from "react";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/router";
-import { useSession } from "next-auth/react";
+import { useSession, getSession } from "next-auth/react";
 import { ChooseColorTheme } from "./../components";
 import ScrollToTop from "react-scroll-to-top";
-
 const Layout = ({ children }) => {
   const router = useRouter();
   const { data: session, status } = useSession();
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
       title: "Dashboard",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="h-6 w-6"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
       title: "Shipments",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="h-6 w-6"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
       title: "Agents",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="h-6 w-6"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ const Layout = ({ children }) => {
       title: "Finances",
       icon: (
         <svg
-          className="w-6 h-6"
+          className="h-6 w-6"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <ScrollToTop smooth color="#6f00ff" />
-      <div className="relative flex w-full h-screen overflow-x-hidden bg-white font-heading">
+      <div className="relative flex h-screen w-full overflow-x-hidden bg-white font-heading">
         <nav
           className={`${
             sideBarOpen ? "w-[200px]" : "w-[4vw]"
@@ -109,7 +109,7 @@ const Layout = ({ children }) => {
             onClick={() => router.push("/")}
           >
             <svg
-              className="w-6 h-6"
+              className="h-6 w-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -163,7 +163,7 @@ const Layout = ({ children }) => {
         >
           <div className="flex h-[60px] w-full items-center justify-between">
             <button
-              className="flex flex-col items-center justify-center w-12 h-12 rounded group"
+              className="group flex h-12 w-12 flex-col items-center justify-center rounded"
               onClick={() => {
                 setSideBarOpen(!sideBarOpen);
               }}
@@ -190,7 +190,7 @@ const Layout = ({ children }) => {
                 }`}
               />
             </button>
-            <div className="text-xl font-medium uppercase font-heading text-mainColor">
+            <div className="font-heading text-xl font-medium uppercase text-mainColor">
               <h2>{navLinks[navHover]?.title} Page</h2>
             </div>
             <div className="flex cursor-pointer space-x-[20px] text-black">
@@ -250,6 +250,7 @@ const Layout = ({ children }) => {
 
 export default Layout;
 export async function getServerSideProps(context) {
+  await connectToDatabase();
   const session = await getSession({ context });
 
   if (session?.user?.role === "agent") {

@@ -1,3 +1,4 @@
+import { connectToDatabase } from "./../../backend/dbConnect";
 import Shipment from "../../backend/shipmentModel";
 import Image from "next/image";
 import { useState, useLayoutEffect, useEffect, useRef } from "react";
@@ -320,6 +321,7 @@ const AgentProfile = ({ statistics }) => {
 };
 
 export async function getServerSideProps({ req, res }) {
+  await connectToDatabase();
   const session = await getSession({ req });
   if (!session) {
     return {

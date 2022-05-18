@@ -1,3 +1,4 @@
+import { connectToDatabase } from "../backend/dbConnect";
 import { getSession } from "next-auth/react";
 import { useState } from "react";
 import { useAlert } from "react-alert";
@@ -154,6 +155,7 @@ const Login = () => {
 };
 
 export async function getServerSideProps({ req, res }) {
+  await connectToDatabase();
   const session = await getSession({ req });
   if (session) {
     return {

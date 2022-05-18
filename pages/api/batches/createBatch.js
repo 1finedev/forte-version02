@@ -2,8 +2,10 @@ import Batch from "../../../backend/batchesModel";
 import format from "date-fns/format";
 import getMonth from "date-fns/getMonth";
 import getYear from "date-fns/getYear";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
+  await connectToDatabase();
   if (req.method === "GET") {
     const yearBatch = await Batch.findOne()
       .sort({ field: "asc", _id: -1 })

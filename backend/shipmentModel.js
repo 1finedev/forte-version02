@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 const randomString = require("randomstring");
 import User from "./../backend/userModel";
-import { connectToDatabase } from "./dbConnect";
-
-connectToDatabase();
 
 const shipmentSchema = new mongoose.Schema({
   name: {

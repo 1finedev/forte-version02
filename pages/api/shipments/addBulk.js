@@ -3,8 +3,10 @@ import User from "./../../../backend/userModel";
 import Fund from "./../../../backend/fundsModel";
 import { startOfDay, endOfDay } from "date-fns";
 import axios from "axios";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
+  await connectToDatabase();
   //   const shipments = await Shipment.find().limit(309).sort({
   //     createdAt: -1,
   //   });
@@ -248,11 +250,12 @@ const handler = async (req, res) => {
     //       timeout += 3000;
     //       index = index + 1;
     //     });
+    // const jeffe = await Shipments.find({ name: "JEFFE" });
   } catch (error) {
     console.log(error);
   }
 
-  res.status(200).json({
+  res.status(400).json({
     status: "success",
     msg: "error",
   });

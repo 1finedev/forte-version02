@@ -1,9 +1,11 @@
+import { connectToDatabase } from "./../../backend/dbConnect";
 import { getSession } from "next-auth/react";
 import User from "./../../backend/userModel";
 import Shipment from "./../../backend/shipmentModel";
 import Funds from "./../../backend/fundsModel";
 
 const handler = async (req, res) => {
+  await connectToDatabase();
   const { query, path, searchType, batchStart, batchEnd } = req.body;
   if (!query || !path || !searchType) {
     return res

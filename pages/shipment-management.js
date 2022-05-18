@@ -1,3 +1,4 @@
+import { connectToDatabase } from "../backend/dbConnect";
 import { useState, Fragment, useEffect, useRef } from "react";
 import { useSession, getSession } from "next-auth/react";
 import { useAlert } from "react-alert";
@@ -152,13 +153,6 @@ const Shipments = ({ batchData }) => {
     //     }
     //   }, 3000);
     // });
-    const data = async () => {
-      const res = await axios.get("/api/shipments/addBulk");
-
-      console.log(res);
-    };
-
-    data();
   }, []);
 
   // download Manifest
@@ -911,6 +905,7 @@ Shipments.getLayout = function getLayout(page) {
 };
 
 export async function getServerSideProps({ req, res }) {
+  await connectToDatabase();
   const session = await getSession({ req });
 
   if (session?.user?.role === "agent") {

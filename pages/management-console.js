@@ -1,3 +1,4 @@
+import { connectToDatabase } from "../backend/dbConnect";
 import { getSession } from "next-auth/react";
 import Layout from "./backLayout";
 import { useState, useEffect } from "react";
@@ -139,6 +140,7 @@ Console.getLayout = function getLayout(page) {
 };
 
 export async function getServerSideProps({ req, res }) {
+  await connectToDatabase();
   const session = await getSession({ req });
 
   if (session?.user?.role !== "admin") {

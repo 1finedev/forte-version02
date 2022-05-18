@@ -1,7 +1,9 @@
 import axios from "axios";
 import Shipment from "./../../../backend/shipmentModel";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
+  await connectToDatabase();
   if (req.method === "POST") {
     const transformPrice = (price) => {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

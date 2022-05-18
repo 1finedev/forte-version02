@@ -1,3 +1,4 @@
+import { connectToDatabase } from "./../../../backend/dbConnect";
 import { getSession } from "next-auth/react";
 import Funds from "../../../backend/fundsModel";
 import User from "../../../backend/userModel";
@@ -5,6 +6,7 @@ import axios from "axios";
 import { startOfDay, endOfDay } from "date-fns";
 
 const handler = async (req, res) => {
+  await connectToDatabase();
   if (req.method === "POST") {
     const session = await getSession({ req });
 

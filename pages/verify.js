@@ -1,3 +1,4 @@
+import { connectToDatabase } from "../backend/dbConnect";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -116,8 +117,9 @@ const Verify = () => {
 export default Verify;
 Verify.auth = true;
 
-export async function getServerSideProps(ctx) {
-  const session = await getSession(ctx);
+export async function getServerSideProps({ req, res }) {
+  await connectToDatabase();
+  const session = await getSession({ req });
   if (session?.user?.verified === true) {
     return {
       redirect: {

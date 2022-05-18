@@ -1,2370 +1,2586 @@
 [
   {
-    "name": "gt fox",
-    "weight": 32,
+    "name": "dhs",
+    "weight": 29,
     "destination": "lagos",
     "carton": 1,
-    "agentId": "fb67",
-    "type": "single"
+    "agentId": "fb20",
+    "type": "single "
   },
   {
-    "name": "samdot cargo",
-    "weight": 42,
-    "destination": "lagos 2 south ",
+    "name": "dhs",
+    "weight": 25,
+    "destination": "lagos",
     "carton": 2,
-    "agentId": "fb17",
-    "type": "single"
+    "agentId": "fb20",
+    "type": "single "
   },
   {
-    "name": "Mrs stephy ",
-    "weight": 30,
+    "name": "efe",
+    "weight": 55,
     "destination": "lagos",
     "carton": 3,
-    "agentId": "fb43",
-    "type": "single"
+    "agentId": "fb19",
+    "type": "single "
   },
   {
-    "name": "ikenna",
-    "weight": 60,
+    "name": "alale",
+    "weight": 52,
     "destination": "lagos",
     "carton": 4,
-    "agentId": "fb18",
-    "type": "single"
+    "agentId": "fb1",
+    "type": "single "
   },
   {
-    "name": "derin",
-    "weight": 7,
+    "name": "alale ",
+    "weight": 51,
     "destination": "lagos",
     "carton": 5,
+    "agentId": "fb1",
+    "type": "single "
+  },
+  {
+    "name": "madam adeshola",
+    "weight": 52,
+    "destination": "lagos",
+    "carton": 6,
+    "agentId": "fb1",
+    "type": "single "
+  },
+  {
+    "name": "ay istanbul ",
+    "weight": 15,
+    "destination": "lagos",
+    "carton": 7,
     "agentId": "fb61",
     "type": "mm"
   },
   {
-    "name": "glam",
-    "weight": 11,
-    "destination": "lagos",
-    "carton": 5,
-    "agentId": "fb61",
-    "type": "mm"
-  },
-  {
-    "name": "teddy",
-    "weight": 5,
-    "destination": "lagos",
-    "carton": 5,
-    "agentId": "fb56",
-    "type": "mm"
-  },
-  {
-    "name": "tee why",
+    "name": "miss awotunde",
     "weight": 10,
-    "destination": "lagos",
-    "carton": 5,
-    "agentId": "fb60",
-    "type": "mm"
-  },
-  {
-    "name": "ify",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 6,
-    "agentId": "fb9",
-    "type": "mm"
-  },
-  {
-    "name": "wuraola",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 5,
-    "agentId": "fb67",
-    "type": "mm"
-  },
-  {
-    "name": "fc kemolala",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 5,
-    "agentId": "fb28",
-    "type": "mm"
-  },
-  {
-    "name": "fc choco",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 5,
-    "agentId": "fb28",
-    "type": "mm"
-  },
-  {
-    "name": "fc pendragon ",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 5,
-    "agentId": "fb28",
-    "type": "mm"
-  },
-  {
-    "name": "mirazinc",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 5,
-    "agentId": "fb83",
-    "type": "mm"
-  },
-  {
-    "name": "ikenna",
-    "weight": 63,
-    "destination": "lagos",
-    "carton": 6,
-    "agentId": "fb18",
-    "type": "single"
-  },
-  {
-    "name": "uzoamaka",
-    "weight": 56,
     "destination": "lagos",
     "carton": 7,
     "agentId": "fb19",
-    "type": "single"
-  },
-  {
-    "name": "spr",
-    "weight": 11,
-    "destination": "lagos",
-    "carton": 8,
-    "agentId": "fb58",
     "type": "mm"
   },
   {
-    "name": "truworth ",
-    "weight": 7,
+    "name": "ccp venture ",
+    "weight": 12,
     "destination": "abuja",
-    "carton": 8,
-    "agentId": "fb18",
+    "carton": 7,
+    "agentId": "fb17",
     "type": "mm"
   },
   {
-    "name": "kevwe",
+    "name": "busola tresanic",
     "weight": 4,
     "destination": "lagos",
-    "carton": 8,
-    "agentId": "fb9",
+    "carton": 7,
+    "agentId": "fb17",
     "type": "mm"
   },
   {
-    "name": "exclamation ",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 8,
-    "agentId": "fb18",
-    "type": "mm"
-  },
-  {
-    "name": "adenike",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 8,
-    "agentId": "fb18",
-    "type": "mm"
-  },
-  {
-    "name": "label",
+    "name": "enn",
     "weight": 12,
     "destination": "lagos",
-    "carton": 8,
-    "agentId": "fb20",
+    "carton": 7,
+    "agentId": "fb34",
     "type": "mm"
   },
   {
-    "name": "signora",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 8,
-    "agentId": "fb65",
-    "type": "mm"
-  },
-  {
-    "name": "esther",
+    "name": "twt bella",
     "weight": 2,
     "destination": "lagos",
-    "carton": 8,
-    "agentId": "fb19",
+    "carton": 7,
+    "agentId": "fb34",
     "type": "mm"
   },
   {
-    "name": "lb col",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 8,
-    "agentId": "fb65",
-    "type": "mm"
-  },
-  {
-    "name": "tosia",
-    "weight": 16,
-    "destination": "warri",
-    "carton": 9,
-    "agentId": "fb65",
-    "type": "mm"
-  },
-  {
-    "name": "teddy",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 9,
-    "agentId": "fb20",
-    "type": "mm"
-  },
-  {
-    "name": "mum odebiyi",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 9,
-    "agentId": "fb65",
-    "type": "mm"
-  },
-  {
-    "name": "racheal",
-    "weight": 6,
-    "destination": "Warri",
-    "carton": 9,
-    "agentId": "fb65",
-    "type": "mm"
-  },
-  {
-    "name": "floxy",
-    "weight": 11,
-    "destination": "lagos",
-    "carton": 9,
-    "agentId": "fb20",
-    "type": "mm"
-  },
-  {
-    "name": "twinnie",
-    "weight": 57,
-    "destination": "lagos",
-    "carton": 10,
-    "agentId": "fb71",
-    "type": "single"
-  },
-  {
-    "name": "ikenna",
-    "weight": 38,
-    "destination": "lagos",
-    "carton": 11,
-    "agentId": "fb18",
-    "type": "single"
-  },
-  {
-    "name": "sukuran",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 12,
-    "agentId": "fb20",
-    "type": "mm"
-  },
-  {
-    "name": "Twinnie",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 12,
-    "agentId": "fb71",
-    "type": "mm"
-  },
-  {
-    "name": "sherry",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 12,
-    "agentId": "fb14",
-    "type": "mm"
-  },
-  {
-    "name": "Mercy",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 12,
-    "agentId": "fb66",
-    "type": "mm"
-  },
-  {
-    "name": "Omo t",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 12,
-    "agentId": "fb66",
-    "type": "mm"
-  },
-  {
-    "name": "labby",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 12,
-    "agentId": "fb14",
-    "type": "mm"
-  },
-  {
-    "name": "timy",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 12,
-    "agentId": "fb14",
-    "type": "mm"
-  },
-  {
-    "name": "ayo",
-    "weight": 10,
-    "destination": "lagos",
-    "carton": 12,
-    "agentId": "fb66",
-    "type": "mm"
-  },
-  {
-    "name": "lafominic ",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 12,
-    "agentId": "fb66",
-    "type": "mm"
-  },
-  {
-    "name": "evar",
-    "weight": 58,
-    "destination": "lagos",
-    "carton": 13,
-    "agentId": "fb15",
-    "type": "single"
-  },
-  {
-    "name": "spr",
+    "name": "kayode",
     "weight": 21,
     "destination": "lagos",
-    "carton": 14,
-    "agentId": "fb58",
+    "carton": 8,
+    "agentId": "fb1",
     "type": "mm"
   },
   {
-    "name": "sparkling ",
-    "weight": 17,
+    "name": "dhs",
+    "weight": 14,
     "destination": "lagos",
-    "carton": 14,
-    "agentId": "fb58",
-    "type": "mm"
-  },
-  {
-    "name": "b4 smile",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 14,
-    "agentId": "fb58",
-    "type": "mm"
-  },
-  {
-    "name": "anabel",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 12,
+    "carton": 8,
     "agentId": "fb20",
     "type": "mm"
   },
   {
-    "name": "uzoamaka",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 15,
-    "agentId": "fb19",
-    "type": "mm"
-  },
-  {
-    "name": "splendor",
-    "weight": 13,
-    "destination": "lagos",
-    "carton": 15,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "maknelo",
-    "weight": 12,
-    "destination": "lagos",
-    "carton": 15,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "tando",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 15,
-    "agentId": "fb66",
-    "type": "mm"
-  },
-  {
-    "name": "evar",
-    "weight": 13,
-    "destination": "lagos",
-    "carton": 15,
-    "agentId": "fb13",
-    "type": "mm"
-  },
-  {
-    "name": "kiyah",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 15,
-    "agentId": "fb66",
-    "type": "mm"
-  },
-  {
-    "name": "alemberry",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 15,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "habo",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 15,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "house pendragon ",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 16,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "shola",
+    "name": "annabell",
     "weight": 3,
     "destination": "lagos",
-    "carton": 16,
-    "agentId": "fb7",
+    "carton": 8,
+    "agentId": "fb20",
     "type": "mm"
   },
   {
-    "name": "alaje",
-    "weight": 5,
+    "name": "adebunmi adedapo",
+    "weight": null,
     "destination": "lagos",
-    "carton": 16,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "ifeoma",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 16,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "abeekehz place",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 16,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "giggles & Kiddie’s'",
-    "weight": 5,
-    "destination": "lagos",
-    "carton": 16,
-    "agentId": "fb19",
-    "type": "mm"
-  },
-  {
-    "name": "gt fox",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 16,
-    "agentId": "fb67",
-    "type": "mm"
-  },
-  {
-    "name": "lb",
-    "weight": 10,
-    "destination": "lagos",
-    "carton": 16,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "florence",
-    "weight": 64,
-    "destination": "lagos",
-    "carton": 17,
-    "agentId": "fb41",
+    "carton": 9,
+    "agentId": "fb71",
     "type": "single"
   },
   {
-    "name": "eli",
-    "weight": 7,
+    "name": "uzomama",
+    "weight": 34,
     "destination": "lagos",
-    "carton": 18,
-    "agentId": "fb20",
+    "carton": 10,
+    "agentId": "fb19",
+    "type": "single "
+  },
+  {
+    "name": "shoddy",
+    "weight": 60,
+    "destination": "lagos",
+    "carton": 11,
+    "agentId": "fb45",
+    "type": "single "
+  },
+  {
+    "name": "shoddy",
+    "weight": 53,
+    "destination": "lagos",
+    "carton": 12,
+    "agentId": "fb45",
+    "type": "single "
+  },
+  {
+    "name": "shoddy",
+    "weight": 30,
+    "destination": "lagos",
+    "carton": 13,
+    "agentId": "fb45",
+    "type": "single "
+  },
+  {
+    "name": "nico",
+    "weight": 6,
+    "destination": "lagos",
+    "carton": 14,
+    "agentId": "db69",
     "type": "mm"
   },
   {
-    "name": "label",
-    "weight": 5,
+    "name": "xclamation ",
+    "weight": 9,
     "destination": "lagos",
-    "carton": 18,
-    "agentId": "fb20",
+    "carton": 14,
+    "agentId": "fb65",
     "type": "mm"
   },
   {
-    "name": "truworth",
-    "weight": 5,
-    "destination": "abuja",
-    "carton": 18,
-    "agentId": "fb20",
-    "type": "mm"
-  },
-  {
-    "name": "mj closet ",
-    "weight": 8,
+    "name": "pinky berry",
+    "weight": 16,
     "destination": "lagos",
-    "carton": 18,
+    "carton": 14,
     "agentId": "fb77",
     "type": "mm"
   },
   {
-    "name": "kam",
-    "weight": 3,
+    "name": "tosan",
+    "weight": 6,
+    "destination": "warri ",
+    "carton": 14,
+    "agentId": "fb65",
+    "type": "mm"
+  },
+  {
+    "name": "jeffe",
+    "weight": 5,
     "destination": "lagos",
-    "carton": 18,
+    "carton": 14,
+    "agentId": "fb77",
+    "type": "mm"
+  },
+  {
+    "name": "lu classy",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 14,
+    "agentId": "fb77",
+    "type": "mm"
+  },
+  {
+    "name": "mimi",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 14,
+    "agentId": "fb65",
+    "type": "mm"
+  },
+  {
+    "name": "mrs garuba",
+    "weight": 1,
+    "destination": "lagos",
+    "carton": 14,
+    "agentId": "fb76",
+    "type": "mm"
+  },
+  {
+    "name": "mrs adelaku",
+    "weight": 12,
+    "destination": "lagos",
+    "carton": 14,
+    "agentId": "fb76",
+    "type": "mm"
+  },
+  {
+    "name": "ccp venture",
+    "weight": 48,
+    "destination": "lagos",
+    "carton": 15,
+    "agentId": "fb17",
+    "type": "single "
+  },
+  {
+    "name": "edu devine",
+    "weight": 23,
+    "destination": "lagos",
+    "carton": 17,
+    "agentId": "fb41",
+    "type": "mm"
+  },
+  {
+    "name": "twt mamo",
+    "weight": 24,
+    "destination": "lagos",
+    "carton": 17,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "ice princess ",
+    "weight": 6,
+    "destination": "lagos",
+    "carton": 16,
     "agentId": "fb20",
     "type": "mm"
   },
   {
-    "name": "gbemi",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 18,
-    "agentId": "fb29",
-    "type": "mm"
-  },
-  {
-    "name": "abidemi",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 18,
-    "agentId": "fb63",
-    "type": "mm"
-  },
-  {
-    "name": "house of rhoyales ",
-    "weight": 10,
-    "destination": "lagos",
-    "carton": 18,
-    "agentId": "fb29",
-    "type": "mm"
-  },
-  {
-    "name": "senaicon ",
+    "name": "aunty yetunde",
     "weight": 6,
     "destination": "lagos",
-    "carton": 18,
-    "agentId": "fb63",
-    "type": "mm"
-  },
-  {
-    "name": "spice",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 18,
-    "agentId": "fb84",
-    "type": "mm"
-  },
-  {
-    "name": "t look",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 18,
-    "agentId": "fb63",
-    "type": "mm"
-  },
-  {
-    "name": "kabiyat",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 19,
-    "agentId": "fb84",
-    "type": "mm"
-  },
-  {
-    "name": "biola",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 19,
-    "agentId": "fb84",
-    "type": "mm"
-  },
-  {
-    "name": "tintin",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 19,
-    "agentId": "fb84",
-    "type": "mm"
-  },
-  {
-    "name": "shantimo",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 19,
-    "agentId": "fb63",
-    "type": "mm"
-  },
-  {
-    "name": "ibukun",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 19,
-    "agentId": "fb42",
-    "type": "mm"
-  },
-  {
-    "name": "house of collection ",
-    "weight": 13,
-    "destination": "lagos",
-    "carton": 19,
-    "agentId": "fb84",
-    "type": "mm"
-  },
-  {
-    "name": "bristol",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 19,
-    "agentId": "fb42",
-    "type": "mm"
-  },
-  {
-    "name": "cynthia",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 19,
-    "agentId": "fb42",
-    "type": "mm"
-  },
-  {
-    "name": "hannah",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 19,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "edu divine",
-    "weight": 39,
-    "destination": "lagos",
-    "carton": 20,
-    "agentId": "fb41",
-    "type": "mm"
-  },
-  {
-    "name": "jmk",
-    "weight": 16,
-    "destination": "lagos",
-    "carton": 20,
-    "agentId": "fb63",
-    "type": "mm"
-  },
-  {
-    "name": "florence",
-    "weight": 35,
-    "destination": "lagos",
-    "carton": 21,
-    "agentId": "fb41",
-    "type": "mm"
-  },
-  {
-    "name": "Peculiar ",
-    "weight": 22,
-    "destination": "lagos",
-    "carton": 21,
-    "agentId": "fb63",
-    "type": "mm"
-  },
-  {
-    "name": "lola",
-    "weight": 33,
-    "destination": "lagos",
-    "carton": 22,
-    "agentId": "fb66",
-    "type": "mm"
-  },
-  {
-    "name": "baz",
-    "weight": 56,
-    "destination": "lagos",
-    "carton": 23,
-    "agentId": "fb30",
-    "type": "Single"
-  },
-  {
-    "name": "dapper wears",
-    "weight": 13,
-    "destination": "lagos",
-    "carton": 24,
-    "agentId": "fb30",
-    "type": "mm"
-  },
-  {
-    "name": "oyinda",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 24,
-    "agentId": "fb30",
-    "type": "mm"
-  },
-  {
-    "name": "hob",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 24,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "ash",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 24,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "princess",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 24,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "next image",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 24,
-    "agentId": "fb15",
-    "type": "mm"
-  },
-  {
-    "name": "Titilope",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 24,
-    "agentId": "fb30",
-    "type": "mm"
-  },
-  {
-    "name": "akabol",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 24,
-    "agentId": "fb32",
-    "type": "mm"
-  },
-  {
-    "name": "Busola treschic ",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 24,
+    "carton": 16,
     "agentId": "fb17",
     "type": "mm"
   },
   {
-    "name": "kiyah",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 24,
-    "agentId": "fb32",
-    "type": "mm"
-  },
-  {
-    "name": "brenda",
-    "weight": 47,
-    "destination": "lagos",
-    "carton": 25,
-    "agentId": "fb24",
-    "type": "single"
-  },
-  {
-    "name": "enitan",
-    "weight": 27,
-    "destination": "lagos",
-    "carton": 22,
-    "agentId": "fb41",
-    "type": "mm"
-  },
-  {
-    "name": "dabeebar ",
-    "weight": 17,
-    "destination": "lagos",
-    "carton": 26,
-    "agentId": "fb24",
-    "type": "mm"
-  },
-  {
-    "name": "efe",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 26,
-    "agentId": "fb20",
-    "type": "mm"
-  },
-  {
-    "name": "sbt empire",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 26,
-    "agentId": "fb63",
-    "type": "mm"
-  },
-  {
-    "name": "mrs ada",
-    "weight": 13,
-    "destination": "lagos",
-    "carton": 26,
-    "agentId": "fb24",
-    "type": "mm"
-  },
-  {
-    "name": "lola",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 26,
-    "agentId": "fb66",
-    "type": "mm"
-  },
-  {
-    "name": " t look",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 26,
-    "agentId": "fb63",
-    "type": "mm"
-  },
-  {
-    "name": "meenah ",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 26,
-    "agentId": "fb63",
-    "type": "mm"
-  },
-  {
-    "name": "favour",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 26,
-    "agentId": "fb41",
-    "type": "mm"
-  },
-  {
-    "name": "ify",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 26,
-    "agentId": "fb41",
-    "type": "mm"
-  },
-  {
-    "name": "teddy",
-    "weight": 10,
-    "destination": "lagos",
-    "carton": 27,
-    "agentId": "fb6",
-    "type": "mm"
-  },
-  {
-    "name": "abidemi",
+    "name": "rashida",
     "weight": 5,
     "destination": "lagos",
-    "carton": 27,
-    "agentId": "fb13",
+    "carton": 16,
+    "agentId": "fb56",
     "type": "mm"
   },
   {
-    "name": "ngozi",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 27,
-    "agentId": "fb13",
-    "type": "mm"
-  },
-  {
-    "name": "okey",
+    "name": "olatunji",
     "weight": 1,
     "destination": "lagos",
-    "carton": 27,
+    "carton": 16,
     "agentId": "fb83",
     "type": "mm"
   },
   {
-    "name": "js lux",
-    "weight": 4,
+    "name": "bolu",
+    "weight": 2,
     "destination": "lagos",
-    "carton": 27,
-    "agentId": "fb6",
+    "carton": 16,
+    "agentId": "fb13",
     "type": "mm"
   },
   {
-    "name": "omoh",
-    "weight": 15,
+    "name": "akaffy ",
+    "weight": 19,
     "destination": "lagos",
-    "carton": 27,
-    "agentId": "fb9",
+    "carton": 16,
+    "agentId": "fb41",
     "type": "mm"
   },
   {
-    "name": "kevwe",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 27,
-    "agentId": "fb9",
-    "type": "mm"
-  },
-  {
-    "name": "lola",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 27,
-    "agentId": "fb9",
-    "type": "mm"
-  },
-  {
-    "name": "Dayour fikky ",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 27,
-    "agentId": "fb9",
-    "type": "mm"
-  },
-  {
-    "name": "lilly",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb40",
-    "type": "mm"
-  },
-  {
-    "name": "jummy",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb40",
-    "type": "mm"
-  },
-  {
-    "name": "adorable",
+    "name": "adebunmi adedapo ",
     "weight": 5,
     "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb9",
+    "carton": 16,
+    "agentId": "fb71",
     "type": "mm"
   },
   {
-    "name": "chioma",
-    "weight": 2,
+    "name": "esther",
+    "weight": 3,
     "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb9",
-    "type": "mm"
-  },
-  {
-    "name": "chika",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb9",
-    "type": "mm"
-  },
-  {
-    "name": "nkechi",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 28,
+    "carton": 16,
     "agentId": "fb19",
     "type": "mm"
   },
   {
     "name": "irene",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb27",
-    "type": "mm"
-  },
-  {
-    "name": "iffy",
     "weight": 2,
     "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb9",
+    "carton": 16,
+    "agentId": "fb7",
     "type": "mm"
   },
   {
-    "name": "shoddy",
+    "name": "ewa",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 16,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "seewhy",
+    "weight": 63,
+    "destination": "lagos",
+    "carton": 18,
+    "agentId": "fb7",
+    "type": "single "
+  },
+  {
+    "name": "efe",
+    "weight": 48,
+    "destination": "lagos",
+    "carton": 19,
+    "agentId": "fb19",
+    "type": "single "
+  },
+  {
+    "name": "jolade",
+    "weight": 10,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "adaora",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "adeleye",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "sam",
+    "weight": 12,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "atibioke ",
     "weight": 6,
     "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb9",
+    "carton": 20,
+    "agentId": "fb7",
     "type": "mm"
   },
   {
-    "name": "lb col",
+    "name": "shola",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "kummy",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "vette",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "wealth",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "ewa",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "Jessica ",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "dhs",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 20,
+    "agentId": "fb20",
+    "type": "mm"
+  },
+  {
+    "name": "lima",
+    "weight": 15,
+    "destination": "lagos",
+    "carton": 21,
+    "agentId": "fb14",
+    "type": "mm"
+  },
+  {
+    "name": "janet",
+    "weight": 36,
+    "destination": "lagos",
+    "carton": 21,
+    "agentId": "fb14",
+    "type": "mm"
+  },
+  {
+    "name": "cy stores",
+    "weight": 12,
+    "destination": "lagos",
+    "carton": 22,
+    "agentId": "fb14",
+    "type": "mm"
+  },
+  {
+    "name": "bimberry",
     "weight": 8,
     "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb65",
+    "carton": 22,
+    "agentId": "fb20",
     "type": "mm"
   },
   {
-    "name": "ese",
-    "weight": 3,
+    "name": "temmy",
+    "weight": 16,
     "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb27",
+    "carton": 22,
+    "agentId": "fb7",
     "type": "mm"
   },
   {
-    "name": "spr",
-    "weight": 3,
+    "name": "b4 smile",
+    "weight": 5,
     "destination": "lagos",
-    "carton": 28,
+    "carton": 22,
     "agentId": "fb58",
     "type": "mm"
   },
   {
-    "name": "xclamation ",
-    "weight": 14,
+    "name": "eva laural",
+    "weight": 8,
     "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb18",
+    "carton": 22,
+    "agentId": "fb7",
     "type": "mm"
   },
   {
-    "name": "cassie",
+    "name": "emi",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 22,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "bidos nice ",
+    "weight": 9,
+    "destination": "lagos",
+    "carton": 23,
+    "agentId": "fb27",
+    "type": "mm"
+  },
+  {
+    "name": "kenneth",
+    "weight": 12,
+    "destination": "lagos",
+    "carton": 23,
+    "agentId": "fb24",
+    "type": "mm"
+  },
+  {
+    "name": "mummy daniel",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 23,
+    "agentId": "fb62",
+    "type": "mm"
+  },
+  {
+    "name": "kikiewa",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 23,
+    "agentId": "fb27",
+    "type": "mm"
+  },
+  {
+    "name": "mummy adex ",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 23,
+    "agentId": "fb27",
+    "type": "mm"
+  },
+  {
+    "name": "juwe",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 23,
+    "agentId": "fb24",
+    "type": "mm"
+  },
+  {
+    "name": "enakwe",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 23,
+    "agentId": "fb24",
+    "type": "mm"
+  },
+  {
+    "name": "devogue",
+    "weight": 14,
+    "destination": "lagos",
+    "carton": 23,
+    "agentId": "fb24",
+    "type": "mm"
+  },
+  {
+    "name": "dapperwears ",
+    "weight": 40,
+    "destination": "lagos",
+    "carton": 24,
+    "agentId": "fb30",
+    "type": "single "
+  },
+  {
+    "name": "baz",
+    "weight": 53,
+    "destination": "lagos",
+    "carton": 25,
+    "agentId": "fb30",
+    "type": "single "
+  },
+  {
+    "name": "bidos",
     "weight": 4,
     "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb27",
+    "type": "mm"
+  },
+  {
+    "name": "chioma",
+    "weight": 12,
+    "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb43",
+    "type": "mm"
+  },
+  {
+    "name": "gloflex",
+    "weight": 6,
+    "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb43",
+    "type": "mm"
+  },
+  {
+    "name": "omolara",
+    "weight": 6,
+    "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb43",
+    "type": "mm"
+  },
+  {
+    "name": "ngozi",
+    "weight": 6,
+    "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb13",
+    "type": "mm"
+  },
+  {
+    "name": "k closet",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb62",
+    "type": "mm"
+  },
+  {
+    "name": "oyeniran",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb20",
+    "type": "mm"
+  },
+  {
+    "name": "telenath",
+    "weight": 1,
+    "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb19",
+    "type": "mm"
+  },
+  {
+    "name": "esther",
+    "weight": 1,
+    "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb19",
+    "type": "mm"
+  },
+  {
+    "name": "meolisa",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb38",
+    "type": "mm"
+  },
+  {
+    "name": "onos benin ",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 26,
+    "agentId": "fb56",
+    "type": "mm"
+  },
+  {
+    "name": "mrs ecoise",
+    "weight": 31,
+    "destination": "lagos",
+    "carton": 27,
+    "agentId": "fb48",
+    "type": "single "
+  },
+  {
+    "name": "diadem clothing ",
+    "weight": 56,
+    "destination": "lagos",
     "carton": 28,
-    "agentId": "fb18",
+    "agentId": "fb43",
+    "type": "single "
+  },
+  {
+    "name": "house of rhoyales ",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 29,
+    "agentId": "fb29",
+    "type": "mm"
+  },
+  {
+    "name": "gbemi",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 29,
+    "agentId": "fb29",
+    "type": "mm"
+  },
+  {
+    "name": "glitz",
+    "weight": 8,
+    "destination": "lagos",
+    "carton": 29,
+    "agentId": "fb56",
+    "type": "mm"
+  },
+  {
+    "name": "aunty yetunde ",
+    "weight": 1,
+    "destination": "lagos",
+    "carton": 29,
+    "agentId": "fb17",
     "type": "mm"
   },
   {
     "name": "jeffe",
-    "weight": 43,
-    "destination": "lagos",
-    "carton": 29,
-    "agentId": "fb77",
-    "type": "single"
-  },
-  {
-    "name": "kaffy",
-    "weight": 58,
+    "weight": 33,
     "destination": "lagos",
     "carton": 30,
-    "agentId": "fb77",
-    "type": "single"
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "crest ",
+    "weight": 25,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "kenzy",
+    "weight": 26,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "jmk",
+    "weight": 11,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "temy",
+    "weight": 8,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb76",
+    "type": "mm"
+  },
+  {
+    "name": "korad",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "yemi",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb76",
+    "type": "mm"
+  },
+  {
+    "name": "esti",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb83",
+    "type": "mm"
+  },
+  {
+    "name": "mom princess ",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "t look",
+    "weight": 9,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "sidikat",
+    "weight": 6,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "meenah",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "tee collection ",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 30,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "netavic",
+    "weight": 25,
+    "destination": "lagos",
+    "carton": 31,
+    "agentId": "fb62",
+    "type": "mm"
+  },
+  {
+    "name": "edu devine",
+    "weight": 34,
+    "destination": "lagos",
+    "carton": 31,
+    "agentId": "fb41",
+    "type": "mm"
+  },
+  {
+    "name": "d jay",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 32,
+    "agentId": "fb84",
+    "type": "mm"
   },
   {
     "name": "value plus",
-    "weight": 8,
+    "weight": 14,
     "destination": "lagos",
-    "carton": 31,
+    "carton": 32,
+    "agentId": "fb84",
+    "type": "mm"
+  },
+  {
+    "name": "monica",
+    "weight": 16,
+    "destination": "lagos",
+    "carton": 32,
+    "agentId": "fb84",
+    "type": "mm"
+  },
+  {
+    "name": "rosaline ",
+    "weight": 18,
+    "destination": "lagos",
+    "carton": 32,
     "agentId": "fb84",
     "type": "mm"
   },
   {
     "name": "tintin",
-    "weight": 6,
+    "weight": 4,
     "destination": "lagos",
-    "carton": 31,
+    "carton": 32,
     "agentId": "fb84",
+    "type": "mm"
+  },
+  {
+    "name": "chika",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 32,
+    "agentId": "fb84",
+    "type": "mm"
+  },
+  {
+    "name": "lizanj",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 32,
+    "agentId": "fb84",
+    "type": "mm"
+  },
+  {
+    "name": "nike",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 32,
+    "agentId": "fb84",
+    "type": "mm"
+  },
+  {
+    "name": "midam",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 32,
+    "agentId": "fb84",
+    "type": "mm"
+  },
+  {
+    "name": "mariam",
+    "weight": 62,
+    "destination": "lagos",
+    "carton": 33,
+    "agentId": "fb41",
+    "type": "single "
+  },
+  {
+    "name": "mq lagos",
+    "weight": 15,
+    "destination": "lagos",
+    "carton": 34,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "blessing ",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 34,
+    "agentId": "fb11",
+    "type": "mm"
+  },
+  {
+    "name": "ashabi",
+    "weight": 13,
+    "destination": "lagos",
+    "carton": 34,
+    "agentId": "fb76",
+    "type": "mm"
+  },
+  {
+    "name": "lb",
+    "weight": 1,
+    "destination": "lagos",
+    "carton": 34,
+    "agentId": "fb61",
+    "type": "mm"
+  },
+  {
+    "name": "hog",
+    "weight": 11,
+    "destination": "lagos",
+    "carton": 34,
+    "agentId": "fb65",
+    "type": "mm"
+  },
+  {
+    "name": "oandy",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 34,
+    "agentId": "fb65",
+    "type": "mm"
+  },
+  {
+    "name": "xclamation ",
+    "weight": 13,
+    "destination": "lagos",
+    "carton": 34,
+    "agentId": "fb38",
+    "type": "mm"
+  },
+  {
+    "name": "bimbo",
+    "weight": 21,
+    "destination": "lagos",
+    "carton": 35,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "ice princess ",
+    "weight": 17,
+    "destination": "lagos",
+    "carton": 35,
+    "agentId": "fb63",
+    "type": "mm"
+  },
+  {
+    "name": "dasap",
+    "weight": 27,
+    "destination": "lagos",
+    "carton": 36,
+    "agentId": "fb63",
+    "type": "single "
+  },
+  {
+    "name": "florence",
+    "weight": 35,
+    "destination": "lagos",
+    "carton": 37,
+    "agentId": "fb41",
+    "type": "mm"
+  },
+  {
+    "name": "khara",
+    "weight": 23,
+    "destination": "lagos",
+    "carton": 37,
+    "agentId": "fb30",
+    "type": "mm"
+  },
+  {
+    "name": "iya desire",
+    "weight": 49,
+    "destination": "lagos",
+    "carton": 38,
+    "agentId": "fb76",
+    "type": "single "
+  },
+  {
+    "name": "sbj collection ",
+    "weight": 21,
+    "destination": "lagos",
+    "carton": 39,
+    "agentId": "fb76",
+    "type": "mm"
+  },
+  {
+    "name": "vivian",
+    "weight": 8,
+    "destination": "lagos",
+    "carton": 39,
+    "agentId": "fb40",
+    "type": "mm"
+  },
+  {
+    "name": "twinnie",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 39,
+    "agentId": "fb71",
     "type": "mm"
   },
   {
     "name": "anita",
     "weight": 12,
     "destination": "lagos",
-    "carton": 31,
+    "carton": 39,
     "agentId": "fb18",
     "type": "mm"
   },
   {
-    "name": "christy ",
-    "weight": 5,
-    "destination": "lagos",
-    "carton": 31,
-    "agentId": "fb84",
-    "type": "mm"
-  },
-  {
-    "name": "nikky6ent ",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 31,
-    "agentId": "fb18",
-    "type": "mm"
-  },
-  {
-    "name": "lola",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 31,
-    "agentId": "fb18",
-    "type": "mm"
-  },
-  {
-    "name": "keem",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 31,
-    "agentId": "fb77",
-    "type": "mm"
-  },
-  {
-    "name": "bishop",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 31,
-    "agentId": "fb18",
-    "type": "mm"
-  },
-  {
-    "name": "phavour ",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 31,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "b4 smile",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 28,
-    "agentId": "fb58",
-    "type": "mm"
-  },
-  {
-    "name": "apparel",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 32,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "okafor",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 32,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "madam peace",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 32,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "variety",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 32,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "juliet",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 32,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "madam Oluwatosin ",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 32,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "chioma",
-    "weight": 5,
-    "destination": "lagos",
-    "carton": 32,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "ganiyat ",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 32,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "bsmg",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 32,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "melly store friend",
+    "name": "kiyah",
     "weight": 4,
     "destination": "lagos",
-    "carton": 32,
+    "carton": 39,
+    "agentId": "fb18",
+    "type": "mm"
+  },
+  {
+    "name": "sly",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 39,
+    "agentId": "fb61",
+    "type": "mm"
+  },
+  {
+    "name": "adenike",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 39,
+    "agentId": "fb18",
+    "type": "mm"
+  },
+  {
+    "name": "abidemi",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 40,
     "agentId": "fb10",
     "type": "mm"
   },
   {
-    "name": "rubby",
-    "weight": 41,
+    "name": "ojunwa",
+    "weight": 3,
     "destination": "lagos",
-    "carton": 33,
-    "agentId": "fb9",
+    "carton": 40,
+    "agentId": "fb10",
     "type": "mm"
   },
   {
-    "name": "mrs awotunde",
-    "weight": 22,
+    "name": "kikelomo",
+    "weight": 3,
     "destination": "lagos",
-    "carton": 33,
-    "agentId": "fb19",
+    "carton": 40,
+    "agentId": "fb10",
     "type": "mm"
   },
   {
-    "name": "rumia",
-    "weight": 10,
+    "name": "gorgeous ",
+    "weight": 13,
     "destination": "lagos",
-    "carton": 34,
-    "agentId": "fb27",
+    "carton": 40,
+    "agentId": "fb10",
     "type": "mm"
   },
   {
-    "name": "bliss ful",
-    "weight": 10,
+    "name": "omolara",
+    "weight": 5,
     "destination": "lagos",
-    "carton": 34,
-    "agentId": "fb27",
+    "carton": 40,
+    "agentId": "fb10",
     "type": "mm"
   },
   {
-    "name": "candy shop",
-    "weight": 19,
-    "destination": "lagos",
-    "carton": 34,
-    "agentId": "fb27",
-    "type": "mm"
-  },
-  {
-    "name": "ceo posh",
+    "name": "halajat",
     "weight": 14,
     "destination": "lagos",
-    "carton": 34,
-    "agentId": "fb27",
+    "carton": 40,
+    "agentId": "fb10",
     "type": "mm"
   },
   {
-    "name": "lola",
-    "weight": 6,
+    "name": "bimberry",
+    "weight": 4,
     "destination": "lagos",
-    "carton": 34,
-    "agentId": "fb14",
+    "carton": 40,
+    "agentId": "fb10",
+    "type": "mm"
+  },
+  {
+    "name": "bridget",
+    "weight": 8,
+    "destination": "lagos",
+    "carton": 40,
+    "agentId": "fb10",
     "type": "mm"
   },
   {
     "name": "chichi",
     "weight": 19,
     "destination": "lagos",
-    "carton": 35,
+    "carton": 41,
     "agentId": "fb10",
     "type": "mm"
   },
   {
-    "name": "rubby",
-    "weight": 32,
-    "destination": "lagos",
-    "carton": 35,
-    "agentId": "fb9",
-    "type": "mm"
-  },
-  {
-    "name": "aduke",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 36,
-    "agentId": "fb14",
-    "type": "mm"
-  },
-  {
-    "name": "Dejoke",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 36,
-    "agentId": "fb43",
-    "type": "mm"
-  },
-  {
-    "name": "glofex",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 36,
-    "agentId": "fb43",
-    "type": "mm"
-  },
-  {
-    "name": "fenasworld ",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 36,
-    "agentId": "fb43",
-    "type": "mm"
-  },
-  {
-    "name": "chioma",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 36,
-    "agentId": "fb43",
-    "type": "mm"
-  },
-  {
-    "name": "udofa",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 36,
-    "agentId": "fb6",
-    "type": "mm"
-  },
-  {
-    "name": "mrs omolara",
-    "weight": 13,
-    "destination": "lagos",
-    "carton": 36,
-    "agentId": "fb43",
-    "type": "mm"
-  },
-  {
-    "name": "diadem clothing ",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 36,
-    "agentId": "fb43",
-    "type": "mm"
-  },
-  {
-    "name": "tyna don",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 36,
-    "agentId": "fb38",
-    "type": "mm"
-  },
-  {
-    "name": "gabby's",
-    "weight": 29,
-    "destination": "warri",
-    "carton": 37,
-    "agentId": "fb27",
-    "type": "mm"
-  },
-  {
-    "name": "mrs brown",
-    "weight": 19,
-    "destination": "lagos",
-    "carton": 37,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "posh fashion",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 38,
-    "agentId": "fb60",
-    "type": "mm"
-  },
-  {
-    "name": "lady collection ",
-    "weight": 17,
-    "destination": "lagos",
-    "carton": 38,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "amisek",
-    "weight": 29,
-    "destination": "lagos",
-    "carton": 38,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "feyisayo ",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 38,
-    "agentId": "fb60",
-    "type": "mm"
-  },
-  {
-    "name": "timi closet",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 38,
-    "agentId": "fb60",
-    "type": "mm"
-  },
-  {
-    "name": "de flox",
+    "name": "house of rhoyales ",
     "weight": 3,
     "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb11",
+    "carton": 41,
+    "agentId": "fb29",
     "type": "mm"
   },
   {
-    "name": "cherry",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb38",
-    "type": "mm"
-  },
-  {
-    "name": "anita",
+    "name": "lad collection ",
     "weight": 2,
     "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb17",
-    "type": "mm"
-  },
-  {
-    "name": "madam b",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb38",
-    "type": "mm"
-  },
-  {
-    "name": "daps wear",
-    "weight": 5,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb38",
-    "type": "mm"
-  },
-  {
-    "name": "sholly more",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb11",
-    "type": "mm"
-  },
-  {
-    "name": "rumia",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb66",
-    "type": "mm"
-  },
-  {
-    "name": "blessing",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb11",
-    "type": "mm"
-  },
-  {
-    "name": "soso",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb11",
-    "type": "mm"
-  },
-  {
-    "name": "aunty bimpe",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb17",
-    "type": "mm"
-  },
-  {
-    "name": "omohot ",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "oma",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "emi",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "temi",
-    "weight": 5,
-    "destination": "lagos",
-    "carton": 39,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "boma",
-    "weight": 5,
-    "destination": "lagos",
-    "carton": 40,
+    "carton": 41,
     "agentId": "fb10",
     "type": "mm"
   },
   {
-    "name": "meolisa global",
-    "weight": 8,
+    "name": "kids choice",
+    "weight": 3,
     "destination": "lagos",
-    "carton": 40,
+    "carton": 41,
     "agentId": "fb10",
     "type": "mm"
   },
   {
-    "name": "diva",
-    "weight": 4,
+    "name": "liz fam",
+    "weight": 5,
     "destination": "lagos",
-    "carton": 40,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "tessy",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 40,
+    "carton": 41,
     "agentId": "fb10",
     "type": "mm"
   },
   {
     "name": "abike",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 40,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "hellina",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 40,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "lady j",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 40,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "see why",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 40,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "halajat",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 40,
-    "agentId": "fb10",
-    "type": "mm"
-  },
-  {
-    "name": "fash",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 40,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "patricia",
-    "weight": 39,
+    "weight": 7,
     "destination": "lagos",
     "carton": 41,
-    "agentId": "fb7",
-    "type": "single"
+    "agentId": "fb10",
+    "type": "mm"
   },
   {
-    "name": "patricia",
-    "weight": 40,
+    "name": "haniyat",
+    "weight": 9,
+    "destination": "lagos",
+    "carton": 41,
+    "agentId": "fb10",
+    "type": "mm"
+  },
+  {
+    "name": "iitab",
+    "weight": 39,
     "destination": "lagos",
     "carton": 42,
-    "agentId": "fb7",
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "iitab",
+    "weight": 39,
+    "destination": "lagos",
+    "carton": 43,
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "iitab",
+    "weight": 39,
+    "destination": "lagos",
+    "carton": 44,
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "iitab",
+    "weight": 39,
+    "destination": "lagos",
+    "carton": 45,
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "iitab",
+    "weight": 39,
+    "destination": "lagos",
+    "carton": 46,
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "iitab",
+    "weight": 39,
+    "destination": "lagos",
+    "carton": 47,
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "iitab",
+    "weight": 39,
+    "destination": "lagos",
+    "carton": 48,
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "iitab",
+    "weight": 39,
+    "destination": "lagos",
+    "carton": 49,
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "iitab",
+    "weight": 39,
+    "destination": "lagos",
+    "carton": 50,
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "iitab",
+    "weight": 42,
+    "destination": "lagos",
+    "carton": 52,
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "iitab",
+    "weight": 39,
+    "destination": "lagos",
+    "carton": 53,
+    "agentId": "fb20",
+    "type": "single "
+  },
+  {
+    "name": "adus",
+    "weight": 27,
+    "destination": "lagos",
+    "carton": 54,
+    "agentId": "fb15",
+    "type": "mm"
+  },
+  {
+    "name": "splendour ",
+    "weight": 22,
+    "destination": "lagos",
+    "carton": 54,
+    "agentId": "fb15",
+    "type": "mm"
+  },
+  {
+    "name": "reginna",
+    "weight": 19,
+    "destination": "lagos",
+    "carton": 55,
+    "agentId": "fb10",
+    "type": "mm"
+  },
+  {
+    "name": "mrs brown",
+    "weight": 23,
+    "destination": "lagos",
+    "carton": 55,
+    "agentId": "fb10",
+    "type": "mm"
+  },
+  {
+    "name": "moyosore ",
+    "weight": 24,
+    "destination": "lagos",
+    "carton": 56,
+    "agentId": "fb10",
+    "type": "mm"
+  },
+  {
+    "name": "merry heart",
+    "weight": 15,
+    "destination": "lagos",
+    "carton": 56,
+    "agentId": "fb10",
+    "type": "mm"
+  },
+  {
+    "name": "aunty ",
+    "weight": 19,
+    "destination": "lagos",
+    "carton": 56,
+    "agentId": "fb10",
+    "type": "mm"
+  },
+  {
+    "name": "kaffy",
+    "weight": 58,
+    "destination": "lagos",
+    "carton": 57,
+    "agentId": "fb77",
     "type": "single"
   },
   {
-    "name": "mrs armany",
-    "weight": 50,
+    "name": "kaffy",
+    "weight": 48,
     "destination": "lagos",
-    "carton": 43,
+    "carton": 58,
+    "agentId": "fb77",
+    "type": "single"
+  },
+  {
+    "name": "ify",
+    "weight": 33,
+    "destination": "abuja",
+    "carton": 59,
+    "agentId": "fb10",
+    "type": "single"
+  },
+  {
+    "name": "reginna",
+    "weight": 52,
+    "destination": "lagos",
+    "carton": 60,
+    "agentId": "fb10",
+    "type": "single"
+  },
+  {
+    "name": "Omolara",
+    "weight": 46,
+    "destination": "lagos",
+    "carton": 61,
+    "agentId": "fb10",
+    "type": "single"
+  },
+  {
+    "name": "Fc lizzy",
+    "weight": 36,
+    "destination": "lagos",
+    "carton": 62,
+    "agentId": "fb28",
+    "type": "single"
+  },
+  {
+    "name": "arit . S zema",
+    "weight": 35,
+    "destination": "lagos",
+    "carton": 63,
+    "agentId": "fb10",
+    "type": "single"
+  },
+  {
+    "name": "mrs ezico",
+    "weight": 55,
+    "destination": "lagos",
+    "carton": 64,
     "agentId": "fb48",
     "type": "single"
   },
   {
-    "name": "lena",
-    "weight": 13,
-    "destination": "lagos",
-    "carton": 44,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "twt mamo",
-    "weight": 15,
-    "destination": "lagos",
-    "carton": 44,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "Oba",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 44,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "abidemi",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 44,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "twt spt",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 44,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "twt bella",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 44,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "twt lyndy ",
+    "name": "Omo t",
     "weight": 6,
     "destination": "lagos",
-    "carton": 44,
-    "agentId": "fb34",
+    "carton": 65,
+    "agentId": "fb66",
     "type": "mm"
   },
   {
-    "name": "adorable",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 44,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "omoh",
-    "weight": 20,
-    "destination": "lagos",
-    "carton": 45,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "twt nibokun",
-    "weight": 16,
-    "destination": "lagos",
-    "carton": 45,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "dapper",
-    "weight": 11,
-    "destination": "lagos",
-    "carton": 45,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "crownzy",
+    "name": "gold",
     "weight": 9,
     "destination": "lagos",
-    "carton": 45,
-    "agentId": "fb34",
+    "carton": 65,
+    "agentId": "fb15",
     "type": "mm"
   },
   {
-    "name": "Mia fash",
-    "weight": 3,
+    "name": "bint",
+    "weight": 8,
     "destination": "lagos",
-    "carton": 45,
-    "agentId": "fb34",
+    "carton": 65,
+    "agentId": "fb15",
     "type": "mm"
   },
   {
-    "name": "twt vera",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 45,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "enn",
-    "weight": 40,
-    "destination": "lagos",
-    "carton": 46,
-    "agentId": "fb34",
-    "type": "single"
-  },
-  {
-    "name": "Mia fash",
-    "weight": 58,
-    "destination": "lagos",
-    "carton": 47,
-    "agentId": "fb34",
-    "type": "single"
-  },
-  {
-    "name": "truworth ",
-    "weight": 52,
-    "destination": "lagos",
-    "carton": 48,
-    "agentId": "fb34",
-    "type": "single"
-  },
-  {
-    "name": "mvn",
-    "weight": 12,
-    "destination": "lagos",
-    "carton": 49,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "ice princess",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 49,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "fummie",
+    "name": "Princess",
     "weight": 4,
     "destination": "lagos",
-    "carton": 49,
-    "agentId": "fb34",
+    "carton": 65,
+    "agentId": "fb15",
     "type": "mm"
   },
   {
-    "name": "adorable",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 49,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "mariam",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 49,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "bidex",
+    "name": "mercy",
     "weight": 4,
     "destination": "lagos",
-    "carton": 49,
-    "agentId": "fb34",
+    "carton": 65,
+    "agentId": "fb66",
     "type": "mm"
   },
   {
     "name": "b4 smile",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 49,
-    "agentId": "fb34",
-    "type": "mm"
-  },
-  {
-    "name": "mrs viviento",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 49,
-    "agentId": "fb48",
-    "type": "mm"
-  },
-  {
-    "name": "Mia fash",
-    "weight": 39,
-    "destination": "lagos",
-    "carton": 50,
-    "agentId": "fb34",
-    "type": "single"
-  },
-  {
-    "name": "mrs rainy",
-    "weight": 13,
-    "destination": "lagos",
-    "carton": 51,
-    "agentId": "fb48",
-    "type": "mm"
-  },
-  {
-    "name": "mrs chivicky ",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 51,
-    "agentId": "fb48",
-    "type": "mm"
-  },
-  {
-    "name": "mrs juliet",
     "weight": 1,
     "destination": "lagos",
-    "carton": 51,
-    "agentId": "fb48",
+    "carton": 65,
+    "agentId": "fb66",
     "type": "mm"
   },
   {
-    "name": "mrs aramide",
-    "weight": 8,
+    "name": "hob",
+    "weight": 10,
     "destination": "lagos",
-    "carton": 51,
-    "agentId": "fb48",
+    "carton": 65,
+    "agentId": "fb15",
     "type": "mm"
   },
   {
-    "name": "dew",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 51,
-    "agentId": "fb48",
-    "type": "mm"
-  },
-  {
-    "name": "ewa",
+    "name": "jeffe",
     "weight": 4,
     "destination": "lagos",
-    "carton": 51,
-    "agentId": "fb7",
+    "carton": 65,
+    "agentId": "fb77",
     "type": "mm"
-  },
-  {
-    "name": "sam",
-    "weight": 5,
-    "destination": "lagos",
-    "carton": 51,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "teni",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 51,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "fc kemolala ",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 51,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "alimat",
-    "weight": 56,
-    "destination": "lagos",
-    "carton": 52,
-    "agentId": "fb12",
-    "type": "single"
-  },
-  {
-    "name": "comfort clozzet",
-    "weight": 64,
-    "destination": "lagos",
-    "carton": 53,
-    "agentId": "fb12",
-    "type": "Single"
-  },
-  {
-    "name": "uche",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "adetoun ",
-    "weight": 8,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "kaybe",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "exclusive ",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "monsurat",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "addorable ",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "tyna",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "sholly",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "shukuran ",
-    "weight": 7,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "mutiat olabanji",
-    "weight": 11,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "mide",
-    "weight": 3,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "toyin everyday",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "Elizabeth ",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 54,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "Cindy donsio",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 55,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "faboya",
-    "weight": 9,
-    "destination": "lagos",
-    "carton": 55,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "eki",
-    "weight": 5,
-    "destination": "lagos",
-    "carton": 55,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "blessing ",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 55,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "adeola",
-    "weight": 6,
-    "destination": "lagos",
-    "carton": 55,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "sholly",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 55,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "eniola",
-    "weight": 5,
-    "destination": "lagos",
-    "carton": 55,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "vja collection ",
-    "weight": 15,
-    "destination": "lagos",
-    "carton": 56,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "ruklet",
-    "weight": 21,
-    "destination": "lagos",
-    "carton": 56,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "smart outfit ",
-    "weight": 11,
-    "destination": "lagos",
-    "carton": 56,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "amu comfort",
-    "weight": 13,
-    "destination": "lagos",
-    "carton": 56,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "Amu comfort ",
-    "weight": 4,
-    "destination": "lagos",
-    "carton": 56,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "adeshiyan",
-    "weight": 3,
-    "destination": "ibadan",
-    "carton": 56,
-    "agentId": "fb12",
-    "type": "mm"
-  },
-  {
-    "name": "madam uk",
-    "weight": 35,
-    "destination": "lagos",
-    "carton": 57,
-    "agentId": "fb1",
-    "type": "single"
-  },
-  {
-    "name": "mrs yemisi ",
-    "weight": 45,
-    "destination": "lagos",
-    "carton": 58,
-    "agentId": "fb48",
-    "type": "single"
-  },
-  {
-    "name": "efe",
-    "weight": 47,
-    "destination": "lagos",
-    "carton": 59,
-    "agentId": "fb1",
-    "type": "single"
-  },
-  {
-    "name": "ccp ventures",
-    "weight": 43,
-    "destination": "lagos",
-    "carton": 60,
-    "agentId": "fb17",
-    "type": "single"
-  },
-  {
-    "name": "madam adeshola",
-    "weight": 35,
-    "destination": "lagos",
-    "carton": 61,
-    "agentId": "fb1",
-    "type": "single"
-  },
-  {
-    "name": "mrs yemisi",
-    "weight": 45,
-    "destination": "lagos",
-    "carton": 62,
-    "agentId": "fb48",
-    "type": "single"
   },
   {
     "name": "fc peach",
     "weight": 9,
     "destination": "lagos",
-    "carton": 63,
+    "carton": 65,
     "agentId": "fb28",
     "type": "mm"
   },
   {
-    "name": "fc rhoyales ",
-    "weight": 6,
+    "name": "tando",
+    "weight": 37,
     "destination": "lagos",
-    "carton": 63,
-    "agentId": "fb28",
+    "carton": 66,
+    "agentId": "fb66",
+    "type": "single"
+  },
+  {
+    "name": "monica",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 67,
+    "agentId": "fb77",
     "type": "mm"
   },
   {
-    "name": "fc folashade",
+    "name": "zukky store",
+    "weight": 8,
+    "destination": "lagos",
+    "carton": 67,
+    "agentId": "fb77",
+    "type": "mm"
+  },
+  {
+    "name": "mrs ayoola",
+    "weight": 9,
+    "destination": "lagos",
+    "carton": 67,
+    "agentId": "fb77",
+    "type": "mm"
+  },
+  {
+    "name": "ify",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 67,
+    "agentId": "fb18",
+    "type": "mm"
+  },
+  {
+    "name": "Mimi sure",
+    "weight": 3,
+    "destination": "Warri",
+    "carton": 67,
+    "agentId": "fb58",
+    "type": "mm"
+  },
+  {
+    "name": "cresent ",
+    "weight": 13,
+    "destination": "lagos",
+    "carton": 67,
+    "agentId": "fb15",
+    "type": "mm"
+  },
+  {
+    "name": "Nojeem omoroga",
+    "weight": 17,
+    "destination": "lagos",
+    "carton": 67,
+    "agentId": "fb78",
+    "type": "mm"
+  },
+  {
+    "name": "girl's cave",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 67,
+    "agentId": "fb60",
+    "type": "mm"
+  },
+  {
+    "name": "timy",
+    "weight": 26,
+    "destination": "lagos",
+    "carton": 68,
+    "agentId": "fb14",
+    "type": "mm"
+  },
+  {
+    "name": "Cy",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 68,
+    "agentId": "fb14",
+    "type": "mm"
+  },
+  {
+    "name": "janet",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 68,
+    "agentId": "fb14",
+    "type": "mm"
+  },
+  {
+    "name": "cabby",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 68,
+    "agentId": "fb14",
+    "type": "mm"
+  },
+  {
+    "name": "janet",
+    "weight": 29,
+    "destination": "lagos",
+    "carton": 70,
+    "agentId": "fb60",
+    "type": "mm"
+  },
+  {
+    "name": "shile",
     "weight": 18,
     "destination": "lagos",
-    "carton": 63,
-    "agentId": "fb28",
+    "carton": 70,
+    "agentId": "fb10",
     "type": "mm"
   },
   {
-    "name": "fc gift",
+    "name": "dupsy",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 70,
+    "agentId": "fb60",
+    "type": "mm"
+  },
+  {
+    "name": "Timmy closet",
     "weight": 9,
     "destination": "lagos",
-    "carton": 63,
-    "agentId": "fb28",
+    "carton": 70,
+    "agentId": "fb60",
     "type": "mm"
   },
   {
-    "name": "fc kemolala",
-    "weight": 4,
+    "name": "cura",
+    "weight": 48,
     "destination": "lagos",
-    "carton": 63,
-    "agentId": "fb28",
-    "type": "mm"
-  },
-  {
-    "name": "emmy",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 63,
-    "agentId": "fb13",
-    "type": "mm"
-  },
-  {
-    "name": "shola",
-    "weight": 2,
-    "destination": "lagos",
-    "carton": 63,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "hannah",
-    "weight": 1,
-    "destination": "lagos",
-    "carton": 63,
-    "agentId": "fb7",
-    "type": "mm"
-  },
-  {
-    "name": "truworth ",
-    "weight": 2,
-    "destination": "abuja",
-    "carton": 63,
+    "carton": 70,
     "agentId": "fb1",
+    "type": "single"
+  },
+  {
+    "name": "efe",
+    "weight": 46,
+    "destination": "lagos",
+    "carton": 71,
+    "agentId": "fb1",
+    "type": "single"
+  },
+  {
+    "name": "twt spt",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 72,
+    "agentId": "fb34",
     "type": "mm"
   },
   {
-    "name": "mary",
-    "weight": 9,
-    "destination": "calabar ",
-    "carton": 64,
-    "agentId": "fb82",
+    "name": "Omoh",
+    "weight": 16,
+    "destination": "lagos",
+    "carton": 72,
+    "agentId": "fb34",
     "type": "mm"
   },
   {
-    "name": "blessing",
+    "name": "twt mona",
+    "weight": 18,
+    "destination": "lagos",
+    "carton": 72,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "vera",
     "weight": 6,
-    "destination": "ph",
-    "carton": 64,
-    "agentId": "fb82",
-    "type": "mm"
-  },
-  {
-    "name": "favour",
-    "weight": 4,
     "destination": "lagos",
-    "carton": 64,
-    "agentId": "fb41",
+    "carton": 72,
+    "agentId": "fb34",
     "type": "mm"
   },
   {
-    "name": "fc royahles ",
+    "name": "funmi",
+    "weight": 6,
+    "destination": "lagos",
+    "carton": 72,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "Tyna don",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 72,
+    "agentId": "fb38",
+    "type": "mm"
+  },
+  {
+    "name": "Enn",
+    "weight": 12,
+    "destination": "lagos",
+    "carton": 72,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "mrs juliet",
+    "weight": 9,
+    "destination": "lagos",
+    "carton": 72,
+    "agentId": "fb48",
+    "type": "mm"
+  },
+  {
+    "name": "promise",
+    "weight": 59,
+    "destination": "lagos",
+    "carton": 73,
+    "agentId": "fb7",
+    "type": "Single"
+  },
+  {
+    "name": "au fash",
+    "weight": 24,
+    "destination": "lagos",
+    "carton": 74,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "chichi",
+    "weight": 26,
+    "destination": "lagos",
+    "carton": 74,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "atibioke",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 74,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "mrs viviento ",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 74,
+    "agentId": "fb48",
+    "type": "mm"
+  },
+  {
+    "name": "madam adeshola",
+    "weight": 14,
+    "destination": "lagos",
+    "carton": 75,
+    "agentId": "fb1",
+    "type": "mm"
+  },
+  {
+    "name": "tru",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 75,
+    "agentId": "fb1",
+    "type": "mm"
+  },
+  {
+    "name": "ret",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 75,
+    "agentId": "fb1",
+    "type": "mm"
+  },
+  {
+    "name": "bunmi",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 75,
+    "agentId": "fb1",
+    "type": "mm"
+  },
+  {
+    "name": "see why",
+    "weight": 22,
+    "destination": "lagos",
+    "carton": 76,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "kemolala",
+    "weight": 25,
+    "destination": "lagos",
+    "carton": 76,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "mrs nicky",
+    "weight": 11,
+    "destination": "lagos",
+    "carton": 76,
+    "agentId": "fb48",
+    "type": "mm"
+  },
+  {
+    "name": "Tiwa",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 76,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "Turkey 2 lagos",
     "weight": 1,
     "destination": "lagos",
-    "carton": 64,
-    "agentId": "fb28",
+    "carton": 76,
+    "agentId": "fb7",
     "type": "mm"
   },
   {
-    "name": "ret",
-    "weight": 15,
+    "name": "twt baz",
+    "weight": 26,
     "destination": "lagos",
-    "carton": 64,
-    "agentId": ".Fb1",
+    "carton": 77,
+    "agentId": "fb34",
     "type": "mm"
   },
   {
-    "name": "tru",
-    "weight": 11,
-    "destination": "abuja",
-    "carton": 64,
-    "agentId": "fb1",
-    "type": "mm"
-  },
-  {
-    "name": "ret",
-    "weight": 11,
+    "name": "dapper",
+    "weight": 21,
     "destination": "lagos",
-    "carton": 66,
-    "agentId": "fb1",
-    "type": "mm"
-  },
-  {
-    "name": "tru",
-    "weight": 8,
-    "destination": "abuja",
-    "carton": 66,
-    "agentId": "fb1",
+    "carton": 77,
+    "agentId": "fb34",
     "type": "mm"
   },
   {
     "name": "kevwe",
+    "weight": 10,
+    "destination": "lagos",
+    "carton": 77,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "chipearl",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 77,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "hon gloria",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 78,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "sam",
+    "weight": 9,
+    "destination": "lagos",
+    "carton": 78,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "baz",
     "weight": 11,
     "destination": "lagos",
-    "carton": 66,
-    "agentId": "fb1",
+    "carton": 78,
+    "agentId": "fb7",
     "type": "mm"
   },
   {
-    "name": "efe",
-    "weight": 17,
+    "name": "shore",
+    "weight": 6,
     "destination": "lagos",
-    "carton": 65,
-    "agentId": "fb1",
+    "carton": 78,
+    "agentId": "fb7",
     "type": "mm"
   },
   {
-    "name": "madam adeshola ",
+    "name": "Lola",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 78,
+    "agentId": "fb7",
+    "type": "mm"
+  },
+  {
+    "name": "Mrs aramide",
+    "weight": 8,
+    "destination": "lagos",
+    "carton": 78,
+    "agentId": "fb48",
+    "type": "mm"
+  },
+  {
+    "name": "ify",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 78,
+    "agentId": "fb41",
+    "type": "mm"
+  },
+  {
+    "name": "mrs yemisi",
+    "weight": 47,
+    "destination": "lagos",
+    "carton": 79,
+    "agentId": "fb48",
+    "type": "single"
+  },
+  {
+    "name": "truworth ",
+    "weight": 20,
+    "destination": "lagos",
+    "carton": 80,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "twt mamo",
+    "weight": 24,
+    "destination": "lagos",
+    "carton": 80,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "twt lyndy",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 80,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "kiyah",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 80,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "mvn",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 80,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "ice princess",
+    "weight": 15,
+    "destination": "lagos",
+    "carton": 81,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "kemsure",
+    "weight": 21,
+    "destination": "lagos",
+    "carton": 81,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "nibokun",
+    "weight": 22,
+    "destination": "lagos",
+    "carton": 81,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "abc",
+    "weight": 16,
+    "destination": "lagos",
+    "carton": 83,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "lafunke",
+    "weight": 13,
+    "destination": "lagos",
+    "carton": 83,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "twt ogonna",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 83,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "ehc",
+    "weight": 6,
+    "destination": "lagos",
+    "carton": 83,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "b4 smile",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 83,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "lena",
+    "weight": 8,
+    "destination": "lagos",
+    "carton": 83,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "twt mamo",
+    "weight": 49,
+    "destination": "lagos",
+    "carton": 84,
+    "agentId": "fb34",
+    "type": "single"
+  },
+  {
+    "name": "twt mamo",
+    "weight": 51,
+    "destination": "lagos",
+    "carton": 85,
+    "agentId": "fb34",
+    "type": "single"
+  },
+  {
+    "name": "twt mamo",
+    "weight": 51,
+    "destination": "lagos",
+    "carton": 86,
+    "agentId": "fb34",
+    "type": "Single"
+  },
+  {
+    "name": "shc",
+    "weight": 8,
+    "destination": "lagos",
+    "carton": 87,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "iphy",
+    "weight": 10,
+    "destination": "lagos",
+    "carton": 87,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "abidemi",
+    "weight": 1,
+    "destination": "lagos",
+    "carton": 87,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "rain",
+    "weight": 10,
+    "destination": "lagos",
+    "carton": 87,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "xclamation",
+    "weight": 14,
+    "destination": "lagos",
+    "carton": 87,
+    "agentId": "fb34",
+    "type": "mm"
+  },
+  {
+    "name": "desir  luxury world",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "bido",
+    "weight": 10,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "modious ",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "xclamation ",
+    "weight": 8,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "D boldot ",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "osakwe",
+    "weight": 13,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "mummy nasir",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "bolanle",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "metmedy ",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "Uc bianka",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "damlex",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "Alex mandy",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 89,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "rosemary",
+    "weight": 18,
+    "destination": "lagos",
+    "carton": 90,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "namdam",
+    "weight": 18,
+    "destination": "lagos",
+    "carton": 90,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "Jane paul",
+    "weight": 14,
+    "destination": "lagos",
+    "carton": 90,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "shukuran",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 90,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "mide",
+    "weight": 13,
+    "destination": "lagos",
+    "carton": 91,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "zainab",
+    "weight": 13,
+    "destination": "lagos",
+    "carton": 91,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "adisa",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 91,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "shola",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 91,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "bolanle",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 91,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "adeshiyan",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 91,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "kel",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 91,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "patient ",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 91,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "mrs ajayi",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 91,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "hermajeaty",
+    "weight": 36,
+    "destination": "lagos",
+    "carton": 92,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "ashopey",
+    "weight": 23,
+    "destination": "lagos",
+    "carton": 92,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "flacksam",
+    "weight": 16,
+    "destination": "lagos",
+    "carton": 93,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "adetoun",
+    "weight": 16,
+    "destination": "lagos",
+    "carton": 93,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "grandbell",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 93,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "tyna",
+    "weight": 6,
+    "destination": "lagos",
+    "carton": 93,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "Cordell's collection ",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 93,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "Sagittarius",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 93,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "roselyn",
+    "weight": 10,
+    "destination": "lagos",
+    "carton": 94,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "vja",
+    "weight": 13,
+    "destination": "lagos",
+    "carton": 94,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "mummy gbolahan",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 94,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "exclusive",
+    "weight": 6,
+    "destination": "lagos",
+    "carton": 94,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "rose empire",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 94,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "stella",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 94,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "eve",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 94,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "mummy smart",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 94,
+    "agentId": "fb12",
+    "type": "mm "
+  },
+  {
+    "name": "talk to foluke",
+    "weight": 5,
+    "destination": "lagos",
+    "carton": 94,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "lynda",
     "weight": 19,
     "destination": "lagos",
-    "carton": 65,
-    "agentId": "fb1",
+    "carton": 95,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "Elizebeth ",
+    "weight": 4,
+    "destination": "lagos",
+    "carton": 95,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "monica",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 95,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "adeola",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 95,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "ololade boutique",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 95,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "eki",
+    "weight": 20,
+    "destination": "lagos",
+    "carton": 96,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "blessing",
+    "weight": 22,
+    "destination": "lagos",
+    "carton": 96,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "hermajesty",
+    "weight": 48,
+    "destination": "lagos",
+    "carton": 96,
+    "agentId": "fb12",
+    "type": "single"
+  },
+  {
+    "name": "chinning look",
+    "weight": 41,
+    "destination": "lagos",
+    "carton": 97,
+    "agentId": "fb12",
+    "type": "single"
+  },
+  {
+    "name": "favour",
+    "weight": 13,
+    "destination": "lagos",
+    "carton": 98,
+    "agentId": "fb41",
+    "type": "mm"
+  },
+  {
+    "name": "adetoun",
+    "weight": 9,
+    "destination": "lagos",
+    "carton": 98,
+    "agentId": "fb18",
+    "type": "mm"
+  },
+  {
+    "name": "xclusive",
+    "weight": 2,
+    "destination": "lagos",
+    "carton": 98,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "alaje",
+    "weight": 3,
+    "destination": "lagos",
+    "carton": 98,
+    "agentId": "fb12",
+    "type": "mm"
+  },
+  {
+    "name": "Mia fash",
+    "weight": 49,
+    "destination": "lagos",
+    "carton": 100,
+    "agentId": "fb12",
+    "type": "single"
+  },
+  {
+    "name": "mrs yemisi",
+    "weight": 46,
+    "destination": "lagos",
+    "carton": 88,
+    "agentId": "fb12",
+    "type": "single"
+  },
+  {
+    "name": "IITAB",
+    "weight": 18,
+    "destination": "lagos",
+    "carton": 69,
+    "agentId": "fb20",
+    "type": "single"
+  },
+  {
+    "name": "IITAB",
+    "weight": 39,
+    "destination": "lagos",
+    "carton": 51,
+    "agentId": "fb20",
+    "type": "single"
+  },
+  {
+    "name": "lady j",
+    "weight": 27,
+    "destination": "lagos",
+    "carton": 82,
+    "agentId": "fb7",
+    "type": "single"
+  },
+  {
+    "name": "ladyrik",
+    "weight": 8,
+    "destination": "lagos",
+    "carton": 68,
+    "agentId": "fb14",
+    "type": "mm"
+  },
+  {
+    "name": "ezinne",
+    "weight": 7,
+    "destination": "lagos",
+    "carton": 98,
+    "agentId": "fb56",
     "type": "mm"
   }
 ]

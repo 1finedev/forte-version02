@@ -1,3 +1,4 @@
+import { connectToDatabase } from "../backend/dbConnect";
 import { getSession } from "next-auth/react";
 import User from "./../backend/userModel";
 import axios from "axios";
@@ -7,6 +8,7 @@ const Profile = () => {
 };
 
 export async function getServerSideProps({ req, res }) {
+  await connectToDatabase();
   const session = await getSession({ req });
   if (!session) {
     return {

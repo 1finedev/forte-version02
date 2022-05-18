@@ -1,3 +1,4 @@
+import { connectToDatabase } from "../backend/dbConnect";
 import { getSession } from "next-auth/react";
 import Layout from "./backLayout";
 
@@ -10,6 +11,7 @@ Finances.getLayout = function getLayout(page) {
   return <Layout page="create-shipment">{page}</Layout>;
 };
 export async function getServerSideProps({ req, res }) {
+  await connectToDatabase();
   const session = await getSession({ req });
 
   if (session?.user?.role !== "admin") {

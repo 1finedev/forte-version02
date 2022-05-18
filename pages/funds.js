@@ -1,3 +1,4 @@
+import { connectToDatabase } from "../backend/dbConnect";
 import { Layout, PageNav } from "./../components";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
@@ -284,6 +285,7 @@ export default AgentFunds;
 AgentFunds.auth = true;
 
 export async function getServerSideProps(context) {
+  await connectToDatabase();
   const session = await getSession(context);
 
   if (!session?.user) {

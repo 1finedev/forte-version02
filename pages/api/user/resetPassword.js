@@ -1,7 +1,9 @@
+import { connectToDatabase } from "./../../../backend/dbConnect";
 import User from "./../.././../backend/userModel";
 const crypto = require("crypto");
 
 const handler = async (req, res) => {
+  await connectToDatabase();
   if (req.method === "POST") {
     const { password, passwordConfirm, token } = req.body;
     if (!password || !passwordConfirm || !token) {

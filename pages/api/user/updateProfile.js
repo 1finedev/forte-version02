@@ -1,7 +1,9 @@
+import { connectToDatabase } from "./../../../backend/dbConnect";
 import { getSession } from "next-auth/react";
 import User from "./../../../backend/userModel";
 
 const handler = async (req, res) => {
+  await connectToDatabase();
   if (req.method === "POST") {
     const session = await getSession({ req });
     if (!session) {

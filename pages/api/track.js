@@ -1,5 +1,8 @@
+import { connectToDatabase } from "./../../backend/dbConnect";
 import Shipment from "./../../backend/shipmentModel";
+
 const handler = async (req, res) => {
+  await connectToDatabase();
   if (req.method === "POST") {
     const { shipCode } = req.body;
     if (!shipCode) {

@@ -1,8 +1,10 @@
 import Shipment from "./../../../backend/shipmentModel";
 import { getSession } from "next-auth/react";
 import User from "../../../backend/userModel";
+import { connectToDatabase } from "./../../../backend/dbConnect";
 
 const handler = async (req, res) => {
+  await connectToDatabase();
   const session = await getSession({ req });
 
   if (!session) {

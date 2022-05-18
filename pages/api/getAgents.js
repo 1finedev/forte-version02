@@ -1,7 +1,9 @@
+import { connectToDatabase } from "./../../backend/dbConnect";
 import User from "./../../backend/userModel";
 import { getSession } from "next-auth/react";
 
 const handler = async (req, res) => {
+  await connectToDatabase();
   if (req.method === "GET") {
     const session = await getSession({ req });
     if (!session || session?.user?.role !== "admin") {

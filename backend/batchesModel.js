@@ -1,8 +1,5 @@
 const mongoose = require("mongoose");
 
-import { connectToDatabase } from "./dbConnect";
-connectToDatabase();
-
 const batchSchema = new mongoose.Schema({
   batch: {
     type: Number,

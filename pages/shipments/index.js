@@ -1,3 +1,4 @@
+import { connectToDatabase } from "./../../backend/dbConnect";
 import { useState } from "react";
 import router from "next/router";
 import { format } from "date-fns";
@@ -88,6 +89,7 @@ const AgentShipment = ({ batchData, shipments }) => {
 };
 
 export async function getServerSideProps({ req, res }) {
+  await connectToDatabase();
   // get all batches in the database
 
   const session = await getSession({ req });
