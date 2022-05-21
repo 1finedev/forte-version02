@@ -8,9 +8,9 @@ import { getSession } from "next-auth/react";
 
 const handler = async (req, res) => {
   await connectToDatabase();
-  const session = await getSession({ req });
+  const jeffe = await Shipment.find({ name: "JEFFE" });
 
-  console.log(session);
+  console.log(jeffe.length);
 
   //   const shipments = await Shipment.find().limit(309).sort({
   //     createdAt: -1,
