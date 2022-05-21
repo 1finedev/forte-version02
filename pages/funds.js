@@ -284,9 +284,9 @@ const AgentFunds = ({ funds }) => {
 export default AgentFunds;
 AgentFunds.auth = true;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ req, res }) {
   await connectToDatabase();
-  const session = await getSession(context);
+  const session = await getSession({ req });
 
   if (!session?.user) {
     return {

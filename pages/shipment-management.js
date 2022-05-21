@@ -276,6 +276,7 @@ const Shipments = ({ batchData }) => {
                     type: "success",
                   }
                 );
+
                 const res = await axios.post(
                   "/api/shipments/sendSingleMessage",
                   {
@@ -287,7 +288,10 @@ const Shipments = ({ batchData }) => {
                   alert.show(
                     <div
                       className="text-white dark:text-white"
-                      style={{ textTransform: "initial", fontFamily: "Roboto" }}
+                      style={{
+                        textTransform: "initial",
+                        fontFamily: "Roboto",
+                      }}
                     >
                       {index + 1} of {shipment.length} messages sent
                       successfully!
@@ -300,7 +304,10 @@ const Shipments = ({ batchData }) => {
                   alert.show(
                     <div
                       className="text-white dark:text-white"
-                      style={{ textTransform: "initial", fontFamily: "Roboto" }}
+                      style={{
+                        textTransform: "initial",
+                        fontFamily: "Roboto",
+                      }}
                     >
                       {res.data.error}
                     </div>,

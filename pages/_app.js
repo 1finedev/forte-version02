@@ -41,7 +41,14 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const getLayout = Component.getLayout || ((page) => page);
 
   return (
-    <SessionProvider session={session} refetchOnWindowFocus={true}>
+    <SessionProvider
+      session={session}
+      options={{
+        clientMaxAge: 2 * 60 * 60, // Re-fetch session if cache is older than 2 hours
+        keepAlive: 60 * 60, // Send keepAlive message every hour
+      }}
+      refetchOnWindowFocus={true}
+    >
       <AlertProvider template={AlertTemplate} {...options}>
         <NextNProgress color="white" />
 

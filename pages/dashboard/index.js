@@ -49,10 +49,6 @@ const AgentProfile = ({ statistics }) => {
     }
   }, [session]);
 
-  useEffect(() => {
-    reloadSession();
-  }, []);
-
   const uploadImage = async (base64EncodedImage) => {
     if (!base64EncodedImage) return;
     const res = await axios.post(
@@ -76,7 +72,7 @@ const AgentProfile = ({ statistics }) => {
           type: "success",
         }
       );
-      reloadSession();
+      await getSession();
       setPhotoPreview(user?.photo);
       setLoading(false);
     } else {
@@ -322,16 +318,6 @@ const AgentProfile = ({ statistics }) => {
 
 export async function getServerSideProps({ req, res }) {
   await connectToDatabase();
-  const session = await getSession({ req });
-  if (!session) {
-    return {
-      redirect: {
-        permanent: false,
-        destination: "/login",
-      },
-      props: {},
-    };
-  }
 
   try {
     const mongoose = (await import("mongoose")).default;

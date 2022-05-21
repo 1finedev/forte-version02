@@ -6,6 +6,8 @@ const handler = async (req, res) => {
   await connectToDatabase();
   if (req.method === "POST") {
     const session = await getSession({ req });
+
+    console.log(session);
     if (!session) {
       return res
         .status(200)

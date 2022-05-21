@@ -15,7 +15,7 @@ import {
   Layout,
 } from "./../../components";
 
-const AgentShipment = ({ batchData, shipments }) => {
+const AgentShipment = ({ batchData }) => {
   const {
     batches,
     UpdateBatches,
@@ -91,45 +91,13 @@ const AgentShipment = ({ batchData, shipments }) => {
 export async function getServerSideProps({ req, res }) {
   await connectToDatabase();
   // get all batches in the database
-
-  const session = await getSession({ req });
-
-  if (!session || session.user.role !== "agent") {
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  }
-
   try {
     const batches = await Batch.find({}).lean();
-    const batchStart =
-      batches[batches.length - 1]?.months?.[
-        batches[batches.length - 1].months.length - 1
-      ]?.batches?.[
-        batches[batches.length - 1].months[
-          batches[batches.length - 1].months.length - 1
-        ].batches.length - 1
-      ]?.startDate;
-    try {
-      const data = await Shipments.find({
-        createdAt: { $gte: batchStart, $lte: new Date(Date.now()) },
-        user: session.user._id,
-      })
-        .sort({ createdAt: -1 })
-        .lean();
-      const shipments = JSON.parse(JSON.stringify(data));
-      return {
-        props: {
-          batchData: JSON.parse(JSON.stringify(batches)),
-          shipments,
-        },
-      };
-    } catch (e) {
-      console.log(e);
-    }
+    return {
+      props: {
+        batchData: JSON.parse(JSON.stringify(batches)),
+      },
+    };
   } catch (error) {
     console.log(error);
     return {

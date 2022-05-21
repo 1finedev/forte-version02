@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Layout } from "./../components";
-import { useSession } from "next-auth/react";
+import { useSession, getSession } from "next-auth/react";
 import { MultiSelect } from "react-multi-select-component";
 import axios from "axios";
 import { useAlert } from "react-alert";
 
 const AgentProfile = () => {
   const reloadSession = () => {
+    console.log("called");
     const event = new Event("visibilitychange");
     document.dispatchEvent(event);
   };
@@ -50,7 +51,6 @@ const AgentProfile = () => {
           type: "success",
         }
       );
-      reloadSession();
     } else {
       alert.show(
         <div
@@ -64,6 +64,7 @@ const AgentProfile = () => {
         }
       );
     }
+    reloadSession();
     setLoading(false);
   };
 
@@ -118,12 +119,12 @@ const AgentProfile = () => {
         min == 0 && sec == 0 ? clearInterval(countdown) : countdown;
       }
     }
-    if (loading) {
+    if (loading && mobileUpdate) {
       clearInterval(countdown);
     }
-    return () => {
-      clearInterval(countdown);
-    };
+    // return () => {
+    //   clearInterval(countdown);
+    // };
   }, [mobileUpdate, loading]);
 
   useEffect(() => {

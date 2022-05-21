@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import User from "./../../../backend/userModel";
 import { connectToDatabase } from "./../../../backend/dbConnect";
+
 export default NextAuth({
   session: {
     strategy: "jwt",
@@ -65,6 +66,8 @@ export default NextAuth({
     },
     async session({ session, token }) {
       token && (session.user = token.user);
+      const user = await User.findById(token.user._id);
+      session.user = user;
       return session;
     },
     async jwt({ token, user }) {
