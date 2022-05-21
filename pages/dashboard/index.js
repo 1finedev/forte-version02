@@ -2,8 +2,9 @@ import { connectToDatabase } from "./../../backend/dbConnect";
 import Shipment from "../../backend/shipmentModel";
 import Image from "next/image";
 import { useState, useLayoutEffect, useEffect, useRef } from "react";
-import { useSession, getSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { getSession } from "next-auth/react";
 import { Layout, ChooseColorTheme } from "./../../components";
 import { useRouter } from "next/router";
 import axios from "axios";
@@ -47,6 +48,10 @@ const AgentProfile = ({ statistics }) => {
       setPhotoPreview(session.user.photo);
     }
   }, [session]);
+
+  useEffect(() => {
+    reloadSession();
+  }, []);
 
   const uploadImage = async (base64EncodedImage) => {
     if (!base64EncodedImage) return;
@@ -317,7 +322,6 @@ const AgentProfile = ({ statistics }) => {
 
 export async function getServerSideProps({ req, res }) {
   await connectToDatabase();
-
   const session = await getSession({ req });
   if (!session) {
     return {
@@ -325,8 +329,10 @@ export async function getServerSideProps({ req, res }) {
         permanent: false,
         destination: "/login",
       },
+      props: {},
     };
   }
+
   try {
     const mongoose = (await import("mongoose")).default;
     let idToSearch = mongoose.Types.ObjectId(session.user._id);

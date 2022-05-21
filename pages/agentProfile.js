@@ -7,7 +7,6 @@ import { useAlert } from "react-alert";
 
 const AgentProfile = () => {
   const reloadSession = () => {
-    console.log("called");
     const event = new Event("visibilitychange");
     document.dispatchEvent(event);
   };
@@ -64,6 +63,7 @@ const AgentProfile = () => {
         }
       );
     }
+    await getSession();
     reloadSession();
     setLoading(false);
   };
