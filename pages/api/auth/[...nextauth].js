@@ -65,11 +65,11 @@ export default NextAuth({
       return true;
     },
     async session({ session, token }) {
-      // token && (session.user = token.user);
-      session.user = token.user;
+      token && (session.user = token.user);
+      // session.user = token.user;
 
-      const user = await User.findById(token.user._id);
-      session.user = user;
+      // const user = await User.findById(token.user._id);
+      // session.user = user;
       return session;
     },
     async jwt({ token, user }) {
