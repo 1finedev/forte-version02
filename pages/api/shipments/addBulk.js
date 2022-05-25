@@ -8,9 +8,9 @@ import { getSession } from "next-auth/react";
 
 const handler = async (req, res) => {
   await connectToDatabase();
-  const jeffe = await Shipment.find({ name: "JEFFE" });
+  // const jeffe = await Shipment.find({ name: "JEFFE" });
 
-  console.log(jeffe.length);
+  // console.log(jeffe.length);
 
   //   const shipments = await Shipment.find().limit(309).sort({
   //     createdAt: -1,
@@ -258,6 +258,20 @@ const handler = async (req, res) => {
   // } catch (error) {
   //   console.log(error);
   // }
+
+  const agent = await Shipment.find({
+    user: "5f104e30c7201e0017587605",
+    createdAt: { $gte: "2022-04-12T20:44:52.500Z" },
+  });
+  console.log(agent);
+
+  let total = 0;
+
+  agent.forEach((ship) => {
+    total = total + ship.weight;
+  });
+
+  console.log(total);
 
   res.status(400).json({
     status: "success",

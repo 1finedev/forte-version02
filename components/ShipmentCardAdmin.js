@@ -17,7 +17,7 @@ const ShipmentCardAdmin = ({
     return price?.toString()?.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
   return (
-    <div className="mx-[-10px] bg-[#E9ECEF] p-[10px]">
+    <div className="bg-[#E9ECEF] p-[10px] px-[10px]">
       <h4 className="py-[30px] text-center text-xl">
         {loading || isLoading ? (
           <p>Loading Shipments, please wait...</p>
@@ -35,17 +35,17 @@ const ShipmentCardAdmin = ({
       </h4>
       <div className="flex flex-col ">
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div className="sm: inline-block min-w-full py-2 align-middle lg:px-8">
+          <div className="inline-block min-w-full py-2 align-middle sm: lg:px-8">
             <div className="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
                     <th
                       scope="col"
-                      className="py-3 pl-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                      className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
                       <svg
-                        className="h-4 w-4"
+                        className="w-4 h-4"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ const ShipmentCardAdmin = ({
                     </th>
                     <th
                       scope="col"
-                      className="py-3 pl-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                      className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
                       Tracking
                     </th>
@@ -73,33 +73,33 @@ const ShipmentCardAdmin = ({
                     </th>
                     <th
                       scope="col"
-                      className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                      className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
                       Weight
                     </th>
                     <th
                       scope="col"
-                      className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                      className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
                       Extra
                     </th>
                     <th
                       scope="col"
-                      className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500 "
+                      className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase "
                     >
                       Dest.
                     </th>
 
                     <th
                       scope="col"
-                      className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                      className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
                       Carton
                     </th>
 
                     <th
                       scope="col"
-                      className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                      className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                     >
                       Agent
                     </th>
@@ -107,19 +107,19 @@ const ShipmentCardAdmin = ({
                       <>
                         <th
                           scope="col"
-                          className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                          className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                         >
                           freight
                         </th>
                         <th
                           scope="col"
-                          className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                          className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                         >
                           Custom
                         </th>
                         <th
                           scope="col"
-                          className="py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                          className="py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                         >
                           total
                         </th>
@@ -140,12 +140,12 @@ const ShipmentCardAdmin = ({
                   return (
                     <tbody
                       key={index}
-                      className="divide-y divide-gray-200 bg-white "
+                      className="bg-white divide-y divide-gray-200 "
                     >
                       <tr>
                         <td
                           scope="col"
-                          className="py-3 pl-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
+                          className="py-3 pl-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                         >
                           <input
                             type="checkbox"
@@ -168,7 +168,7 @@ const ShipmentCardAdmin = ({
                             }
                           />
                         </td>
-                        <td className="whitespace-nowrap py-4 pl-2">
+                        <td className="py-4 pl-2 whitespace-nowrap">
                           <div className="text-sm font-medium text-gray-900">
                             {ship.shipCode}
                           </div>
@@ -193,7 +193,7 @@ const ShipmentCardAdmin = ({
                                 autoFocus
                                 type="text"
                                 defaultValue={editValues.name}
-                                className="min-w-0 border-0 uppercase text-mainColor focus:outline-0"
+                                className="min-w-0 uppercase border-0 text-mainColor focus:outline-0"
                                 style={{
                                   width: editWidth.name,
                                 }}
@@ -204,7 +204,7 @@ const ShipmentCardAdmin = ({
                           </div>
                         </td>
 
-                        <td className="whitespace-nowrap py-4">
+                        <td className="py-4 whitespace-nowrap">
                           <div
                             className={`${
                               selectedIndex === index && "relative "
@@ -223,7 +223,7 @@ const ShipmentCardAdmin = ({
                                 }
                                 type="text"
                                 defaultValue={editValues.weight}
-                                className="min-w-0 border-0 uppercase text-mainColor focus:outline-0"
+                                className="min-w-0 uppercase border-0 text-mainColor focus:outline-0"
                                 style={{
                                   width: editWidth.weight,
                                 }}
@@ -233,7 +233,7 @@ const ShipmentCardAdmin = ({
                             )}
                           </div>
                         </td>
-                        <td className="whitespace-nowrap py-4">
+                        <td className="py-4 whitespace-nowrap">
                           <div
                             className={`${
                               selectedIndex === index && "relative "
@@ -252,7 +252,7 @@ const ShipmentCardAdmin = ({
                                 }
                                 type="text"
                                 defaultValue={editValues.extraWeight}
-                                className="min-w-0 border-0 uppercase text-mainColor focus:outline-0"
+                                className="min-w-0 uppercase border-0 text-mainColor focus:outline-0"
                                 style={{
                                   width: editWidth.extraWeight,
                                 }}
@@ -281,7 +281,7 @@ const ShipmentCardAdmin = ({
                                 }
                                 type="text"
                                 defaultValue={editValues.destination.toUpperCase()}
-                                className="min-w-0 border-0 uppercase text-mainColor focus:outline-0"
+                                className="min-w-0 uppercase border-0 text-mainColor focus:outline-0"
                                 style={{
                                   width: editWidth.destination,
                                 }}
@@ -291,7 +291,7 @@ const ShipmentCardAdmin = ({
                             )}
                           </div>
                         </td>
-                        <td className="whitespace-nowrap py-4">
+                        <td className="py-4 whitespace-nowrap">
                           <div
                             className={`${
                               selectedIndex === index && "relative "
@@ -310,7 +310,7 @@ const ShipmentCardAdmin = ({
                                 }
                                 type="text"
                                 defaultValue={editValues.carton}
-                                className="min-w-0 border-0 uppercase text-mainColor focus:outline-0"
+                                className="min-w-0 uppercase border-0 text-mainColor focus:outline-0"
                                 style={{
                                   width: editWidth.carton,
                                 }}
@@ -321,7 +321,7 @@ const ShipmentCardAdmin = ({
                           </div>
                         </td>
 
-                        <td className="whitespace-nowrap py-4">
+                        <td className="py-4 whitespace-nowrap">
                           <div
                             className={`${
                               selectedIndex === index && "relative "
@@ -340,7 +340,7 @@ const ShipmentCardAdmin = ({
                                 }
                                 type="text"
                                 defaultValue={editValues.agentId}
-                                className="min-w-0 border-0 uppercase text-mainColor focus:outline-0"
+                                className="min-w-0 uppercase border-0 text-mainColor focus:outline-0"
                                 style={{
                                   width: editWidth.agentId,
                                 }}
@@ -352,7 +352,7 @@ const ShipmentCardAdmin = ({
                         </td>
                         {session?.user?.role === "admin" && (
                           <>
-                            <td className="whitespace-nowrap py-4">
+                            <td className="py-4 whitespace-nowrap">
                               <div
                                 className={`${
                                   selectedIndex === index && "relative "
@@ -371,7 +371,7 @@ const ShipmentCardAdmin = ({
                                     }
                                     type="text"
                                     defaultValue={editValues.freight}
-                                    className="min-w-0 border-0 uppercase text-mainColor focus:outline-0"
+                                    className="min-w-0 uppercase border-0 text-mainColor focus:outline-0"
                                     style={{
                                       width: editWidth.freight,
                                     }}
@@ -381,7 +381,7 @@ const ShipmentCardAdmin = ({
                                 )}
                               </div>
                             </td>
-                            <td className="whitespace-nowrap py-4">
+                            <td className="py-4 whitespace-nowrap">
                               <div
                                 className={`${
                                   selectedIndex === index && "relative "
@@ -400,7 +400,7 @@ const ShipmentCardAdmin = ({
                                     }
                                     type="text"
                                     defaultValue={editValues.customs}
-                                    className="min-w-0 border-0 uppercase text-mainColor focus:outline-0"
+                                    className="min-w-0 uppercase border-0 text-mainColor focus:outline-0"
                                     style={{
                                       width: editWidth.customs,
                                     }}
@@ -410,7 +410,7 @@ const ShipmentCardAdmin = ({
                                 )}
                               </div>
                             </td>
-                            <td className="whitespace-nowrap py-4">
+                            <td className="py-4 whitespace-nowrap">
                               <div
                                 className={`${
                                   selectedIndex === index && "relative "
@@ -429,7 +429,7 @@ const ShipmentCardAdmin = ({
                                     }
                                     type="text"
                                     defaultValue={editValues.total}
-                                    className="min-w-0 border-0 uppercase text-mainColor focus:outline-0"
+                                    className="min-w-0 uppercase border-0 text-mainColor focus:outline-0"
                                     style={{
                                       width: editWidth.total,
                                     }}
@@ -447,7 +447,7 @@ const ShipmentCardAdmin = ({
                           </div>
                         </td>
 
-                        <td className="flex items-center space-x-2 whitespace-nowrap py-4 text-right text-sm font-medium ">
+                        <td className="flex items-center py-4 space-x-2 text-sm font-medium text-right whitespace-nowrap ">
                           <span
                             className="cursor-pointer hover:text-mainColor "
                             onClick={() => {
@@ -491,7 +491,7 @@ const ShipmentCardAdmin = ({
                                   ? null
                                   : deleteShipment(ship._id)
                               }
-                              className="h-4 w-4 cursor-pointer text-red-800 hover:text-red-500"
+                              className="w-4 h-4 text-red-800 cursor-pointer hover:text-red-500"
                               fill="none"
                               stroke="currentColor"
                               viewBox="0 0 24 24"

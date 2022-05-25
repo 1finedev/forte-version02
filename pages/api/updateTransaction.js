@@ -34,7 +34,7 @@ const handler = async (req, res) => {
 
       // send a message to the agent
       const acceptanceBody = `Hello ${transaction.user.fullname.split(" ")[0]}, 
-Your withdrawal request has been *APPROVED* by the Admin.
+Your withdrawal request has been *${transaction.status}* by the Admin.
 
 Kindly check your ${transaction.bankName} account for the requested amount
 
@@ -44,7 +44,7 @@ Kindly contact the admin for further details.
 *This message is automated and sent to you by the portal.*`;
 
       const rejectionBody = `Hello ${transaction.user.fullname.split(" ")[0]}, 
-Your withdrawal request has been *REJECTED* by the Admin.
+Your withdrawal request has been *${transaction.status}* by the Admin.
 
 Reason: ${transaction.adminComment}
 

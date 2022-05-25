@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
       title: "Dashboard",
       icon: (
         <svg
-          className="h-6 w-6"
+          className="w-6 h-6"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
       title: "Shipments",
       icon: (
         <svg
-          className="h-6 w-6"
+          className="w-6 h-6"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
       title: "Agents",
       icon: (
         <svg
-          className="h-6 w-6"
+          className="w-6 h-6"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ const Layout = ({ children }) => {
       title: "Finances",
       icon: (
         <svg
-          className="h-6 w-6"
+          className="w-6 h-6"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -98,18 +98,20 @@ const Layout = ({ children }) => {
   return (
     <>
       <ScrollToTop smooth color="#6f00ff" />
-      <div className="relative flex h-screen w-full overflow-x-hidden bg-white font-heading">
+      <div className="relative flex w-full h-screen overflow-x-scroll bg-white font-heading">
         <nav
           className={`${
-            sideBarOpen ? "w-[200px]" : "w-[4vw]"
+            sideBarOpen ? "w-[200px]" : "w-0"
           } fixed h-screen bg-mainColor pl-[5px] text-white transition-all duration-700  ease-in-out`}
         >
           <div
-            className="mb-[30px] flex cursor-pointer items-center space-x-[20px] p-[20px]"
-            onClick={() => router.push("/")}
+            className={`${
+              sideBarOpen ? "flex" : "hidden"
+            } mb-[30px]  cursor-pointer items-center space-x-[20px] p-[20px]`}
+            onClick={() => sideBarOpen && router.push("/")}
           >
             <svg
-              className="h-6 w-6"
+              className="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -136,7 +138,9 @@ const Layout = ({ children }) => {
                   router.push(`${link.destination}`);
                 }}
                 key={index}
-                className={`relative  mb-[20px] flex cursor-pointer items-center space-x-[20px] p-[20px] transition-all ${
+                className={`${
+                  sideBarOpen ? "flex" : "hidden"
+                } relative mb-[20px] flex cursor-pointer items-center space-x-[20px] p-[20px] transition-all ${
                   navHover === index
                     ? "rounded-tl-[30px] rounded-bl-[30px] bg-white  text-mainColor"
                     : null
@@ -158,12 +162,12 @@ const Layout = ({ children }) => {
         </nav>
         <div
           className={`${
-            sideBarOpen ? "ml-[200px]" : "ml-[4vw]"
+            sideBarOpen ? "ml-[200px]" : "ml-2"
           } w-full transition-all duration-700 ease-in-out`}
         >
           <div className="flex h-[60px] w-full items-center justify-between">
             <button
-              className="group flex h-12 w-12 flex-col items-center justify-center rounded"
+              className="flex flex-col items-center justify-center w-12 h-12 rounded group"
               onClick={() => {
                 setSideBarOpen(!sideBarOpen);
               }}
@@ -190,7 +194,7 @@ const Layout = ({ children }) => {
                 }`}
               />
             </button>
-            <div className="font-heading text-xl font-medium uppercase text-mainColor">
+            <div className="text-xl font-medium uppercase font-heading text-mainColor">
               <h2>{navLinks[navHover]?.title} Page</h2>
             </div>
             <div className="flex cursor-pointer space-x-[20px] text-black">
@@ -200,12 +204,12 @@ const Layout = ({ children }) => {
               >
                 <p>Change colour theme</p>
               </div>
-              <div className="flex space-x-[5px] text-brandText">
+              {/* <div className="flex space-x-[5px] text-brandText">
                 <p> Signed In:</p>
                 <p className="text-red-500">
                   {session?.user.fullname?.split(" ")?.[0]?.toUpperCase()}
                 </p>
-              </div>
+              </div> */}
               <div className="flex hover:text-mainColor hover:underline">
                 <h5
                   onClick={async () => {
@@ -235,9 +239,7 @@ const Layout = ({ children }) => {
           {showColorTheme ? <ChooseColorTheme toggle={toggle} /> : null}
           <main
             className={`absolute top-[60px] px-[10px] text-black ${
-              sideBarOpen
-                ? "min-w-[calc(100vw-200px)]"
-                : "min-w-[calc(100vw-4rem)]"
+              sideBarOpen ? "min-w-[calc(100vw-200px)]" : "min-w-[100vw]"
             }`}
           >
             {children}
