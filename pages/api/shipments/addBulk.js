@@ -259,23 +259,15 @@ const handler = async (req, res) => {
   //   console.log(error);
   // }
 
-  const agent = await Shipment.find({
-    user: "5f104e30c7201e0017587605",
-    createdAt: { $gte: "2022-04-12T20:44:52.500Z" },
-  });
-  console.log(agent);
+  // const all = await Shipment.find({}).sort({ createdAt: -1 }).limit(304);
 
-  let total = 0;
+  // const ship = await Shipment.find({ mobile: 2348105537061 });
 
-  agent.forEach((ship) => {
-    total = total + ship.weight;
-  });
-
-  console.log(total);
+  console.log(ship.length);
 
   res.status(400).json({
     status: "success",
-    msg: "error",
+    msg: "done",
   });
 };
 
