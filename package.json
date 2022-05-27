@@ -36,6 +36,7 @@
     "react-scroll-to-top": "^1.0.8",
     "react-tiny-collapse": "^1.1.0",
     "swr": "^1.1.2",
+    "tinyurl": "^1.1.7",
     "typewriter-effect": "^2.18.2",
     "update-input-width": "^1.2.2",
     "use-lodash-debounce": "^1.2.0"

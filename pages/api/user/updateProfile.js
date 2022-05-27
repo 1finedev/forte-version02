@@ -31,7 +31,7 @@ const handler = async (req, res) => {
           accountNumber: accountNumber
             ? accountNumber
             : session.user.accountNumber,
-          services: services ? services : session.user.services,
+          services: services ? services[0] : session.user.services,
         }
       );
 

@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema(
       select: false,
     },
     level: { type: Number, default: 0 },
-    services: { type: Array },
+    services: [String],
     active: { type: Boolean, default: true },
     suspended: { type: Boolean, default: false },
     otp: { type: Number, select: false },

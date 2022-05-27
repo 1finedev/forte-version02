@@ -10,3 +10,4 @@ export { default as Header } from "./Header";
 export { default as Layout } from "./Layout";
 export { default as ChooseColorTheme } from "./ChooseColorTheme";
 export { default as AgentsList } from "./AgentsList";
+export { default as RequestAgent } from "./RequestAgent";

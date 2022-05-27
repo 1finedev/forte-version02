@@ -48,7 +48,6 @@ export default NextAuth({
         user.gender = undefined;
         user.suspended = undefined;
         user.active = undefined;
-
         return user;
       },
     }),

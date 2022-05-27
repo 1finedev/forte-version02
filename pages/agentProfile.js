@@ -20,10 +20,12 @@ const AgentProfile = () => {
     { label: "Furniture", value: "furniture" },
     { label: "Not listed", value: "other" },
   ];
-  const [selectedServices, setSelectedServices] = useState(
-    session?.user?.services || []
-  );
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState({
+    services: session?.user?.services || [],
+    tempServices: session?.user?.services || [],
+  });
+
+  console.log(userData);
   const [loading, setLoading] = useState(false);
   const [mobileUpdate, setMobileUpdate] = useState(false);
   const [timer, setTimer] = useState({});
@@ -127,11 +129,6 @@ const AgentProfile = () => {
     // };
   }, [mobileUpdate, loading]);
 
-  useEffect(() => {
-    setUserData({ ...userData, services: selectedServices });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedServices]);
-
   return (
     <Layout>
       <div className="min-h-screen w-full bg-mainColor pt-[40px]">
@@ -223,10 +220,15 @@ const AgentProfile = () => {
               <div className="">
                 <MultiSelect
                   options={services}
-                  value={selectedServices}
-                  onChange={setSelectedServices}
+                  value={userData.tempServices}
+                  onChange={(d) =>
+                    setUserData({
+                      ...userData,
+                      services: [d.map((e) => e.value)],
+                      tempServices: d,
+                    })
+                  }
                   labelledBy="Choose all that apply"
-                  shouldToggleOnHover={true}
                   className=" text-mainColor"
                 />
               </div>
