@@ -61,14 +61,14 @@ const handler = async (req, res) => {
             calculated: true,
             rebate,
           });
-        } else {
-          await axios.post(
-            "http://fortebridgelogistics.com/api/shipments/agentRebate",
-            {
-              values: data.splice(20, data.length),
-            }
-          );
         }
+      } else {
+        await axios.post(
+          "http://fortebridgelogistics.com/api/shipments/agentRebate",
+          {
+            values: data.splice(20, data.length),
+          }
+        );
       }
     });
 
