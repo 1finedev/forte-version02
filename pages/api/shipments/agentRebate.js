@@ -63,7 +63,7 @@ const handler = async (req, res) => {
           });
         } else {
           await axios.post(
-            "http://euniquelogistics.com/api/shipments/agentRebate",
+            "http://fortebridgelogistics.com/api/shipments/agentRebate",
             {
               values: arr.splice(20, data.length),
             }
