@@ -1,6 +1,9 @@
 import { Layout } from "./../components";
 
+import { useSession } from "next-auth/react";
+
 const Statistics = () => {
+  console.log(useSession());
   return (
     <Layout>
       <div className="h-[20vh] w-full bg-mainColor">
