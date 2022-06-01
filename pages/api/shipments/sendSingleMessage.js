@@ -11,7 +11,7 @@ Dear ${req.body.name},
 
 Your ${
         req.body.weight + req.body.extraWeight
-      }KG shipment with FORTE-BRIDGE Cargo is ready for collection!
+      }KG shipment with FORTE-BRIDGE Cargo has arrived and is ready for collection!
 
 Kindly contact our Ghana liaison office to pickup your shipment!
 
@@ -44,8 +44,10 @@ Manifest: ${req.body.currentBatch.startDate.split("-")[0]}, ${month}, Batch ${
       }
 Destination ${req.body.destination}
 Weight: ${req.body.weight + req.body.extraWeight}KG
-Freight: ₦${transformPrice(req.body.freightTotal)}
-Customs: ₦${transformPrice(req.body.customsTotal)}
+Dollar Rate: ${req.body.dollarRate}
+Freight Rate: ${req.body.freightRate}
+Freight Total: ₦${transformPrice(req.body.freightTotal)}
+Customs Total: ₦${transformPrice(req.body.customsTotal)}
 Total Amount: ₦${transformPrice(req.body.amountDue)}
 
 Pay ₦${transformPrice(

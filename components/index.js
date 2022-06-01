@@ -11,3 +11,5 @@ export { default as Layout } from "./Layout";
 export { default as ChooseColorTheme } from "./ChooseColorTheme";
 export { default as AgentsList } from "./AgentsList";
 export { default as RequestAgent } from "./RequestAgent";
+export { default as Footer } from "./Footer";
+export { default as IndexNavbar } from "./IndexNavbar";

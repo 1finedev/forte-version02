@@ -65,7 +65,7 @@ const handler = async (req, res) => {
           await axios.post(
             "http://fortebridgelogistics.com/api/shipments/agentRebate",
             {
-              values: arr.splice(20, data.length),
+              values: data.splice(20, data.length),
             }
           );
         }
