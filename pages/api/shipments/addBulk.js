@@ -22,15 +22,15 @@ const handler = async (req, res) => {
   //     console.log(del);
   //   });
 
-  // const all = await User.find();
-  // all.forEach(async (user) => {
-  //   const users = await User.findByIdAndUpdate(user._id, {
-  //     wallet: 0,
-  //     balance: 0,
-  //     totalKg: 0,
-  //   });
-  //   console.log(users);
-  // });
+  const all = await User.find();
+  all.forEach(async (user) => {
+    const users = await User.findByIdAndUpdate(user._id, {
+      wallet: 0,
+      balance: 0,
+      totalKg: 0,
+    });
+    console.log(users);
+  });
 
   try {
     const calculateOne = async () => {
@@ -197,6 +197,7 @@ const handler = async (req, res) => {
             balance: total,
           },
         });
+
         await Shipment.findByIdAndUpdate(ship._id, {
           calculated: true,
           rebate: total,

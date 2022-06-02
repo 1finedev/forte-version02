@@ -37,7 +37,7 @@ const handler = async (req, res) => {
       });
     }
 
-    data.forEach(async (shipment) => {
+    data.forEach(async (shipment, index) => {
       if (index < 20) {
         // update balance
         let rebate;
